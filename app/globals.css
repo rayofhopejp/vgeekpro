@@ -31,3 +31,21 @@ body {
     text-wrap: balance;
   }
 }
+
+.video-box {
+  position: absolute;
+  flex:auto;
+  overflow: hidden;
+  width: 100vw;
+  height: 50vw;
+}
+.video {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.text-box {
+  position: absolute;
+  bottom: 0;
+}

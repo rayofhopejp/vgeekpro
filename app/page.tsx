@@ -1,112 +1,130 @@
+"use client"; 
 import Image from "next/image";
+import { useEffect } from "react";
+import './fonts.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+import Marquee from "react-fast-marquee";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init();
+  }, [])  
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
+    <main className="flex  flex-col items-center">
+      <div className="w-full max-w-5x z-10">
+        <p className="fixed left-0 top-0 flex w-full p-1 w-[min(28vw,500px)] z-50">
+        <Image
+              src="/logo.png"
+              alt="Usaneko Logo"
               className="dark:invert"
-              width={100}
-              height={24}
+              width={300}
+              height={100}
               priority
             />
-          </a>
+        </p>
+        <p className=" z-50 fixed font-slogan font-bold right-[100px] top-[20px] flex justify-between p-1 w-[min(500px,60%)]  rounded-full bg-white bg-opacity-50 border-white border-2">
+          <button className="pl-[10px] ">About</button>|
+          <button>Videos</button>|
+          <button>Guidline</button>|
+          <button>Link</button>|
+          <button className="pr-[10px]">History</button>
+        </p>
+        <p className=" z-50 fixed font-slogan font-bold right-[20px] top-[20px] flex justify-between p-1 w-[60px] rounded-full bg-white bg-opacity-50 border-white border-2">
+          JP/EN
+        </p>
+      </div>
+
+      <div className="relative video-box">
+      <div className=" brightness-50"><video className="video" src="kagura.mp4" autoPlay muted loop/></div>
+      <div className="text-white whitespace-nowrap text-[6vw] font-slogan text-box">知のフロンティアは、ここにある。</div>
+      </div>
+
+      <div className="z-10 font-slogan justify-items-stretch text-center absolute mt-[50vw] w-full max-w-5x bg-white/50 ">
+      <div className="divide-y-8 divide-zinc-200 divide-dotted">
+        <div>
+          <div data-aos="fade-right"><p className="text-[min(50px,7vw)]">About</p>
+          <p className="text-sm text-rose-500">セキュリティホールから、こんばんらーじ！</p><br/></div>
+          「うさねこらーじ」は、22歳東大卒新人セキュリティスペシャリストVTuberです。
+          <p className="text-[min(30px,4vw)]">様々な経験をして、皆さんと一緒に成長していきます。</p>
+          <button className="rounded-full bg-rose-500 text-white justify-self-center m-10 p-2">
+            View More ➤
+          </button>
+        </div>
+
+        <div>
+          <div data-aos="fade-right"><p className="text-[min(50px,7vw)]"> Recommended Videos</p></div>
+          <Marquee autoFill={true} pauseOnHover={true}>
+          <div className="flex justify-center items-center gap-4">
+          <a href="https://youtu.be/8rR9A1r_02U"  target="_blank" rel="noopener noreferrer"><Image src="/thmbnail/atcoder_beginner.png" alt={"thumbnail"} width={300} height={300}/></a>
+          <a href="https://www.youtube.com/live/BmgETVET1QA"  target="_blank" rel="noopener noreferrer"><Image src="/thmbnail/eromanga.png" alt={"thumbnail"} width={300} height={300}/></a>
+          <a href="https://youtube.com/live/WJ0fLH3_2uk" target="_blank" rel="noopener noreferrer"><Image src="/thmbnail/htb.jpg" alt={"thumbnail"} width={300} height={300}/></a>
+          <a href="https://youtu.be/BejCkc1K4qs" target="_blank" rel="noopener noreferrer"><Image src="/thmbnail/jikosyoukai.jpg" alt={"thumbnail"} width={300} height={300}/></a>
+          <a href="https://youtube.com/live/FE1EaxIJDR8" target="_blank" rel="noopener noreferrer"><Image src="/thmbnail/happyou.png" alt={"thumbnail"} width={300} height={300}/></a>
+          <a href="https://youtube.com/live/g_QTfqi8_Ig" target="_blank" rel="noopener noreferrer"><Image src="/thmbnail/koba789_1.png" alt={"thumbnail"} width={300} height={300}/></a>
+          <span>   </span>
+          </div>
+          </Marquee>
+          <a href="https://www.youtube.com/@usaneko_xlarge" target="_blank" rel="noopener noreferrer"><button className="rounded-full bg-rose-500 text-white justify-self-center m-10 p-2">
+            More on YouTube ➤
+          </button></a>
+        </div>
+
+        <div>
+          <div data-aos="fade-right"><p className="text-[min(50px,7vw)]">Guideline</p></div>
+          <p className="text-[min(30px,4vw)]">二次創作などにおけるガイドラインを定めています</p>
+          <button className="rounded-full bg-rose-500 text-white justify-self-center m-10 p-2">
+            View More ➤
+          </button>
+        </div>
+
+        <div>
+          <div data-aos="fade-right"><p className="text-[min(50px,7vw)]">Link</p></div>
+          <a href="https://x.com/usaneko_xlarge" target="_blank" rel="noopener noreferrer"><button className="rounded-full bg-rose-500 text-white justify-self-center m-10 p-2 w-[200px]">
+            X(Twitter)
+          </button></a>
+          <a href="https://www.youtube.com/@usaneko_xlarge" target="_blank" rel="noopener noreferrer"><button className="rounded-full bg-rose-500 text-white justify-self-center m-10 p-2 w-[200px]">
+            YouTube
+          </button></a>
+          <a href="https://discord.gg/zRBavEQz6T" target="_blank" rel="noopener noreferrer"><button className="rounded-full bg-rose-500 text-white justify-self-center m-10 p-2 w-[200px]">
+            Discord Server
+          </button></a>
+          <a href="https://peing.net/ja/usaneko_xlarge" target="_blank" rel="noopener noreferrer"><button className="rounded-full bg-rose-500 text-white justify-self-center m-10 p-2 w-[200px]">
+            Peing<br/> (Anonymas Messages)
+          </button></a>
+          <a href="https://skeb.jp/@usaneko_xlarge" target="_blank" rel="noopener noreferrer"><button className="rounded-full bg-rose-500 text-white justify-self-center m-10 p-2 w-[200px]">
+            Skeb
+          </button></a>
+          <a href="https://usaneko-xlarge.fanbox.cc/" target="_blank" rel="noopener noreferrer"><button className="rounded-full bg-rose-500 text-white justify-self-center m-10 p-2 w-[200px]">
+            FanBox
+          </button></a>
+          <a href="mailto:naomi.lilienthal.jpn@gmail.com" target="_blank" rel="noopener noreferrer"><button className="rounded-full bg-rose-500 text-white justify-self-center m-10 p-2 w-[200px]">
+           Mail
+          </button></a>
+        </div>
+
+        <div>
+          <div data-aos="fade-right"><p className="text-[min(50px,7vw)]">History</p></div><br/>
+          <p className="text-[min(30px,4vw)]">VTuber を始めた後の出来事</p>
+          <p>2023年7月2日 3D 化 & 1 万人記念ライブ</p>
+          <p>2023年12月 情報処理安全確保支援士試験合格</p>
+          <p>2023年7月2日 VTuber としてデビュー</p><br/>
+          <p className="text-[min(30px,4vw)]">VTuber を始める前の出来事</p>
+         <p>東京大学工学部卒業</p>
+         <p>主著である論文が国際学会を通過、数百回以上引用される</p>
+         <p>卒業論文が国際学会を通過</p>
+         <p>情報オリンピック予選 A ランク・本戦出場</p>
+         <p>応用情報技術者試験合格</p>
+         <p>AWS 認定試験 9 個合格 (Security Specialist 含む) </p>
+         <p>3 歳時の IQ が 188</p>
+        </div><br/><br/><br/><br/>
+        ©Usaneko Large All Rights Reserved.
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="z-0  font-bold text-[200px] text-white justify-items-stretch text-center absolute mt-[50vw] ">
+        <Marquee autoFill={true}>
+        Usaneko Large<span> </span>
+        </Marquee>
       </div>
     </main>
   );
