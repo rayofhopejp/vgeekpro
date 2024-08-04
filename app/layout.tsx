@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
     ? new URL("https://usaneko-xlarge.com")
     : undefined,
-  openGraph: { images: "/shoukai_2.png" },
+  openGraph: { images: "/others/shoukai_2.png" },
 };
 
 

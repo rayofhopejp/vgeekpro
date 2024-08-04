@@ -16,7 +16,7 @@ export default function Home() {
       <div className="w-full max-w-5x z-50">
         <p  className="fixed left-0 top-0 flex w-full p-1 w-[min(28vw,500px)] z-50">
         <Scroll to="home"><Image
-              src="/logo.png"
+              src="/others/logo.png"
               alt="Usaneko Logo"
               className="dark:invert"
               width={300}
@@ -37,7 +37,7 @@ export default function Home() {
       </div>
 
       <div id="home" className="relative video-box">
-      <div className=" brightness-50"><video className="video" src="kagura.mp4" autoPlay muted loop/></div>
+      <div className=" brightness-50"><video className="video" src="/others/kagura.mp4" autoPlay muted loop/></div>
       <div className="text-white whitespace-nowrap text-[6vw] font-slogan text-box">知のフロンティアは、ここにある。</div>
       </div>
 
@@ -45,14 +45,14 @@ export default function Home() {
       <div className="divide-y-8 divide-zinc-200 divide-dotted">
         <div id="about" className="lg:flex">
           <Image
-            src="/900x1800-touka.png"
+            src="/others/900x1800-touka.png"
             alt="Usaneko Large"
             className="object-contain"
             width={300}
             height={150}
             priority
           />
-          <div className="items-center">
+          <div className="items-center w-[80vw]">
           <div data-aos="fade-right"><p className="text-[min(50px,7vw)]">About</p></div>
           <p className="text-[min(60px,8vw)]">うさねこらーじ</p>
           <p className="text-base">Usaneko Large</p><br/>
@@ -209,7 +209,7 @@ export default function Home() {
         ©Usaneko Large All Rights Reserved.
         </div>
       </div>
-      <div className="overflow-hidden z-0  fold font-bold text-[200px] text-white justify-items-stretch text-center absolute mt-[50vw] ">
+      <div className="overflow-hidden z-0  fold font-bold text-[200px] text-white justify-items-stretch text-center absolute mt-[50vw] max-w-[100vw]">
         <Marquee>
         Usaneko Large<span> </span>
         </Marquee>
