@@ -49,7 +49,7 @@ export default function Home() {
       <div id="home" className="overflow-hidden relative w-full h-svh xl:h-svh">
         <div className="relative w-[400svw] left-[-150svw] xl:left-0 xl:w-full h-full">
           <div className="z-10 absolute w-full h-svh bg-gradient-to-b from-transparent from-40% xl:from-60% to-stone-900"></div>
-          <video className="z-0 absolute -mt-14 video xl:w-full xl:h-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full" src="/others/kagura.mp4" autoPlay muted playsinline loop/>
+          <video className="z-0 absolute -mt-14 video xl:w-full xl:h-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full" src="/others/kagura.mp4" autoPlay muted playsInline loop/>
           <div className="z-20 absolute ps-[3vw] w-full bottom-14 whitespace-nowrap text-center text-[6vw] font-slogan">知のフロンティアは、ここにある。</div>
         </div>
       </div>
