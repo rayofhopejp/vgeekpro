@@ -27,9 +27,9 @@ export default function Home() {
         <p className=" z-50 fixed font-slogan font-bold right-[100px] top-[20px] flex justify-between p-1 w-[min(500px,60%)]  rounded-full bg-white bg-opacity-50 border-white border-2">
         <Scroll to="about"><button className="pl-[10px] ">About</button></Scroll>|
         <Scroll to="videos"><button>Videos</button></Scroll>|
-        <Scroll to="guideline"><button>Guideline</button></Scroll>|
         <Scroll to="link"><button>Link</button></Scroll>|
-        <Scroll to="history"><button className="pr-[10px]">History</button></Scroll>
+        <Scroll to="history"><button>History</button></Scroll>|
+        <Scroll to="guideline"><button className="pr-[10px]">Guideline</button></Scroll>
         </p>
         <p className=" z-50 fixed font-slogan font-bold right-[20px] top-[20px] flex justify-between p-1 w-[60px] rounded-full bg-white bg-opacity-50 border-white border-2">
           JP/EN
