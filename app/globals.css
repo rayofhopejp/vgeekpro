@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 .bg-maze {
-  background-image: url(/others/bg-maze.png);
+  background-image: url(/others/background-maze.png);
   background-size: contain;
   background-position: bottom center;
   background-repeat: no-repeat;
 }
 
 .sample-slider .swiper-wrapper {
-    transition-timing-function: linear;
+  transition-timing-function: linear;
 }
