@@ -7,10 +7,7 @@ const inter = Inter({subsets: ["latin"]});
 export const metadata: Metadata = {
   title: "Usaneko Large",
   description: "22才、東大卒、新人セキュリティスペシャリストVTuber「うさねこらーじ」の公式サイトです。",
-  metadataBase:
-    process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
-      ? new URL("https://usaneko-xlarge.com")
-      : undefined,
+  metadataBase: new URL("https://usaneko-xlarge.com"),
   openGraph: {images: "/others/profile.webp"},
 };
 
