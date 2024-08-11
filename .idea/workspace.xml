@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="04d0af4d-fb76-4d2e-8135-7cadee1a0c3d" name="変更" comment="フォールバックフォントの定義" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="shota-patch-1" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2kCTEX8bnMfhTu29ZhiQBBK7sfn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "pnpm",
+    "npm.dev.executor": "Debug",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "ts.external.directory.path": "/Users/shota/WebstormProjects/usanekowebsite/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-WS-241.15989.105" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="アプリケーションレベル" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="デフォルトタスク">
+      <changelist id="04d0af4d-fb76-4d2e-8135-7cadee1a0c3d" name="変更" comment="" />
+      <created>1703361638832</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703361638832</updated>
+      <workItem from="1703361641431" duration="81000" />
+      <workItem from="1722786448822" duration="20000" />
+      <workItem from="1722786484362" duration="5783000" />
+      <workItem from="1722818718015" duration="145000" />
+      <workItem from="1722818874905" duration="75000" />
+      <workItem from="1722818958916" duration="80000" />
+      <workItem from="1722819043571" duration="267000" />
+    </task>
+    <task id="LOCAL-00001" summary="WebStormプロジェクトファイルの初期化">
+      <option name="closed" value="true" />
+      <created>1722789334785</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1722789334785</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ファイルのフォーマットを統一">
+      <option name="closed" value="true" />
+      <created>1722789416523</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722789416523</updated>
+    </task>
+    <task id="LOCAL-00003" summary="当方pnpmを使用するため、ロックファイル再生成">
+      <option name="closed" value="true" />
+      <created>1722789472236</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1722789472236</updated>
+    </task>
+    <task id="LOCAL-00004" summary="使用されていないテンプレート付属ファイルの削除">
+      <option name="closed" value="true" />
+      <created>1722789509340</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1722789509340</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ファイル整形">
+      <option name="closed" value="true" />
+      <created>1722789589978</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1722789589978</updated>
+    </task>
+    <task id="LOCAL-00006" summary="全身像から切り取った上半身の画像とそれを使ったfaviconの追加">
+      <option name="closed" value="true" />
+      <created>1722789664244</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1722789664244</updated>
+    </task>
+    <task id="LOCAL-00007" summary="フォールバックフォントの定義">
+      <option name="closed" value="true" />
+      <created>1722789683849</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1722789683849</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="shota-patch-1" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="RELOAD_CONTEXT" value="false" />
+    <MESSAGE value="WebStormプロジェクトファイルの初期化" />
+    <MESSAGE value="ファイルのフォーマットを統一" />
+    <MESSAGE value="当方pnpmを使用するため、ロックファイル再生成" />
+    <MESSAGE value="使用されていないテンプレート付属ファイルの削除" />
+    <MESSAGE value="ファイル整形" />
+    <MESSAGE value="全身像から切り取った上半身の画像とそれを使ったfaviconの追加" />
+    <MESSAGE value="フォールバックフォントの定義" />
+    <option name="LAST_COMMIT_MESSAGE" value="フォールバックフォントの定義" />
+  </component>
+</project>
