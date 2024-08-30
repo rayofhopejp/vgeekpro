@@ -50,6 +50,14 @@ export default function Page() {
                     重度なTwitterユーザーなので、何時でもTwitterでゴロゴロしている。<br/>
                     配信や交流を通して、つよつよな技術猫目指すにゃ～！</p>
                   </div>
+                  <div className="w-full flex flex-col xl:flex-row xl:flex-wrap justify-between items-center gap-4">
+                  <a className="self-stretch flex items-center rounded-full bg-rose-500 hover:bg-rose-700 text-white px-8 py-4" href="https://x.com/iris2664" target="_blank" rel="noopener noreferrer">
+                  東雲絢芽の X (Twitter)
+                  </a>
+                  <a className="self-stretch flex items-center rounded-full bg-rose-500 hover:bg-rose-700 text-white px-8 py-4" href="https://www.youtube.com/@iris2664jp" target="_blank" rel="noopener noreferrer">
+                  東雲絢芽の YouTube
+                  </a>
+                </div>
                 </section>
               </section> 
             </div>

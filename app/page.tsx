@@ -27,8 +27,14 @@ export default function Home() {
 
         <div id="home" className="overflow-hidden relative w-full h-svh xl:h-svh">
           <div className="relative w-[400svw] left-[-150svw] xl:left-0 xl:w-full h-full">
-            <div className="z-10 absolute w-full h-svh bg-gradient-to-b from-transparent from-40% xl:from-60% to-stone-900"></div>
-            <video className="z-0 absolute -mt-14 video xl:w-full xl:h-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full" src="/others/kagura.mp4" autoPlay muted playsInline loop/>
+            <div className="z-10 relative w-full h-svh bg-gradient-to-b from-transparent from-40% xl:from-60% to-stone-900"></div>
+            <Image
+              src="/others/sea.png"
+              alt="top illust"
+              style={{ objectFit: "cover" }}
+              fill
+              priority
+              />
             <div className="z-20 absolute ps-[3vw] w-full bottom-14 whitespace-nowrap text-center text-[6vw] font-slogan">Reality Meets Virtuality</div>
           </div>
         </div>
@@ -79,7 +85,7 @@ export default function Home() {
                     <div className="mb-28 leading-loose text-black">
                     <p className="font-slogan text-center text-3xl xl:text-5xl">うさねこらーじ</p>
                     <p className="font-slogan text-center mb-14">Usaneko Large</p>
-                    <Link className="self-stretch flex items-center rounded-full bg-rose-500 hover:bg-rose-700 text-white px-8 py-4" href="/talents/usaneko_xlarge" rel="noopener noreferrer">
+                    <Link className="self-stretch flex items-center rounded-full bg-rose-500 hover:bg-rose-700 text-white px-8 py-4 text-center" href="/talents/usaneko_xlarge" rel="noopener noreferrer">
                     紹介ページへ
                   </Link>
                   </div>
@@ -97,7 +103,7 @@ export default function Home() {
                     <div className="mb-28 leading-loose text-black">
                     <p className="font-slogan text-center text-3xl xl:text-5xl">東雲絢芽</p>
                     <p className="font-slogan text-center mb-14">SHINONOME Ayame</p>
-                    <Link className="self-stretch flex items-center rounded-full bg-rose-500 hover:bg-rose-700 text-white px-8 py-4" href="/talents/iris2664" rel="noopener noreferrer">
+                    <Link className="self-stretch flex items-center rounded-full bg-rose-500 hover:bg-rose-700 text-white px-8 py-4 text-center" href="/talents/iris2664" rel="noopener noreferrer">
                     紹介ページへ
                   </Link>
                   </div>
@@ -153,7 +159,7 @@ export default function Home() {
               <div className="leading-loose text-center">
                 <div className="w-full flex flex-col xl:flex-row xl:flex-wrap justify-between items-center gap-4">
                   <a className="self-stretch flex items-center rounded-full bg-rose-500 hover:bg-rose-700 text-white px-8 py-4" href="https://x.com/usaneko_xlarge" target="_blank" rel="noopener noreferrer">
-                    公式およびうさねこらーじの X (Twitter)
+                   ぶいぎーく！公式およびうさねこらーじの X (Twitter)
                   </a>
                   <a className="self-stretch flex items-center rounded-full bg-rose-500 hover:bg-rose-700 text-white px-8 py-4" href="https://www.youtube.com/@usaneko_xlarge" target="_blank" rel="noopener noreferrer">
                    ぶいぎーく！公式およびうさねこらーじの YouTube
@@ -189,6 +195,7 @@ export default function Home() {
                       <li>上記以外の連絡手段を1つ以上持つこと (Twitter など) </li>
                       <li>過度に社会的に不適切な行為 (差別発言等) を行わないこと</li>
                       <li>ぶいぎーく！の Discord サーバー内のやりとりや運営とのやりとりのうち、許可されていないコンテンツを外部に共有しないこと。</li>
+                      <li>ウェブサイトに掲載するための名前、英語名、立ち絵などの絵、口上、説明文を用意できる方</li>
                     </ul>
                   </section>
                   <section>

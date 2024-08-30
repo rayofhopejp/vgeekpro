@@ -50,6 +50,14 @@ export default function Page() {
                       下ネタとエロをこよなく愛する。ガチ恋勢を増やすべく策略を練っている。しかし、定期的にガチ恋を葬り去るような言動をする。<br/>
                       配信をつうじて様々な経験をして、みなさんと一緒に成長していきます！</p>
                   </div>
+                  <div className="w-full flex flex-col xl:flex-row xl:flex-wrap justify-between items-center gap-4">
+                  <a className="self-stretch flex items-center rounded-full bg-rose-500 hover:bg-rose-700 text-white px-8 py-4" href="https://x.com/usaneko_xlarge" target="_blank" rel="noopener noreferrer">
+                    うさねこらーじの X (Twitter)
+                  </a>
+                  <a className="self-stretch flex items-center rounded-full bg-rose-500 hover:bg-rose-700 text-white px-8 py-4" href="https://www.youtube.com/@usaneko_xlarge" target="_blank" rel="noopener noreferrer">
+                    うさねこらーじの YouTube
+                  </a>
+                </div>
                 </section>
                 <section>
                   <div className="mb-14 text-center" data-aos="fade-down" data-aos-duration="2000">
