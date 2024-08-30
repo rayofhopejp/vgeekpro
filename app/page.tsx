@@ -29,7 +29,7 @@ export default function Home() {
           <div className="relative w-[400svw] left-[-150svw] xl:left-0 xl:w-full h-full">
             <div className="z-10 relative w-full h-svh bg-gradient-to-b from-transparent from-40% xl:from-60% to-stone-900"></div>
             <Image
-              src="/others/sea.png"
+              src="/others/topillust.png"
               alt="top illust"
               style={{ objectFit: "cover" }}
               fill
@@ -93,7 +93,7 @@ export default function Home() {
 
                   <section>
                       <Image
-                        src="/others/iris2664.jpg"
+                        src="/others/iris2664up.png"
                         alt="SHINONOME Ayame"
                         className="object-contain mt-10 xl:mt-40 mx-auto"
                         width={200}

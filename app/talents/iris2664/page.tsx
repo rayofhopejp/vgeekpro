@@ -31,8 +31,8 @@ export default function Page() {
             <div className="z-10 relative flex flex-col xl:flex-row justify-center items-center">
               <aside className="self-start text-center w-full xl:w-auto">
                 <Image
-                  src="/others/iris2664.jpg"
-                  alt="Usaneko Large"
+                  src="/others/iris2664_zenshin.png"
+                  alt="SHINONOME Ayame"
                   className="object-contain mt-10 xl:mt-40 mx-auto"
                   width={300}
                   height={600}
