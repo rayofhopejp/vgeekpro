@@ -5,10 +5,10 @@ import "./globals.css";
 const inter = Inter({subsets: ["latin"]});
 
 export const metadata: Metadata = {
-  title: "Usaneko Large",
-  description: "22才、東大卒、新人セキュリティスペシャリストVTuber「うさねこらーじ」の公式サイトです。",
-  metadataBase: new URL("https://usaneko-xlarge.com"),
-  openGraph: {images: "/others/profile.webp"},
+  title: "VGeek - ぶいぎーく！",
+  description: "IT 系 VTuber グループ「ぶいぎーく！」の公式サイトです。",
+  metadataBase: new URL("https://vgeekpro.com"),
+  openGraph: {images: "/others/logo.png"},
 };
 
 
