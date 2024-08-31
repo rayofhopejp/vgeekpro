@@ -67,17 +67,19 @@ export default function Home() {
             <section id="members" className="w-full">
             <div className="relative bg-gradient-to-b from-stone-100 from-90%">
             <div className="z-10 relative flex flex-col xl:flex-row justify-center items-center">
-              <section className="px-10 xl:px-14 py-14 text-base">
+              <section className="px-10 xl:px-14 py-10 text-base">
                 <section>
                   <div className="mb-14 text-center" data-aos="fade-down" data-aos-duration="2000">
                     <div className="font-bold text-3xl text-black">Members</div>
                     <div className="text-sm text-rose-600">ゆかいななかまたち</div>
                   </div>
-                  <section>
+
+                  <div className="xl:flex xl:flex-wrap gap-20">
+                  <section className="items-center w-25%">
                       <Image
                         src="/others/upper-body.webp"
                         alt="Usaneko Large"
-                        className="object-contain mt-10 xl:mt-40 mx-auto"
+                        className="object-contain mt-10 mx-auto"
                         width={200}
                         height={200}
                         priority
@@ -85,17 +87,17 @@ export default function Home() {
                     <div className="mb-28 leading-loose text-black">
                     <p className="font-slogan text-center text-3xl xl:text-5xl">うさねこらーじ</p>
                     <p className="font-slogan text-center mb-14">Usaneko Large</p>
-                    <Link className="self-stretch flex items-center rounded-full bg-rose-500 hover:bg-rose-700 text-white px-8 py-4 text-center" href="/talents/usaneko_xlarge" rel="noopener noreferrer">
+                    <Link className="self-stretch rounded-full bg-rose-500 hover:bg-rose-700 text-white px-8 py-4 text-center" href="/talents/usaneko_xlarge" rel="noopener noreferrer">
                     紹介ページへ
                   </Link>
                   </div>
                   </section>
 
-                  <section>
+                  <section className="items-center w-25%">
                       <Image
                         src="/others/iris2664up.png"
                         alt="SHINONOME Ayame"
-                        className="object-contain mt-10 xl:mt-40 mx-auto"
+                        className="object-contain mt-10 mx-auto"
                         width={200}
                         height={200}
                         priority
@@ -103,12 +105,49 @@ export default function Home() {
                     <div className="mb-28 leading-loose text-black">
                     <p className="font-slogan text-center text-3xl xl:text-5xl">東雲絢芽</p>
                     <p className="font-slogan text-center mb-14">SHINONOME Ayame</p>
-                    <Link className="self-stretch flex items-center rounded-full bg-rose-500 hover:bg-rose-700 text-white px-8 py-4 text-center" href="/talents/iris2664" rel="noopener noreferrer">
+                    <Link className="self-stretch rounded-full bg-rose-500 hover:bg-rose-700 text-white px-8 py-4 text-center" href="/talents/iris2664" rel="noopener noreferrer">
                     紹介ページへ
                   </Link>
                   </div>
                   </section>
-                  
+
+                  <section className="items-center w-25%">
+                      <Image
+                        src="/others/members/shiisharp_up.png"
+                        alt="C shiisharp"
+                        className="object-contain mt-10 mx-auto"
+                        width={200}
+                        height={200}
+                        priority
+                      />
+                    <div className="mb-28 leading-loose text-black">
+                    <p className="font-slogan text-center text-3xl xl:text-5xl">椎半音</p>
+                    <p className="font-slogan text-center mb-14">C shiisharp</p>
+                    <Link className="self-stretch rounded-full bg-rose-500 hover:bg-rose-700 text-white px-8 py-4 text-center" href="/talents/shiisharp" rel="noopener noreferrer">
+                    紹介ページへ
+                  </Link>
+                  </div>
+                  </section>
+
+                  <section className="items-center w-25%">
+                      <Image
+                        src="/others/members/setsuna_up.png"
+                        alt="setsuna"
+                        className="object-contain mt-10 mx-auto"
+                        width={200}
+                        height={200}
+                        priority
+                      />
+                    <div className="mb-28 leading-loose text-black">
+                    <p className="font-slogan text-center text-3xl xl:text-5xl">夢向せつな</p>
+                    <p className="font-slogan text-center mb-14">Yumemukai Setsuna</p>
+                    <Link className="self-stretch rounded-full bg-rose-500 hover:bg-rose-700 text-white px-8 py-4 text-center" href="/talents/setsuna" rel="noopener noreferrer">
+                    紹介ページへ
+                  </Link>
+                  </div>
+                  </section>
+
+                  </div>
                 </section>
               </section>
             </div>
