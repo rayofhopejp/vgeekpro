@@ -135,7 +135,7 @@ export default function Home() {
                 <section>
                   <p className="mb-6 font-bold">参加したい方へ</p>
                   <section>
-                    <p className="mb-6">ぶいぎーく！に参加したい方は、以下の条件を満たし続けることが必要です。</p>
+                    <p className="mb-6">ぶいぎーく！に参加されたい方は、以下の条件を満たし続けることが必要です。</p>
                     <ul className="mb-6 list-disc ps-5">
                       <li>Discord または Line のどちらかで連絡が取れること。運営の連絡には 15 日以内に回答してください。</li>
                       <li>上記以外の連絡手段を1つ以上持つこと (Twitter など)</li>
@@ -145,7 +145,7 @@ export default function Home() {
                     </ul>
                   </section>
                   <section>
-                    <p className="mb-6">ぶいぎーく！に参加されたい方は以下のいずれかの方法で運営までご連絡ください。</p>
+                    <p className="mb-6">ぶいぎーく！に参加されたい方は。以下のいずれかの方法で運営までご連絡ください。</p>
                     <ul className="mb-6 list-disc ps-5">
                       <li>Discord: usaneko_xlarge</li>
                       <li>Twitter: @usaneko_xlarge</li>
