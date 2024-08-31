@@ -145,7 +145,7 @@ export default function Home() {
                     </ul>
                   </section>
                   <section>
-                    <p className="mb-6">ぶいぎーく！に参加されたい方は。以下のいずれかの方法で運営までご連絡ください。</p>
+                    <p className="mb-6">ぶいぎーく！に参加されたい方は、以下のいずれかの方法で運営までご連絡ください。</p>
                     <ul className="mb-6 list-disc ps-5">
                       <li>Discord: usaneko_xlarge</li>
                       <li>Twitter: @usaneko_xlarge</li>
