@@ -77,8 +77,8 @@ export default function Page() {
                     <ul className="list-disc ps-5">
                       <li>雑談</li>
                       <li>ゲーム制作進捗報告</li>
-                      <li>レトロPCやチップについての雑談</li>
                       <li>ゲーム制作の一部の作業雑談</li>
+                      <li>ゲーム実況</li>
                     </ul>
                   </div>
                 </section>
@@ -113,10 +113,6 @@ export default function Page() {
                         <td className="pb-4 align-top">
                           <time dateTime="2023/07/02">月華光、0012</time>
                         </td>
-                      </tr>
-                      <tr>
-                        <td className="pe-8 xl:pe-16 pb-4 align-top">身長</td>
-                        <td className="pb-4 align-top">155cm</td>
                       </tr>
                       <tr>
                         <td className="pe-8 xl:pe-16 pb-4 align-top">ハッシュタグ</td>
