@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04d0af4d-fb76-4d2e-8135-7cadee1a0c3d" name="変更" comment="フォールバックフォントの定義" />
+    <list default="true" id="04d0af4d-fb76-4d2e-8135-7cadee1a0c3d" name="変更" comment="フォールバックフォントの定義">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/talents/iris2664/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/talents/iris2664/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/full-body-transparent.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/others/members/usaneko_large/full_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/full-body-transparent.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/others/members/usaneko_large/full_body.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/iris2664_zenshin.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/others/members/shinonome_ayame/full_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/iris2664up.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/others/members/shinonome_ayame/upper_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/setsuna.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/others/members/yumemukai_setsuna/full_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/setsuna2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/others/members/yumemukai_setsuna/full_body_variation_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/setsuna_up.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/others/members/yumemukai_setsuna/upper_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/shiisharp.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/others/members/shii_sharp/full_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/shiisharp_up.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/others/members/shii_sharp/upper_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/upper-body.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/others/members/usaneko_large/upper_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/upper-body.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/others/members/usaneko_large/upper_body.webp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +44,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Shota-Sakitsu&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Shota-Sakitsu/vgeekpro.git&quot;,
+    &quot;accountId&quot;: &quot;710f7120-2698-42cb-b66f-124d1bde02d1&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -37,7 +67,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -46,13 +77,17 @@
     "nodejs_package_manager_path": "pnpm",
     "npm.dev.executor": "Debug",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "settings.nodejs",
-    "ts.external.directory.path": "/Users/shota/WebstormProjects/usanekowebsite/node_modules/typescript/lib",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\koris\\WebstormProjects\\vgeekpro\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\koris\WebstormProjects\vgeekpro\public\others\members\usaneko_large" />
+      <recent name="C:\Users\koris\WebstormProjects\vgeekpro\public\others\members\shinonome_ayame" />
+      <recent name="C:\Users\koris\WebstormProjects\vgeekpro\public\others\members\shiisharp" />
+      <recent name="C:\Users\koris\WebstormProjects\vgeekpro\public\others\members\setsuna" />
       <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
@@ -80,7 +115,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-WS-241.15989.105" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-WS-242.20224.342" />
       </set>
     </attachedChunks>
   </component>
@@ -99,6 +134,8 @@
       <workItem from="1722818874905" duration="75000" />
       <workItem from="1722818958916" duration="80000" />
       <workItem from="1722819043571" duration="267000" />
+      <workItem from="1725109319066" duration="38000" />
+      <workItem from="1725109359484" duration="3907000" />
     </task>
     <task id="LOCAL-00001" summary="WebStormプロジェクトファイルの初期化">
       <option name="closed" value="true" />

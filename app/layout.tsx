@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "VGeek - ぶいぎーく！",
   description: "IT 系 VTuber グループ「ぶいぎーく！」の公式サイトです。",
   metadataBase: new URL("https://vgeekpro.com"),
-  openGraph: {images: "/others/logo.png"},
+  openGraph: {images: "/others/logo.webp"},
 };
 
 
