@@ -114,7 +114,7 @@ export default function Home() {
                   <section className="items-center w-25%">
                       <Image
                         src="/others/members/shiisharp_up.png"
-                        alt="C shiisharp"
+                        alt="Shii Sharp"
                         className="object-contain mt-10 mx-auto"
                         width={200}
                         height={200}
@@ -122,7 +122,7 @@ export default function Home() {
                       />
                     <div className="mb-28 leading-loose text-black">
                     <p className="font-slogan text-center text-3xl xl:text-5xl">椎半音</p>
-                    <p className="font-slogan text-center mb-14">C shiisharp</p>
+                    <p className="font-slogan text-center mb-14">Shii Sharp</p>
                     <Link className="self-stretch rounded-full bg-rose-500 hover:bg-rose-700 text-white px-8 py-4 text-center" href="/talents/shiisharp" rel="noopener noreferrer">
                     紹介ページへ
                   </Link>

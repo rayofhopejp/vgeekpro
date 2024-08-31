@@ -43,7 +43,7 @@ export default function Page() {
                 <section>
                   <div className="mb-28 leading-loose">
                     <p className="font-slogan text-center text-3xl xl:text-5xl">椎半音</p>
-                    <p className="font-slogan text-center mb-14">C shiisharp</p>
+                    <p className="font-slogan text-center mb-14">Shii Sharp</p>
                     <p className="font-slogan text-center mb-14 text-xl xl:text-3xl">「みんなでペアプロ！あなたとペアプロ！」</p>
                     <p className="mb-14">C#を推すために顕現した開発系VTuber。<br/>
                       C#の魅力を伝えるために日々奮闘中！<br/>
@@ -99,7 +99,7 @@ export default function Page() {
                       <tr>
                         <td className="pe-8 xl:pe-16 pb-4 align-top">初配信日</td>
                         <td className="pb-4 align-top">
-                          <time dateTime="2023/07/02">2024年2月22日</time>
+                          <time dateTime="2023/07/02">2023年2月22日</time>
                         </td>
                       </tr>
                       <tr>
