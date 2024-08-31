@@ -2,10 +2,10 @@
 import withImages from 'next-images'
 
 const nextConfig = withImages({
-    output: 'export',
-    reactStrictMode: true,
-    trailingSlash: true,
-    images: { unoptimized: true }
+  output: 'export',
+  reactStrictMode: true,
+  trailingSlash: true,
+  images: {unoptimized: true}
 })
 
 export default nextConfig;
