@@ -11,6 +11,7 @@ import FullBodyImage from "@/components/FullBodyImage";
 import ProfileHead from "@/components/ProfileHead";
 import XProfile from "@/components/XProfile";
 import YouTubeChannel from "@/components/YouTubeChannel";
+import GitHubProfile from "@/components/GitHubProfile";
 
 export default function Page() {
   useEffect(() => {
@@ -31,10 +32,14 @@ export default function Page() {
          </ProfileHead>
           <div className="w-fit flex flex-col xl:flex-row xl:flex-wrap justify-between items-center gap-4">
             <XProfile userId="yuniruyuni"/>
-            <YouTubeChannel handle="yuniruyuni"/>
             <a className="self-stretch flex shrink items-center rounded-full bg-rose-500 hover:bg-rose-700 text-white px-8 py-4" href={`https://www.twitch.tv/yuniruyuni`} target="_blank" rel="noopener noreferrer">
               Twitch
             </a>
+            <a className="self-stretch flex shrink items-center rounded-full bg-rose-500 hover:bg-rose-700 text-white px-8 py-4" href={`http://yuniruyuni.net/`} target="_blank" rel="noopener noreferrer">
+              Website
+            </a>
+            <GitHubProfile userId="yuniruyuni"/>
+            <YouTubeChannel handle="yuniruyuni"/>
           </div>
         </section>
       </section>
