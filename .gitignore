@@ -1,5 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# NTFS Security Alternate Data Stream Virtual File for Windows Subsystem for Linux
+*:Zone.Identifier
+
 # dependencies
 /node_modules
 /.pnp
