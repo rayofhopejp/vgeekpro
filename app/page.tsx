@@ -73,6 +73,7 @@ export default function Home() {
                     <MemberCard name="ゆにるユニ" yomi="Yuniru Yuni" profileId="yuniru_yuni" imageId="yuniru_yuni" imageAlt="Yuniru Yuni"/>
                     <MemberCard name="小日向がく" yomi="Kohinata Gaku" profileId="kohinata_gaku" imageId="kohinata_gaku" imageAlt="Kohinata Gaku"/>
                     <MemberCard name="ますかぷる" yomi="Maskaple" profileId="maskaple" imageId="maskaple" imageAlt="Maskaple"/>
+                    <MemberCard name="ひょんぢゅ" yomi="Hyondyu" profileId="hyondyu" imageId="hyondyu" imageAlt="Hyondyu"/>
                   </div>
                 </section>
               </section>
