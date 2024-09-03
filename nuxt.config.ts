@@ -7,6 +7,7 @@ export default defineNuxtConfig({
 		"@nuxt/image",
 		'@bootstrap-vue-next/nuxt',
 		"@nuxtjs/i18n",
+		"@nuxtjs/robots",
 	],
 	ssr: true,
 	tailwindcss: {
