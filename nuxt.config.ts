@@ -8,7 +8,7 @@ export default defineNuxtConfig({
 		'@bootstrap-vue-next/nuxt',
 		"@nuxtjs/i18n",
 	],
-	ssr: false,
+	ssr: true,
 	tailwindcss: {
 		config: {
 			prefix: "tw-"
