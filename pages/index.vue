@@ -67,7 +67,7 @@ const mailModal = toRef(false);
 								<MemberCard name="小日向がく" yomi="Kohinata Gaku" profileId="kohinata_gaku" imageId="kohinata_gaku" imageAlt="Kohinata Gaku"/>
 								<MemberCard name="ますかぷる" yomi="Maskaple" profileId="maskaple" imageId="maskaple" imageAlt="Maskaple"/>
 								<MemberCard name="ひょんぢゅ" yomi="Hyondyu" profileId="hyondyu" imageId="hyondyu" imageAlt="Hyondyu"/>
-							</div>
+								<MemberCard name="乙木イオ" yomi="IO Otogi" profileId="io_otogi" imageId="io_otogi" imageAlt="IO Otogi"/>							</div>
 						</section>
 					</section>
 				</div>
