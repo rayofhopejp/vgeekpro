@@ -58,9 +58,9 @@ const rel = computed({
 const text = computed({
 	get: () => {
 		if (props.channelId != undefined || props.customLink != undefined || props.userId != undefined || props.handle != undefined) {
-			return "YouTube";
+			return "profileCommon.youTubeLinkButton";
 		} else {
-			return "YouTube (リンク切れ)"
+			return "profileCommon.unknownYouTubeLinkButton";
 		}
 	}
 })
@@ -68,6 +68,6 @@ const text = computed({
 
 <template>
 	<ButtonLinkBase :href="href" :target="target" :rel="rel">
-		{{ text }}
+		{{ $t(text) }}
 	</ButtonLinkBase>
 </template>

@@ -10,6 +10,6 @@ const props = defineProps<GitHubProfileAttributes>();
 
 <template>
 	<ButtonLinkBase :href="`https://github.com/${props.userId}`" target="_blank" rel="noopener noreferrer">
-		GitHub
+		{{ $t("profileCommon.gitHubLinkButton") }}
 	</ButtonLinkBase>
 </template>

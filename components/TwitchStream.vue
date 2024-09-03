@@ -10,6 +10,6 @@ const props = defineProps<TwitchStreamAttributes>();
 
 <template>
 	<ButtonLinkBase :href="`https://www.twitch.tv/${props.userId}`" target="_blank" rel="noopener noreferrer">
-		Twitch
+		{{ $t("profileCommon.twitchLinkButton") }}
 	</ButtonLinkBase>
 </template>

@@ -1,5 +1,12 @@
 <script setup lang="ts">
 const route = useRoute();
+
+const {locale, locales, setLocale} = useI18n();
+
+const setLocaleTo = (locale: string) => {
+	console.debug(`Set Locale: ${locale}`);
+	setLocale(locale);
+}
 </script>
 
 <template>
@@ -47,9 +54,10 @@ const route = useRoute();
 						<a v-else href="/#guideline">Guideline</a>
 					</div>
 				</div>
-				<div class="xl:tw-ms-6 tw-flex-auto tw-shrink tw-text-stone-900 tw-text-xs xl:tw-text-base">
-					<button @click.stop="" type="button" class="tw-ps-3 tw-pe-2 tw-py-1 xl:tw-ps-5 xl:tw-pe-3 xl:tw-py-4 tw-rounded-s-full tw-border-white tw-border-s-2 tw-border-y-2 tw-cursor-pointer text-white tw-bg-rose-500 tw-bg-opacity-75">JP</button>
-					<button @click.stop="" type="button" class="tw-ps-2 tw-pe-3 tw-py-1 xl:tw-ps-3 xl:tw-pe-5 xl:tw-py-4 tw-rounded-e-full tw-border-white tw-border-e-2 tw-border-y-2 tw-bg-white tw-bg-opacity-75 tw-cursor-pointer hover:tw-text-white hover:tw-bg-rose-500 hover:tw-bg-opacity-75">EN</button>
+				<div class="xl:tw-ms-6 tw-flex tw-flex-auto tw-shrink tw-text-stone-900 tw-text-xs xl:tw-text-base tw-pointer-events-auto">
+					<button :class="`tw-ps-5 tw-pe-2.5 tw-py-2 tw-rounded-s-full tw-border-white tw-border-s-2 tw-border-y-2 tw-cursor-pointer ${locale == 'ja' ? 'tw-text-white tw-bg-rose-500 tw-bg-opacity-75' : 'tw-bg-white tw-bg-opacity-75 hover:tw-text-white hover:tw-bg-rose-500 hover:tw-bg-opacity-75'}`" type="button" @click.stop="setLocaleTo('ja')">JP</button>
+					<button :class="`tw-px-2.5 tw-py-2 tw-border-y-2 tw-border-white tw-cursor-pointer ${locale == 'en-US' ? 'tw-text-white tw-bg-rose-500 tw-bg-opacity-75' : 'tw-bg-white tw-bg-opacity-75 hover:tw-text-white hover:tw-bg-rose-500 hover:tw-bg-opacity-75'}`" type="button" @click.stop="setLocaleTo('en-US')">US</button>
+					<button :class="`tw-ps-2.5 tw-pe-5 tw-py-2 tw-rounded-e-full tw-border-white tw-border-e-2 tw-border-y-2  tw-cursor-pointer ${locale == 'en-GB' ? 'tw-text-white tw-bg-rose-500 tw-bg-opacity-75' : 'tw-bg-white tw-bg-opacity-75 hover:tw-text-white hover:tw-bg-rose-500 hover:tw-bg-opacity-75'}`" type="button" @click.stop="setLocaleTo('en-GB')">UK</button>
 				</div>
 			</div>
 		</nav>

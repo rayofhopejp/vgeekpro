@@ -10,6 +10,6 @@ const props = defineProps<XProfileAttributes>();
 
 <template>
 	<ButtonLinkBase :href="`https://x.com/${props.userId}`" target="_blank" rel="noopener noreferrer">
-		X (Twitter)
+		{{ $t("profileCommon.xLinkButton") }}
 	</ButtonLinkBase>
 </template>
