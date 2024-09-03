@@ -8,6 +8,79 @@ const thisYear = toRef((new Date().getFullYear()))
 
 const mailModal = toRef(false);
 
+const showContributorsModal = toRef(false);
+
+const konamiCommandPatterns = [
+	"arrowup",
+	"arrowup",
+	"arrowdown",
+	"arrowdown",
+	"arrowleft",
+	"arrowright",
+	"arrowleft",
+	"arrowright",
+	"b",
+	"a",
+];
+
+if (import.meta.client) {
+	let keyBuffer: string[] = [];
+	let timerToken: int | undefined;
+	window.addEventListener("keydown", (event) => {
+		console.debug(event);
+		window.clearTimeout(timerToken);
+		switch (event.key.toLowerCase()) {
+			case "a":
+			case "b":
+			case "arrowup":
+			case "arrowdown":
+			case "arrowleft":
+			case "arrowright":
+				keyBuffer.push(event.key.toLowerCase());
+				break;
+		}
+		if (keyBuffer.length >= 10) {
+			console.debug("Checker Start: ", keyBuffer);
+			//↑↑↓↓←→←→BA
+			while (true) {
+				let startIndex = keyBuffer.indexOf("arrowup")
+				let checkBuffer = keyBuffer.slice(startIndex, keyBuffer.length);
+				console.debug("Checker Start Index: ", startIndex);
+				console.debug("Check Buffer: ", checkBuffer);
+				if (checkBuffer.length < 10) {
+					console.debug("Not Enough Check Buffer Length")
+					return
+				}
+				let pointer = 0;
+				let checkOk = false;
+				for (const checkValue of checkBuffer) {
+					if (checkValue != konamiCommandPatterns[pointer]) {
+						break;
+					} else {
+						if (pointer == 9) checkOk = true;
+					}
+					pointer++;
+				}
+				if (checkOk) {
+					console.debug("Check OK");
+					showContributorsModal.value = true;
+					break;
+				} else {
+					console.debug("Check Failed: ", checkBuffer)
+				}
+				keyBuffer = checkBuffer
+			}
+		}
+	})
+	window.addEventListener("keyup", () => {
+		timerToken = window.setTimeout(() => {
+			console.debug("Clear Key");
+			keyBuffer = [];
+			timerToken = undefined;
+		}, 10 / 60 * 1000);
+	})
+}
+
 </script>
 
 <template>
@@ -30,7 +103,7 @@ const mailModal = toRef(false);
 			<div class="tw-relative tw-bg-gradient-to-b tw-from-stone-600 tw-from-60%">
 				<div class="tw-z-0 tw-absolute tw-top-40 xl:tw-top-28 tw-overflow-hidden tw-w-full">
 					<client-only>
-						<Vue3Marquee duration="50">
+						<Vue3Marquee :duration="50">
 							<span class="tw-select-none tw-z-0 tw-inline-block tw-font-bold tw-text-stone-500/75 tw-text-[50vw] xl:tw-text-[15vw]">
 								Vgeek Production
 							</span>
@@ -67,7 +140,8 @@ const mailModal = toRef(false);
 								<MemberCard name="小日向がく" yomi="Kohinata Gaku" profileId="kohinata_gaku" imageId="kohinata_gaku" imageAlt="Kohinata Gaku"/>
 								<MemberCard name="ますかぷる" yomi="Maskaple" profileId="maskaple" imageId="maskaple" imageAlt="Maskaple"/>
 								<MemberCard name="ひょんぢゅ" yomi="Hyondyu" profileId="hyondyu" imageId="hyondyu" imageAlt="Hyondyu"/>
-								<MemberCard name="乙木イオ" yomi="IO Otogi" profileId="io_otogi" imageId="io_otogi" imageAlt="IO Otogi"/>							</div>
+								<MemberCard name="乙木イオ" yomi="IO Otogi" profileId="io_otogi" imageId="io_otogi" imageAlt="IO Otogi"/>
+							</div>
 						</section>
 					</section>
 				</div>
@@ -174,6 +248,41 @@ const mailModal = toRef(false);
 				</a>
 			</div>
 		</BModal>
+		<client-only>
+			<BModal v-model="showContributorsModal" title="OSINT" title-class="fs-2 tw-text-stone-900" body-class="tw-text-stone-900" :ok-only="true">
+				<div class="container">
+					<div class="row">
+						<span class="fs-3">コントリビュータ</span>
+						<ul class="list-group">
+							<li class="list-group-item">
+								<span class="fs-4">うさねこらーじ</span>
+								<ul class="list-group">
+									<li class="list-group-item list-group-item-info">主な貢献</li>
+									<li class="list-group-item">プロジェクトオーナー</li>
+									<li class="list-group-item">プロトタイプ制作</li>
+								</ul>
+							</li>
+							<li class="list-group-item">
+								<span class="fs-4">羽山 祥樹</span>
+								<ul class="list-group">
+									<li class="list-group-item list-group-item-info">主な貢献</li>
+									<li class="list-group-item">デザイン最適化</li>
+									<li class="list-group-item">レスポンシブ対応</li>
+								</ul>
+							</li>
+							<li class="list-group-item">
+								<span class="fs-4">崎津 祥汰 / 秋雪 こおり</span>
+								<ul class="list-group">
+									<li class="list-group-item list-group-item-info">主な貢献</li>
+									<li class="list-group-item">細部デザイン調整</li>
+									<li class="list-group-item">リファクタリング</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</BModal>
+		</client-only>
 	</main>
 	<footer class="tw-my-16 tw-footer tw-text-base tw-text-center">
 		<client-only>Copyright &copy; 2023, {{ thisYear }} Usaneko Large</client-only>
