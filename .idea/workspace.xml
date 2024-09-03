@@ -4,95 +4,133 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04d0af4d-fb76-4d2e-8135-7cadee1a0c3d" name="変更" comment="フォールバックフォントの定義">
+    <list default="true" id="8ea76109-579f-4c40-9a56-4698e287f93d" name="変更" comment="破壊的変更: フレームワークNuxt3に変更し、Bootstrap5と共存しました">
+      <change afterPath="$PROJECT_DIR$/app.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/fonts.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/global.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ButtonLinkBase.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/CommonlyHeader.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/FullBodyImage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/GitHubProfile.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/JapaneseTime.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/MemberCard.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/OtherSiteLink.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ProfileHead.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/SectionHeader.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/TwitCastingStream.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/TwitchStream.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UpperBodyImage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/XProfile.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/YouTubeChannel.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/example-member/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/member-page.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/talents/hyondyu/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/talents/iris2664/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/talents/kohinata_gaku/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/talents/maskaple/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/talents/setsuna/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/talents/shiisharp/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/talents/usaneko_xlarge/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/talents/yuniru_yuni/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/Vue3Marquee.client.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/vue3-smooth-scroll.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/talents/iris2664/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/talents/iris2664/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/fonts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/header.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/talents/hyondyu/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/talents/iris2664/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/talents/kohinata_gaku/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/talents/maskaple/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/talents/setsuna/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/talents/shiisharp/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/talents/usaneko_xlarge/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/talents/yuniru_yuni/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/FullBodyImage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/GitHubProfile.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/JapaneseTime.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MemberCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MemberTemplate.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProfileHead.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SectionHeader.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UpperBodyImage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/XProfile.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/YouTubeChannel.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/others/full-body-transparent.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/others/members/usaneko_large/full_body.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/others/full-body-transparent.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/others/members/usaneko_large/full_body.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/others/iris2664_zenshin.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/others/members/shinonome_ayame/full_body.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/others/iris2664up.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/others/members/shinonome_ayame/upper_body.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/others/members/setsuna.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/others/members/yumemukai_setsuna/full_body.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/others/members/setsuna2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/others/members/yumemukai_setsuna/full_body_variation_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/others/members/setsuna_up.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/others/members/yumemukai_setsuna/upper_body.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/others/members/shiisharp.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/others/members/shii_sharp/full_body.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/others/members/shiisharp_up.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/others/members/shii_sharp/upper_body.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/others/upper-body.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/others/members/usaneko_large/upper_body.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/others/upper-body.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/others/members/usaneko_large/upper_body.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Corporate-Mincho-ver3.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/SourceHanSerif-SemiBold.otf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/SourceHanSerif-SemiBold.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/background-maze.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/background-maze.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/logo.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/logo.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/hyondyu/full_body.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/hyondyu/full_body.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/hyondyu/upper_body.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/hyondyu/upper_body.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/kohinata_gaku/full_body.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/kohinata_gaku/full_body.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/kohinata_gaku/upper_body.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/kohinata_gaku/upper_body.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/maskaple/full_body.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/maskaple/full_body.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/maskaple/upper_body.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/maskaple/upper_body.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/shii_sharp/full_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/shii_sharp/full_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/shii_sharp/full_body.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/shii_sharp/full_body.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/shii_sharp/upper_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/shii_sharp/upper_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/shii_sharp/upper_body.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/shii_sharp/upper_body.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/shinonome_ayame/full_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/shinonome_ayame/full_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/shinonome_ayame/full_body.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/shinonome_ayame/full_body.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/shinonome_ayame/upper_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/shinonome_ayame/upper_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/shinonome_ayame/upper_body.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/shinonome_ayame/upper_body.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/usaneko_large/full_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/usaneko_large/full_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/usaneko_large/full_body.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/usaneko_large/full_body.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/usaneko_large/upper_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/usaneko_large/upper_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/usaneko_large/upper_body.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/usaneko_large/upper_body.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/yumemukai_setsuna/full_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/yumemukai_setsuna/full_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/yumemukai_setsuna/full_body.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/yumemukai_setsuna/full_body.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/yumemukai_setsuna/full_body_variation_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/yumemukai_setsuna/full_body_variation_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/yumemukai_setsuna/full_body_variation_2.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/yumemukai_setsuna/full_body_variation_2.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/yumemukai_setsuna/upper_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/yumemukai_setsuna/upper_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/yumemukai_setsuna/upper_body.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/yumemukai_setsuna/upper_body.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/yuniru_yuni/full_body.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/yuniru_yuni/full_body.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/yuniru_yuni/full_body_variation_2.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/yuniru_yuni/full_body_variation_2.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/members/yuniru_yuni/upper_body.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/members/yuniru_yuni/upper_body.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/topillust.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/topillust.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/others/topillust.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/topillust.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="TypeScript JSX File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="shota-patch-1" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Shota-Sakitsu&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Shota-Sakitsu/vgeekpro.git&quot;,
-    &quot;accountId&quot;: &quot;710f7120-2698-42cb-b66f-124d1bde02d1&quot;
-  }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
-}</component>
-  <component name="ProjectId" id="2kCTEX8bnMfhTu29ZhiQBBK7sfn" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "pnpm",
-    "npm.dev.executor": "Debug",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Users\\koris\\WebstormProjects\\vgeekpro\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+    "git-widget-placeholder": "nuxt-master",
+    "last_opened_file_path": "C:/Users/koris/WebstormProjects/vgeekpro"
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\koris\WebstormProjects\vgeekpro\public\others\members\usaneko_large" />
-      <recent name="C:\Users\koris\WebstormProjects\vgeekpro\public\others\members\shinonome_ayame" />
-      <recent name="C:\Users\koris\WebstormProjects\vgeekpro\public\others\members\shiisharp" />
-      <recent name="C:\Users\koris\WebstormProjects\vgeekpro\public\others\members\setsuna" />
-      <recent name="$PROJECT_DIR$/public" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\koris\WebstormProjects\vgeekpro" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.generate">
+    <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -102,137 +140,29 @@
       <envs />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="npm.dev" />
-        <item itemvalue="npm.dev" />
-        <item itemvalue="npm.dev" />
-        <item itemvalue="npm.dev" />
-        <item itemvalue="npm.dev" />
-      </list>
-    </recent_temporary>
+    <configuration name="generate" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="generate" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.dev" />
+      <item itemvalue="npm.generate" />
+    </list>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-WS-242.20224.342" />
-      </set>
-    </attachedChunks>
+  <component name="ShelveChangesManager">
+    <option name="remove_strategy" value="true" />
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="アプリケーションレベル" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="デフォルトタスク">
-      <changelist id="04d0af4d-fb76-4d2e-8135-7cadee1a0c3d" name="変更" comment="" />
-      <created>1703361638832</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1703361638832</updated>
-      <workItem from="1703361641431" duration="81000" />
-      <workItem from="1722786448822" duration="20000" />
-      <workItem from="1722786484362" duration="5783000" />
-      <workItem from="1722818718015" duration="145000" />
-      <workItem from="1722818874905" duration="75000" />
-      <workItem from="1722818958916" duration="80000" />
-      <workItem from="1722819043571" duration="267000" />
-      <workItem from="1725109319066" duration="38000" />
-      <workItem from="1725109359484" duration="3907000" />
-    </task>
-    <task id="LOCAL-00001" summary="WebStormプロジェクトファイルの初期化">
-      <option name="closed" value="true" />
-      <created>1722789334785</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1722789334785</updated>
-    </task>
-    <task id="LOCAL-00002" summary="ファイルのフォーマットを統一">
-      <option name="closed" value="true" />
-      <created>1722789416523</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1722789416523</updated>
-    </task>
-    <task id="LOCAL-00003" summary="当方pnpmを使用するため、ロックファイル再生成">
-      <option name="closed" value="true" />
-      <created>1722789472236</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1722789472236</updated>
-    </task>
-    <task id="LOCAL-00004" summary="使用されていないテンプレート付属ファイルの削除">
-      <option name="closed" value="true" />
-      <created>1722789509340</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1722789509340</updated>
-    </task>
-    <task id="LOCAL-00005" summary="ファイル整形">
-      <option name="closed" value="true" />
-      <created>1722789589978</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1722789589978</updated>
-    </task>
-    <task id="LOCAL-00006" summary="全身像から切り取った上半身の画像とそれを使ったfaviconの追加">
-      <option name="closed" value="true" />
-      <created>1722789664244</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1722789664244</updated>
-    </task>
-    <task id="LOCAL-00007" summary="フォールバックフォントの定義">
-      <option name="closed" value="true" />
-      <created>1722789683849</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1722789683849</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="shota-patch-1" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_NEW_TODO" value="false" />
-    <option name="RELOAD_CONTEXT" value="false" />
-    <MESSAGE value="WebStormプロジェクトファイルの初期化" />
-    <MESSAGE value="ファイルのフォーマットを統一" />
-    <MESSAGE value="当方pnpmを使用するため、ロックファイル再生成" />
-    <MESSAGE value="使用されていないテンプレート付属ファイルの削除" />
-    <MESSAGE value="ファイル整形" />
-    <MESSAGE value="全身像から切り取った上半身の画像とそれを使ったfaviconの追加" />
-    <MESSAGE value="フォールバックフォントの定義" />
-    <option name="LAST_COMMIT_MESSAGE" value="フォールバックフォントの定義" />
+    <MESSAGE value="破壊的変更: フレームワークNuxt3に変更し、Bootstrap5と共存しました" />
+    <option name="LAST_COMMIT_MESSAGE" value="破壊的変更: フレームワークNuxt3に変更し、Bootstrap5と共存しました" />
   </component>
 </project>
