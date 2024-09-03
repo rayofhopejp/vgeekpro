@@ -4,6 +4,122 @@ import SectionHeader from "~/components/SectionHeader.vue";
 import UpperBodyImage from "~/components/UpperBodyImage.vue";
 import MemberCard from "~/components/MemberCard.vue";
 
+type Member = {
+	name: string,
+	yomi: string,
+	profileId: string,
+	imageId: string,
+	imageAlt: string,
+}
+
+/**
+ * メンバー一覧
+ *
+ * メンバーはこの配列の中に記載してください。
+ * この配列の中のデータは`v-for`によるリストレンダリングで自動生成されます。
+ * 型は上の`Member`の型定義を確認してください。
+ * なお、リストレンダリングの主キーには`profileId`が使用されます。
+ */
+const members: Member[] = [
+	{
+		name: "うさねこらーじ",
+		yomi: "Usaneko Large",
+		profileId: "usaneko_xlarge",
+		imageId: "usaneko_large",
+		imageAlt: "Usaneko Large",
+	},
+	{
+		name: "東雲絢芽",
+		yomi: "SHINONOME Ayame",
+		profileId: "iris2664",
+		imageId: "shinonome_ayame",
+		imageAlt: "SHINONOME Ayame",
+	},
+	{
+		name: "椎半音",
+		yomi: "Shii Sharp",
+		profileId: "shiisharp",
+		imageId: "shii_sharp",
+		imageAlt: "Shii Sharp",
+	},
+	{
+		name: "夢向せつな",
+		yomi: "Yumemukai Setsuna",
+		profileId: "setsuna",
+		imageId: "yumemukai_setsuna",
+		imageAlt: "setsuna",
+	},
+	{
+		name: "ゆにるユニ",
+		yomi: "Yuniru Yuni",
+		profileId: "yuniru_yuni",
+		imageId: "yuniru_yuni",
+		imageAlt: "Yuniru Yuni",
+	},
+	{
+		name: "小日向がく",
+		yomi: "Kohinata Gaku",
+		profileId: "kohinata_gaku",
+		imageId: "kohinata_gaku",
+		imageAlt: "Kohinata Gaku",
+	},
+	{
+		name: "ますかぷる",
+		yomi: "Maskaple",
+		profileId: "maskaple",
+		imageId: "maskaple",
+		imageAlt: "Maskaple",
+	},
+	{
+		name: "ひょんぢゅ",
+		yomi: "Hyondyu",
+		profileId: "hyondyu",
+		imageId: "hyondyu",
+		imageAlt: "Hyondyu",
+	},
+	{
+		name: "乙木イオ",
+		yomi: "IO Otogi",
+		profileId: "io_otogi",
+		imageId: "io_otogi",
+		imageAlt: "IO Otogi",
+	},
+];
+
+type Unit = {
+	unitId: string,
+	unitName: string,
+	unitYomi: string,
+	unitImageId?: string,
+	unitImageAlt?: string,
+	members: UnitMember[],
+};
+
+type UnitMember = {
+	name: string,
+	yomi: string,
+}
+
+const Units: Unit[] = [
+	{
+		unitId: "security_girl",
+		unitName: "セキュリティガール",
+		unitYomi: "Security Girl",
+		members: [
+			{
+				name: "うさねこらーじ",
+				yomi: "Usaneko Large",
+			},
+			{
+				name: "東雲絢芽",
+				yomi: "SHINONOME Ayame",
+			},
+		],
+	},
+];
+
+const mailAddress = "naomi.lilienthal.jpn@gmail.com";
+
 const thisYear = toRef((new Date().getFullYear()))
 
 const mailModal = toRef(false);
@@ -132,15 +248,7 @@ if (import.meta.client) {
 							<SectionHeader title="Members" titleColor="black" description="ゆかいななかまたち"/>
 
 							<div class="tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 md:tw-grid-cols-3 2xl:tw-grid-cols-4 tw-gap-20">
-								<MemberCard name="うさねこらーじ" yomi="Usaneko Large" profileId="usaneko_xlarge" imageId="usaneko_large" imageAlt="Usaneko Large"/>
-								<MemberCard name="東雲絢芽" yomi="SHINONOME Ayame" profileId="iris2664" imageId="shinonome_ayame" imageAlt="SHINONOME Ayame"/>
-								<MemberCard name="椎半音" yomi="Shii Sharp" profileId="shiisharp" imageId="shii_sharp" imageAlt="Shii Sharp"/>
-								<MemberCard name="夢向せつな" yomi="Yumemukai Setsuna" profileId="setsuna" imageId="yumemukai_setsuna" imageAlt="setsuna"/>
-								<MemberCard name="ゆにるユニ" yomi="Yuniru Yuni" profileId="yuniru_yuni" imageId="yuniru_yuni" imageAlt="Yuniru Yuni"/>
-								<MemberCard name="小日向がく" yomi="Kohinata Gaku" profileId="kohinata_gaku" imageId="kohinata_gaku" imageAlt="Kohinata Gaku"/>
-								<MemberCard name="ますかぷる" yomi="Maskaple" profileId="maskaple" imageId="maskaple" imageAlt="Maskaple"/>
-								<MemberCard name="ひょんぢゅ" yomi="Hyondyu" profileId="hyondyu" imageId="hyondyu" imageAlt="Hyondyu"/>
-								<MemberCard name="乙木イオ" yomi="IO Otogi" profileId="io_otogi" imageId="io_otogi" imageAlt="IO Otogi"/>
+								<MemberCard v-for="member in members" :key="member.profileId" :name="member.name" :yomi="member.yomi" :profileId="member.profileId" :imageId="member.imageId" :imageAlt="member.imageAlt" />
 							</div>
 						</section>
 					</section>
@@ -155,17 +263,8 @@ if (import.meta.client) {
 						<section>
 							<SectionHeader title="Groups" description="なかよしな仲間たち" titleColor="white" :isDark="true"/>
 							<section>
-								<UpperBodyImage memberId="usaneko_large" alt="Usaneko Large"/>
-								<div class="tw-mb-28 tw-leading-loose tw-text-white">
-									<p class="font-slogan tw-text-center tw-text-3xl xl:tw-text-5xl">セキュリティガール</p>
-									<p class="font-slogan tw-text-center tw-mb-14">Security Girl</p>
-									<ul class="tw-mb-6 tw-list-disc tw-ps-5">
-										<li>うさねこらーじ</li>
-										<li>東雲絢芽</li>
-									</ul>
-								</div>
+								<UnitInformation v-for="unit in Units" :key="unit.unitId" :unit-id="unit.unitId" :unit-name="unit.unitName" :unit-yomi="unit.unitYomi" :members="unit.members" :unit-image-alt="unit.unitImageAlt" :unit-image-id="unit.unitImageId"/>
 							</section>
-
 						</section>
 					</section>
 				</div>
@@ -237,13 +336,13 @@ if (import.meta.client) {
 		</section>
 		<BModal v-model="mailModal" title="メールを送信" title-class="fs-5 tw-text-stone-900" :ok-only="true">
 			<div class="tw-flex tw-flex-col">
-				<a class="tw-self-stretch tw-my-2 tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4" href="mailto:naomi.lilienthal.jpn@gmail.com" target="_blank" rel="noopener noreferrer">
+				<a class="tw-self-stretch tw-my-2 tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4" :href="`mailto:${mailAddress}`" target="_blank" rel="noopener noreferrer">
 					メールアプリを開く
 				</a>
-				<a class="tw-self-stretch tw-my-2 tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4" href="https://mail.google.com/mail/?extsrc=mailto&url=mailto:naomi.lilienthal.jpn@gmail.com" target="_blank" rel="noopener noreferrer">
+				<a class="tw-self-stretch tw-my-2 tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4" :href="`https://mail.google.com/mail/?extsrc=mailto&url=mailto:${mailAddress}`" target="_blank" rel="noopener noreferrer">
 					Gmailを開く
 				</a>
-				<a class="tw-self-stretch tw-my-2 tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4" href="https://mail.yahoo.co.jp/compose/?To=mailto:naomi.lilienthal.jpn@gmail.com" target="_blank" rel="noopener noreferrer">
+				<a class="tw-self-stretch tw-my-2 tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4" :href="`https://mail.yahoo.co.jp/compose/?To=mailto:${mailAddress}`" target="_blank" rel="noopener noreferrer">
 					Yahoo! メールを開く
 				</a>
 			</div>
