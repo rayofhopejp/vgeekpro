@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import CommonlyHeader from "~/components/CommonlyHeader.vue";
 import SectionHeader from "~/components/SectionHeader.vue";
-import UpperBodyImage from "~/components/UpperBodyImage.vue";
 import MemberCard from "~/components/MemberCard.vue";
 
 type Member = {
