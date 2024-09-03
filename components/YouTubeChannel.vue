@@ -28,9 +28,9 @@ const href = computed({
 			return `https://www.youtube.com/channel/${props.channelId}`;
 		} else if (props.customLink != undefined) {
 			return `https://www.youtube.com/c/${props.customLink}`;
-		} else if (props.userId == undefined) {
+		} else if (props.userId != undefined) {
 			return `https://www.youtube.com/user/${props.userId}`;
-		} else if (props.handle == undefined) {
+		} else if (props.handle != undefined) {
 			return `https://www.youtube.com/@${props.handle}`;
 		} else {
 			return ""
@@ -39,7 +39,7 @@ const href = computed({
 })
 const target = computed({
 	get: () => {
-		if (props.channelId != undefined || props.customLink != undefined || props.userId == undefined || props.handle == undefined) {
+		if (props.channelId != undefined || props.customLink != undefined || props.userId != undefined || props.handle != undefined) {
 			return "_blank";
 		} else {
 			return ""
@@ -48,7 +48,7 @@ const target = computed({
 })
 const rel = computed({
 	get: () => {
-		if (props.channelId != undefined || props.customLink != undefined || props.userId == undefined || props.handle == undefined) {
+		if (props.channelId != undefined || props.customLink != undefined || props.userId != undefined || props.handle != undefined) {
 			return "noopener noreferrer";
 		} else {
 			return ""
@@ -57,7 +57,7 @@ const rel = computed({
 })
 const text = computed({
 	get: () => {
-		if (props.channelId != undefined || props.customLink != undefined || props.userId == undefined || props.handle == undefined) {
+		if (props.channelId != undefined || props.customLink != undefined || props.userId != undefined || props.handle != undefined) {
 			return "YouTube";
 		} else {
 			return "YouTube (リンク切れ)"
