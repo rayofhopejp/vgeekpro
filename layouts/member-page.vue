@@ -5,7 +5,7 @@
 			<div class="tw-relative tw-bg-gradient-to-b tw-from-stone-600 tw-from-60%">
 				<div class="tw-z-0 tw-absolute tw-top-40 xl:tw-top-28 tw-overflow-hidden tw-w-full">
 					<client-only>
-						<Vue3Marquee duration="50">
+						<Vue3Marquee :duration="50">
 							<span class="tw-select-none tw-z-0 tw-inline-block tw-font-bold tw-text-stone-500/75 tw-text-[50vw] xl:tw-text-[15vw]">
 								Vgeek Production
 							</span>
