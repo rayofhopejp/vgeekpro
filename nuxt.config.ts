@@ -19,4 +19,34 @@ export default defineNuxtConfig({
 		"bootstrap/dist/css/bootstrap.css",
 		"bootstrap-icons/font/bootstrap-icons.css",
 	],
+	i18n: {
+		defaultLocale: 'ja',
+		strategy: "prefix_except_default",
+		detectBrowserLanguage: {
+			useCookie: true,
+			redirectOn: "root",
+			fallbackLocale: 'ja',
+		},
+		langDir: "./locales",
+		locales: [
+			{
+				name: "JP",
+				code: "ja",
+				language: "ja-JP",
+				file: "ja.json"
+			},
+			{
+				name: "US",
+				code: "en-US",
+				language: "en-US",
+				file: "en-us.json"
+			},
+			{
+				name: "UK",
+				code: "en-GB",
+				language: "en-GB",
+				file: "en-gb.json"
+			},
+		]
+	}
 })

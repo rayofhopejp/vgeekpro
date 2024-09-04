@@ -33,9 +33,9 @@ useSeoMeta({
 				配信や交流を通して，つよつよな技術猫目指すにゃ～！
 			</ProfileHead>
 			<div class="tw-w-fit tw-flex tw-flex-col xl:tw-flex-row xl:tw-flex-wrap tw-justify-between tw-items-center tw-gap-4">
-				<XProfile userId="iris2664"/>
+				<XButtonLink screen-name="iris2664"/>
 				<YouTubeChannel handle="iris2664jp"/>
-				<OtherSiteLink href="https://vtuber.iris2664.com/">Website</OtherSiteLink>
+				<OtherSiteLink href="https://vtuber.iris2664.com/">東雲絢芽個人サイト</OtherSiteLink>
 			</div>
 		</section>
 		<section>

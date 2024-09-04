@@ -17,6 +17,7 @@ type TwitCastingStreamAttributes = {
 	 */
 	accountType: "CasAccount"|"XUser"|"Instagram"|"InstagramAlt"|"Facebook"|"Google"|"Unknown"
 	userId: string
+	useSimpleAnchor?: boolean,
 };
 
 const props = defineProps<TwitCastingStreamAttributes>();
@@ -42,7 +43,7 @@ const accountPrefix = computed({
 </script>
 
 <template>
-	<ButtonLinkBase :href="`https://www.twitcasting.tv/${accountPrefix}${props.userId}`" target="_blank" rel="noopener noreferrer">
-		ツイキャス
+	<ButtonLinkBase :href="`https://www.twitcasting.tv/${accountPrefix}${props.userId}`" :useSimpleAncher="props.useSimpleAnchor" rel="noopener noreferrer" target="_blank">
+		{{ $t("profileCommon.twitCastingLinkButton") }} {{ $t("profileCommon.linkButtonStream") }}
 	</ButtonLinkBase>
 </template>

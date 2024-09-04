@@ -145,6 +145,8 @@ const Units: Unit[] = [
 	},
 ];
 
+const {locale} = useI18n();
+
 const mailAddress = "naomi.lilienthal.jpn@gmail.com";
 
 const thisYear = toRef((new Date().getFullYear()))
@@ -152,6 +154,8 @@ const thisYear = toRef((new Date().getFullYear()))
 const mailModal = toRef(false);
 
 const showContributorsModal = toRef(false);
+
+let commandCheckerCount = 0;
 
 const konamiCommandPatterns = [
 	"arrowup",
@@ -170,6 +174,8 @@ if (import.meta.client) {
 	let keyBuffer: string[] = [];
 	let timerToken: int | undefined;
 	window.addEventListener("keydown", (event) => {
+		commandCheckerCount++;
+		const currentCommandCheckerCount = commandCheckerCount;
 		console.debug(event);
 		window.clearTimeout(timerToken);
 		switch (event.key.toLowerCase()) {
@@ -183,44 +189,51 @@ if (import.meta.client) {
 				break;
 		}
 		if (keyBuffer.length >= 10) {
-			console.debug("Checker Start: ", keyBuffer);
-			//↑↑↓↓←→←→BA
-			while (true) {
-				let startIndex = keyBuffer.indexOf("arrowup")
-				let checkBuffer = keyBuffer.slice(startIndex, keyBuffer.length);
-				console.debug("Checker Start Index: ", startIndex);
-				console.debug("Check Buffer: ", checkBuffer);
-				if (checkBuffer.length < 10) {
-					console.debug("Not Enough Check Buffer Length")
-					return
-				}
-				let pointer = 0;
-				let checkOk = false;
-				for (const checkValue of checkBuffer) {
-					if (checkValue != konamiCommandPatterns[pointer]) {
+			setTimeout(() => {
+				console.debug("Checker Start: ", keyBuffer);
+				//↑↑↓↓←→←→BA
+				let checkStarted = false;
+				while (true) {
+					if (commandCheckerCount != currentCommandCheckerCount) return;
+					let startIndex = keyBuffer.indexOf("arrowup", checkStarted ? 1 : 0)
+					let checkBuffer = keyBuffer.slice(startIndex, keyBuffer.length);
+					console.debug("Checker Start Index: ", startIndex);
+					console.debug("Check Buffer: ", checkBuffer);
+					if (checkBuffer.length < 10) {
+						console.debug("Not Enough Check Buffer Length")
+						return
+					}
+					let pointer = 0;
+					let checkOk = false;
+					for (const checkValue of checkBuffer) {
+						if (checkValue != konamiCommandPatterns[pointer]) {
+							break;
+						} else {
+							if (pointer == 9) checkOk = true;
+						}
+						pointer++;
+					}
+					if (checkOk) {
+						console.debug("Check OK");
+						showContributorsModal.value = true;
+						keyBuffer = [];
 						break;
 					} else {
-						if (pointer == 9) checkOk = true;
+						console.debug("Check Failed: ", checkBuffer)
 					}
-					pointer++;
+					keyBuffer = checkBuffer
+					checkStarted = true;
 				}
-				if (checkOk) {
-					console.debug("Check OK");
-					showContributorsModal.value = true;
-					break;
-				} else {
-					console.debug("Check Failed: ", checkBuffer)
-				}
-				keyBuffer = checkBuffer
-			}
+			}, 250)
 		}
 	})
 	window.addEventListener("keyup", () => {
+		window.clearTimeout(timerToken);
 		timerToken = window.setTimeout(() => {
+			if (keyBuffer.length >= 10) return;
 			console.debug("Clear Key");
 			keyBuffer = [];
-			timerToken = undefined;
-		}, 10 / 60 * 1000);
+		}, 15 / 60 * 1000);
 	})
 }
 
@@ -256,9 +269,9 @@ if (import.meta.client) {
 				<div class="tw-z-10 tw-relative tw-flex tw-flex-col xl:tw-flex-row tw-justify-center tw-items-center">
 					<section class="tw-px-10 xl:tw-px-14 tw-py-14 tw-text-base">
 						<section>
-							<SectionHeader title="About" description="ぶいぎーく！とは" titleColor="white" :isDark="true"/>
+							<SectionHeader :description="$t('topPage.aboutVgeekPro')" :isDark="true" title="About" titleColor="white"/>
 							<ProfileHead name="ぶいぎーく！" yomi="Vgeek Production" catchphrase="Reality meets Virtuality" :isDisableCatchphraseBrackets="true">
-								「ぶいぎーく！」は、IT 系 VTuber のグループです。
+								{{ $t('topPage.vgeekDescription') }}
 							</ProfileHead>
 						</section>
 					</section>
@@ -272,8 +285,7 @@ if (import.meta.client) {
 				<div class="tw-z-10 tw-relative tw-flex tw-flex-col xl:tw-flex-row tw-justify-center tw-items-center">
 					<section class="tw-px-10 xl:tw-px-14 tw-py-10 tw-text-base">
 						<section>
-							<SectionHeader title="Members" titleColor="black" description="ゆかいななかまたち"/>
-
+							<SectionHeader :description="$t('topPage.membersSubtitle')" title="Members" titleColor="black"/>
 							<div class="tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 md:tw-grid-cols-3 2xl:tw-grid-cols-4 tw-gap-20">
 								<MemberCard v-for="member in members" :key="member.profileId" :name="member.name" :yomi="member.yomi" :profileId="member.profileId" :imageId="member.imageId" :imageAlt="member.imageAlt" />
 							</div>
@@ -288,7 +300,7 @@ if (import.meta.client) {
 				<div class="tw-z-10 tw-relative tw-flex tw-flex-col xl:tw-flex-row tw-justify-center tw-items-center">
 					<section class="tw-px-10 xl:tw-px-14 tw-py-14 tw-text-base">
 						<section>
-							<SectionHeader title="Groups" description="なかよしな仲間たち" titleColor="white" :isDark="true"/>
+							<SectionHeader :description="$t('topPage.groupsSubtitle')" :isDark="true" title="Groups" titleColor="white"/>
 							<section>
 								<UnitInformation v-for="unit in Units" :key="unit.unitId" :unit-id="unit.unitId" :unit-name="unit.unitName" :unit-yomi="unit.unitYomi" :members="unit.members" :unit-image-alt="unit.unitImageAlt" :unit-image-id="unit.unitImageId"/>
 							</section>
@@ -301,17 +313,19 @@ if (import.meta.client) {
 		<section id="link" class="tw-w-full">
 			<div class="tw-relative tw-bg-stone-400">
 				<div class="tw-px-10 xl:tw-px-14 tw-py-14 tw-text-base">
-					<SectionHeader title="Link" description="IT系VTuberを探せ！" titleColor="stone-900"/>
+					<SectionHeader :description="$t('topPage.linkSubtitle')" title="Link" titleColor="stone-900"/>
 					<div class="tw-leading-loose tw-text-center">
 						<div class="tw-w-full tw-flex tw-flex-col xl:tw-flex-row xl:tw-flex-wrap tw-justify-between tw-items-center tw-gap-4">
 							<a class="tw-self-stretch tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4" href="https://x.com/vgeekproduction" target="_blank" rel="noopener noreferrer">
-								ぶいぎーく！公式の X (Twitter)
+								{{ $t('topPage.xLinkButton') }}
 							</a>
 							<a class="tw-self-stretch tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4" href="https://www.youtube.com/@usaneko_xlarge" target="_blank" rel="noopener noreferrer">
-								ぶいぎーく！公式およびうさねこらーじの YouTube
+								{{ $t('topPage.youTubeLinkButton') }}
 							</a>
 							<button @click.stop="mailModal = !mailModal" class="tw-self-stretch tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4">
-								<i class="bi bi-envelope tw-me-0.5" style="vertical-align: -.125em"></i>メール送信<i class="bi bi-box-arrow-up-right tw-ms-0.5" style="font-size: .5em; vertical-align: 1.2em"></i>
+								<i class="bi bi-envelope tw-me-0.5" style="vertical-align: -.125em"></i>
+								{{ $t('topPage.openMailModal') }}
+								<i class="bi bi-box-arrow-up-right tw-ms-0.5" style="font-size: .5em; vertical-align: 1.2em"></i>
 							</button>
 						</div>
 					</div>
@@ -319,11 +333,18 @@ if (import.meta.client) {
 			</div>
 		</section>
 
-		<section id="guideline" class="tw-w-full">
+		<section id="guideline" class="tw-w-full" lang="ja">
 			<div class="tw-relative tw-bg-stone-300 tw-text-stone-900">
 				<div class="tw-px-10 xl:tw-px-14 tw-py-14 tw-text-base">
-					<SectionHeader title="Guideline" description="ぶいぎーく！ ガイドライン"/>
+					<SectionHeader :description="$t('topPage.guidelineSubtitle')" title="Guideline"/>
 					<div class="tw-leading-loose xl:tw-max-w-screen-sm xl:tw-mx-auto">
+						<div v-if="locale != 'ja'" class="fs-5 tw-mb-12" lang="en">
+							The Guidelines are only valid in the original Japanese language.<br>
+							They can be read using translations if necessary,
+							but in some cases they may not be correct,
+							as the Japanese version takes precedence over any discrepancies
+							created by the translations.
+						</div>
 						<section>
 							<p class="tw-mb-6 tw-font-bold">ぶいぎーく！について</p>
 							<p class="tw-mb-12">
@@ -362,16 +383,16 @@ if (import.meta.client) {
 				</div>
 			</div>
 		</section>
-		<BModal v-model="mailModal" title="メールを送信" title-class="fs-5 tw-text-stone-900" :ok-only="true">
+		<BModal v-model="mailModal" :ok-only="true" :title="$t('topPage.mailModalTitle')" title-class="fs-5 tw-text-stone-900">
 			<div class="tw-flex tw-flex-col">
 				<a class="tw-self-stretch tw-my-2 tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4" :href="`mailto:${mailAddress}`" target="_blank" rel="noopener noreferrer">
-					メールアプリを開く
+					{{ $t('topPage.openMailApp') }}
 				</a>
 				<a class="tw-self-stretch tw-my-2 tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4" :href="`https://mail.google.com/mail/?extsrc=mailto&url=mailto:${mailAddress}`" target="_blank" rel="noopener noreferrer">
-					Gmailを開く
+					{{ $t('topPage.openGmail') }}
 				</a>
 				<a class="tw-self-stretch tw-my-2 tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4" :href="`https://mail.yahoo.co.jp/compose/?To=mailto:${mailAddress}`" target="_blank" rel="noopener noreferrer">
-					Yahoo! メールを開く
+					{{ $t('topPage.openYahooJapanMail') }}
 				</a>
 			</div>
 		</BModal>
@@ -405,6 +426,15 @@ if (import.meta.client) {
 									<li class="list-group-item">リファクタリング</li>
 								</ul>
 							</li>
+							<li class="list-group-item">
+								<span class="fs-4">Special Thanks</span>
+								<ul class="list-group">
+									<li class="list-group-item list-group-item-info">テストや応援などを行ってくださる</li>
+									<li class="list-group-item">各配信者のファンの皆様</li>
+									<li class="list-group-item">ふとした時に流れてきたVTuberリスナーの皆様</li>
+									<li class="list-group-item">このサイトや各チャンネル・ストリームにアクセスした皆様</li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -412,6 +442,11 @@ if (import.meta.client) {
 		</client-only>
 	</main>
 	<footer class="tw-my-16 tw-footer tw-text-base tw-text-center">
-		<client-only>Copyright &copy; 2023, {{ thisYear }} Usaneko Large</client-only>
+		<a class="tw-inline xl:tw-hidden" @click.stop="showContributorsModal = true">
+			<client-only>Copyright &copy; 2023, {{ thisYear }} Usaneko Large</client-only>
+		</a>
+		<a class="tw-hidden xl:tw-inline">
+			<client-only>Copyright &copy; 2023, {{ thisYear }} Usaneko Large</client-only>
+		</a>
 	</footer>
 </template>

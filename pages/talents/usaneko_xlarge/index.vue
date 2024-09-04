@@ -31,7 +31,7 @@ useSeoMeta({
 				配信をつうじて様々な経験をして、みなさんと一緒に成長していきます！
 			</ProfileHead>
 			<div class="tw-w-fit tw-flex tw-flex-col xl:tw-flex-row xl:tw-flex-wrap tw-justify-between tw-items-center tw-gap-4">
-				<XProfile userId="usaneko_xlarge"/>
+				<XButtonLink screen-name="usaneko_xlarge"/>
 				<YouTubeChannel handle="usaneko_xlarge"/>
 			</div>
 		</section>

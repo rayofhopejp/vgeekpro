@@ -18,6 +18,7 @@ type YouTubeChannelAttributes = ({
 	 * 従来のユーザーIDです。`/user/`以降のことを指します。
 	 */
 	userId?: string
+	useSimpleAnchor?: boolean,
 });
 
 const props = defineProps<YouTubeChannelAttributes>();
@@ -58,16 +59,16 @@ const rel = computed({
 const text = computed({
 	get: () => {
 		if (props.channelId != undefined || props.customLink != undefined || props.userId != undefined || props.handle != undefined) {
-			return "YouTube";
+			return "profileCommon.youTubeLinkButton";
 		} else {
-			return "YouTube (リンク切れ)"
+			return "profileCommon.unknownYouTubeLinkButton";
 		}
 	}
 })
 </script>
 
 <template>
-	<ButtonLinkBase :href="href" :target="target" :rel="rel">
-		{{ text }}
+	<ButtonLinkBase :href="href" :rel="rel" :target="target" :useSimpleAncher="props.useSimpleAnchor">
+		{{ $t(text) }}
 	</ButtonLinkBase>
 </template>

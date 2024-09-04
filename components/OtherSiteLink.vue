@@ -3,13 +3,14 @@ import ButtonLinkBase from "~/components/ButtonLinkBase.vue";
 
 type OtherSiteLinkAttributes = {
 	href: string
+	useSimpleAnchor?: boolean,
 };
 
 const props = defineProps<OtherSiteLinkAttributes>();
 </script>
 
 <template>
-	<ButtonLinkBase :href="props.href" target="_blank" rel="noopener noreferrer">
+	<ButtonLinkBase :href="props.href" :useSimpleAncher="props.useSimpleAnchor" rel="noopener noreferrer" target="_blank">
 		<slot />
 	</ButtonLinkBase>
 </template>

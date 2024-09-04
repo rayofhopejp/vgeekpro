@@ -36,7 +36,7 @@ useSeoMeta({
 				あいノセカイというRPGゲームの制作に関わっている。
 			</ProfileHead>
 			<div class="tw-w-fit tw-flex tw-flex-col xl:tw-flex-row xl:tw-flex-wrap tw-justify-between tw-items-center tw-gap-4">
-				<XProfile userId="setsuna_hope"/>
+				<XButtonLink screen-name="setsuna_hope"/>
 				<YouTubeChannel handle="setsunayumemukai3989"/>
 			</div>
 		</section>

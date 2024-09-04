@@ -28,8 +28,13 @@ useSeoMeta({
 				プロフィール
 			</ProfileHead>
 			<div class="tw-w-fit tw-flex tw-flex-col xl:tw-flex-row xl:tw-flex-wrap tw-justify-between tw-items-center tw-gap-4">
-				<XProfile userId=""/>
+				<XButtonLink screen-name=""/>
 				<YouTubeChannel handle=""/>
+				<TwitchStream user-id=""/>
+				<TwitCastingStream user-id=""/>
+				<GitHubProfile user-id=""/>
+				<OtherSiteLink href=""/>
+				<VRoidHubLink user-id=""/>
 			</div>
 		</section>
 		<section>

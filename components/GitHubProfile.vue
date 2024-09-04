@@ -2,14 +2,15 @@
 import ButtonLinkBase from "~/components/ButtonLinkBase.vue";
 
 type GitHubProfileAttributes = {
-	userId: string
+	userId: string,
+	useSimpleAnchor?: boolean,
 };
 
 const props = defineProps<GitHubProfileAttributes>();
 </script>
 
 <template>
-	<ButtonLinkBase :href="`https://github.com/${props.userId}`" target="_blank" rel="noopener noreferrer">
-		GitHub
+	<ButtonLinkBase :href="`https://github.com/${props.userId}`" :useSimpleAncher="props.useSimpleAnchor" rel="noopener noreferrer" target="_blank">
+		{{ $t("profileCommon.gitHubLinkButton") }} {{ $t("profileCommon.linkButtonUser") }}
 	</ButtonLinkBase>
 </template>

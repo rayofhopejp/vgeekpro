@@ -30,7 +30,7 @@ useSeoMeta({
 				とはいえ普段は仕事に追われて倒れているか時間融解ゲームにのめり込んでいることが多い｡配信や動画投稿していたら褒めてあげよう｡
 			</ProfileHead>
 			<div class="tw-w-fit tw-flex tw-flex-col xl:tw-flex-row xl:tw-flex-wrap tw-justify-between tw-items-center tw-gap-4">
-				<XProfile userId="TsukusuLina"/>
+				<XButtonLink screen-name="TsukusuLina"/>
 				<YouTubeChannel handle="linatsukusu"/>
 				<TwitchStream userId="tsukusulina"/>
 				<GitHubProfile userId="neverclear86"/>
@@ -56,7 +56,7 @@ useSeoMeta({
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">モデル詳細</td>
 						<td class="tw-pb-4 tw-align-top">
-							<a href="https://hub.vroid.com/characters/3916633358793880827/models/6775955148744018672" target="_blank" rel="noopener noreferrer">詳細</a>
+							<a href="https://hub.vroid.com/characters/3916633358793880827/models/6775955148744018672" rel="noopener noreferrer" target="_blank">{{ $t("profileCommon.vRoidHubLinkButton") }}</a>
 						</td>
 					</tr>
 					</tbody>

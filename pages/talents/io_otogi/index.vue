@@ -31,7 +31,7 @@ useSeoMeta({
 				企業と個人と現実の間、放置系Vtuberグループ【Kaleido Tale】(カレイドテイル) にて活動中！
 			</ProfileHead>
 			<div class="tw-w-fit tw-flex tw-flex-col xl:tw-flex-row xl:tw-flex-wrap tw-justify-between tw-items-center tw-gap-4">
-				<XProfile userId="IoOtogi"/>
+				<XButtonLink screen-name="IoOtogi"/>
 				<YouTubeChannel handle="IoOtogi"/>
 			</div>
 		</section>

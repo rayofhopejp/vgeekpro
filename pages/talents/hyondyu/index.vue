@@ -30,7 +30,7 @@ useSeoMeta({
 				プログラミングの技術だけでなく、ゲームやタロット、TRPGの話題もお楽しみください！チャンネル登録して、一緒に楽しい時間を過ごしましょう。質問やリクエストがあれば、コメントで気軽に教えてくださいね！<br/>
 			</ProfileHead>
 			<div class="tw-w-fit tw-flex tw-flex-col xl:tw-flex-row xl:tw-flex-wrap tw-justify-between tw-items-center tw-gap-4">
-				<XProfile userId="if__hyondyu__"/>
+				<XButtonLink screen-name="if__hyondyu__"/>
 				<YouTubeChannel handle="ひょんぢゅ"/>
 			</div>
 		</section>
