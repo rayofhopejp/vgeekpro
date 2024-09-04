@@ -108,6 +108,6 @@ const linkType = computed(() => {
 
 <template>
 	<ButtonLinkBase :href="`https://x.com/${link}`" :useSimpleAncher="props.useSimpleAnchor" rel="noopener noreferrer" target="_blank">
-		{{ $t("profileCommon.xLinkButton") }} {{ $(linkType) }}
+		{{ $t("profileCommon.xLinkButton") }} {{ $t(linkType) }}
 	</ButtonLinkBase>
 </template>
