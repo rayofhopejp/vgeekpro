@@ -33,7 +33,7 @@ useSeoMeta({
 			<div class="tw-w-fit tw-flex tw-flex-col xl:tw-flex-row xl:tw-flex-wrap tw-justify-between tw-items-center tw-gap-4">
 				<XButtonLink screen-name="iris2664"/>
 				<YouTubeChannel handle="iris2664jp"/>
-				<a href="https://vtuber.iris2664.com/" target="_blank" rel="noopener noreferrer">東雲絢芽個人サイト</a>
+				<OtherSiteLink href="https://vtuber.iris2664.com/">東雲絢芽個人サイト</OtherSiteLink>
 			</div>
 		</section>
 		<section>
