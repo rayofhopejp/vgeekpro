@@ -1,0 +1,33 @@
+name: Build Static Files
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        name: Checkout
+        with:
+          path: vgeekpro
+      - uses: actions/setup-node@v4
+        name: Install Node
+        with:
+          node-version: latest
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          run_install: false
+      - name: Install Packages
+        run: |
+          cd $GITHUB_WORKSPACE/vgeekpro
+          pnpm install --frozen-lockfile --color
+      - name: Build Static Files
+        run: |
+          cd $GITHUB_WORKSPACE/vgeekpro
+          pnpm generate
+      - name: Publish
+        uses: actions/upload-artifact@v4
+        with:
+          path: $GITHUB_WORKSPACE/vgeekpro/.output/public/
+          name: Output
