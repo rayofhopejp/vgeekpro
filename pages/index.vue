@@ -134,6 +134,8 @@ const mailModal = toRef(false);
 
 const showContributorsModal = toRef(false);
 
+let commandCheckerCount = 0;
+
 const konamiCommandPatterns = [
 	"arrowup",
 	"arrowup",
@@ -151,6 +153,8 @@ if (import.meta.client) {
 	let keyBuffer: string[] = [];
 	let timerToken: int | undefined;
 	window.addEventListener("keydown", (event) => {
+		commandCheckerCount++;
+		const currentCommandCheckerCount = commandCheckerCount;
 		console.debug(event);
 		window.clearTimeout(timerToken);
 		switch (event.key.toLowerCase()) {
@@ -164,44 +168,51 @@ if (import.meta.client) {
 				break;
 		}
 		if (keyBuffer.length >= 10) {
-			console.debug("Checker Start: ", keyBuffer);
-			//↑↑↓↓←→←→BA
-			while (true) {
-				let startIndex = keyBuffer.indexOf("arrowup")
-				let checkBuffer = keyBuffer.slice(startIndex, keyBuffer.length);
-				console.debug("Checker Start Index: ", startIndex);
-				console.debug("Check Buffer: ", checkBuffer);
-				if (checkBuffer.length < 10) {
-					console.debug("Not Enough Check Buffer Length")
-					return
-				}
-				let pointer = 0;
-				let checkOk = false;
-				for (const checkValue of checkBuffer) {
-					if (checkValue != konamiCommandPatterns[pointer]) {
+			setTimeout(() => {
+				console.debug("Checker Start: ", keyBuffer);
+				//↑↑↓↓←→←→BA
+				let checkStarted = false;
+				while (true) {
+					if (commandCheckerCount != currentCommandCheckerCount) return;
+					let startIndex = keyBuffer.indexOf("arrowup", checkStarted ? 1 : 0)
+					let checkBuffer = keyBuffer.slice(startIndex, keyBuffer.length);
+					console.debug("Checker Start Index: ", startIndex);
+					console.debug("Check Buffer: ", checkBuffer);
+					if (checkBuffer.length < 10) {
+						console.debug("Not Enough Check Buffer Length")
+						return
+					}
+					let pointer = 0;
+					let checkOk = false;
+					for (const checkValue of checkBuffer) {
+						if (checkValue != konamiCommandPatterns[pointer]) {
+							break;
+						} else {
+							if (pointer == 9) checkOk = true;
+						}
+						pointer++;
+					}
+					if (checkOk) {
+						console.debug("Check OK");
+						showContributorsModal.value = true;
+						keyBuffer = [];
 						break;
 					} else {
-						if (pointer == 9) checkOk = true;
+						console.debug("Check Failed: ", checkBuffer)
 					}
-					pointer++;
+					keyBuffer = checkBuffer
+					checkStarted = true;
 				}
-				if (checkOk) {
-					console.debug("Check OK");
-					showContributorsModal.value = true;
-					break;
-				} else {
-					console.debug("Check Failed: ", checkBuffer)
-				}
-				keyBuffer = checkBuffer
-			}
+			}, 250)
 		}
 	})
 	window.addEventListener("keyup", () => {
+		window.clearTimeout(timerToken);
 		timerToken = window.setTimeout(() => {
+			if (keyBuffer.length >= 10) return;
 			console.debug("Clear Key");
 			keyBuffer = [];
-			timerToken = undefined;
-		}, 10 / 60 * 1000);
+		}, 15 / 60 * 1000);
 	})
 }
 
@@ -393,6 +404,15 @@ if (import.meta.client) {
 									<li class="list-group-item">リファクタリング</li>
 								</ul>
 							</li>
+							<li class="list-group-item">
+								<span class="fs-4">Special Thanks</span>
+								<ul class="list-group">
+									<li class="list-group-item list-group-item-info">テストや応援などを行ってくださる</li>
+									<li class="list-group-item">各配信者のファンの皆様</li>
+									<li class="list-group-item">ふとした時に流れてきたVTuberリスナーの皆様</li>
+									<li class="list-group-item">このサイトや各チャンネル・ストリームにアクセスした皆様</li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -400,6 +420,11 @@ if (import.meta.client) {
 		</client-only>
 	</main>
 	<footer class="tw-my-16 tw-footer tw-text-base tw-text-center">
-		<client-only>Copyright &copy; 2023, {{ thisYear }} Usaneko Large</client-only>
+		<a class="tw-inline xl:tw-hidden" @click.stop="showContributorsModal = true">
+			<client-only>Copyright &copy; 2023, {{ thisYear }} Usaneko Large</client-only>
+		</a>
+		<a class="tw-hidden xl:tw-inline">
+			<client-only>Copyright &copy; 2023, {{ thisYear }} Usaneko Large</client-only>
+		</a>
 	</footer>
 </template>

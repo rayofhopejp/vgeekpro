@@ -4,22 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ea76109-579f-4c40-9a56-4698e287f93d" name="変更" comment="pnpm 9.9.0を優先使用に設定しました">
-      <change afterPath="$PROJECT_DIR$/locales/en-gb.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/locales/en-us.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/locales/ja.json" afterDir="false" />
+    <list default="true" id="8ea76109-579f-4c40-9a56-4698e287f93d" name="変更" comment="リンクボタンの機能を追加">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CommonlyHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/CommonlyHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/GitHubProfile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/GitHubProfile.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MemberCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/MemberCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProfileHead.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProfileHead.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/TwitCastingStream.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/TwitCastingStream.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/TwitchStream.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/TwitchStream.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/UnitInformation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/UnitInformation.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/XProfile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/XProfile.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/YouTubeChannel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/YouTubeChannel.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/XProfile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/VRoidHubLink.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en-gb.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en-gb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en-us.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en-us.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/ja.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ja.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/talents/hyondyu/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talents/hyondyu/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/talents/io_otogi/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talents/io_otogi/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/talents/iris2664/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talents/iris2664/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/talents/kohinata_gaku/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talents/kohinata_gaku/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/talents/lina_tsukusu/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talents/lina_tsukusu/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/talents/maskaple/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talents/maskaple/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/talents/setsuna/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talents/setsuna/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/talents/shiisharp/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talents/shiisharp/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/talents/usaneko_xlarge/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talents/usaneko_xlarge/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/talents/yuniru_yuni/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talents/yuniru_yuni/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +37,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="nuxt-i18n" />
+        <entry key="$PROJECT_DIR$" value="0aac587b46c4fe161f7e38720bdd9b98b129e9e5" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -69,13 +70,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "nuxt-i18n",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/koris/WebstormProjects/vgeekpro/locales",
+    "last_opened_file_path": "C:/Users/koris/WebstormProjects/vgeekpro/components",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "pnpm",
     "npm.dev.executor": "Debug",
     "npm.generate.executor": "Run",
+    "settings.editor.selected.configurable": "vcs.Git",
     "ts.external.directory.path": "C:\\Users\\koris\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   },
@@ -87,9 +89,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\koris\WebstormProjects\vgeekpro\components" />
       <recent name="C:\Users\koris\WebstormProjects\vgeekpro\locales" />
       <recent name="C:\Users\koris\WebstormProjects\vgeekpro\public\images\units" />
-      <recent name="C:\Users\koris\WebstormProjects\vgeekpro\components" />
       <recent name="C:\Users\koris\WebstormProjects\vgeekpro\pages\talents" />
       <recent name="C:\Users\koris\WebstormProjects\vgeekpro" />
     </key>
@@ -152,7 +154,8 @@
       <option name="presentableId" value="Default" />
       <updated>1725322255628</updated>
       <workItem from="1725322256720" duration="10585000" />
-      <workItem from="1725378046511" duration="7974000" />
+      <workItem from="1725378046511" duration="8276000" />
+      <workItem from="1725449698934" duration="13453000" />
     </task>
     <task id="LOCAL-00002" summary="東雲絢芽氏のビジュメンテナンスに対応しました">
       <option name="closed" value="true" />
@@ -250,7 +253,63 @@
       <option name="project" value="LOCAL" />
       <updated>1725378465064</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="i18n第一弾として、要所の翻訳を行いました。">
+      <option name="closed" value="true" />
+      <created>1725386307623</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1725386307623</updated>
+    </task>
+    <task id="LOCAL-00015" summary="ボタンベースを修正しました">
+      <option name="closed" value="true" />
+      <created>1725452454567</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1725452454567</updated>
+    </task>
+    <task id="LOCAL-00016" summary="GitHubボタンに追加機能を付けました。">
+      <option name="closed" value="true" />
+      <created>1725452477231</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1725452477231</updated>
+    </task>
+    <task id="LOCAL-00017" summary="変更途中にコミットしてしまいました。ボタン機能追加単独では壊れます">
+      <option name="closed" value="true" />
+      <created>1725453178727</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1725453178727</updated>
+    </task>
+    <task id="LOCAL-00018" summary="翻訳の文言を追加">
+      <option name="closed" value="true" />
+      <created>1725457081478</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1725457081478</updated>
+    </task>
+    <task id="LOCAL-00019" summary="リンクボタンのシンプル化に対応">
+      <option name="closed" value="true" />
+      <created>1725457108379</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1725457108379</updated>
+    </task>
+    <task id="LOCAL-00020" summary="リンクボタンの機能を追加">
+      <option name="closed" value="true" />
+      <created>1725463276244</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1725463276244</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +342,14 @@
     <MESSAGE value="動的生成されるために、正常にOpenGraphが取得出来ない問題を解決しました。" />
     <MESSAGE value="robots.txtを一部修正しました。" />
     <MESSAGE value="pnpm 9.9.0を優先使用に設定しました" />
-    <option name="LAST_COMMIT_MESSAGE" value="pnpm 9.9.0を優先使用に設定しました" />
+    <MESSAGE value="i18n第一弾として、要所の翻訳を行いました。" />
+    <MESSAGE value="ボタンベースを修正しました" />
+    <MESSAGE value="GitHubボタンに追加機能を付けました。" />
+    <MESSAGE value="変更途中にコミットしてしまいました。ボタン機能追加単独では壊れます" />
+    <MESSAGE value="翻訳の文言を追加" />
+    <MESSAGE value="リンクボタンのシンプル化に対応" />
+    <MESSAGE value="リンクボタンの機能を追加" />
+    <option name="LAST_COMMIT_MESSAGE" value="リンクボタンの機能を追加" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

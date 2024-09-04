@@ -32,7 +32,7 @@ useSeoMeta({
 				裏方の飼い主さんは、情報処理安全確保支援士の資格持ち。
 			</ProfileHead>
 			<div class="tw-w-fit tw-flex tw-flex-col xl:tw-flex-row xl:tw-flex-wrap tw-justify-between tw-items-center tw-gap-4">
-				<XProfile userId="maskaple"/>
+				<XButtonLink screen-name="maskaple"/>
 				<YouTubeChannel handle="maskaple"/>
 			</div>
 		</section>

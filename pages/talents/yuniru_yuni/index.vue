@@ -35,7 +35,7 @@ useSeoMeta({
 				興味に従って新技術を学んだり数学書を読んだり、歌やピアノなどのやったことのない新しいスキルを身に着ける挑戦をしたりします✨
 			</ProfileHead>
 			<div class="tw-w-fit tw-flex tw-flex-col xl:tw-flex-row xl:tw-flex-wrap tw-justify-between tw-items-center tw-gap-4">
-				<XProfile userId="yuniruyuni"/>
+				<XButtonLink screen-name="yuniruyuni"/>
 				<TwitchStream userId="yuniruyuni"/>
 				<OtherSiteLink href="http://yuniruyuni.net/">
 					Website
