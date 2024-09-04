@@ -104,6 +104,13 @@ const members: Member[] = [
 		imageId: "nagi_nagisa",
 		imageAlt: "Nagi Nagisa",
 	},
+	{
+		name: "坂道輪",
+		yomi: "Rin Sakamichi",
+		profileId: "rin_sakamichi",
+		imageId: "rin_sakamichi",
+		imageAlt: "rin_sakamichi",
+	},
 ];
 
 type Unit = {
