@@ -26,6 +26,7 @@ jobs:
       - name: Build Static Files
         run: |
           cd ${{ github.workspace }}/vgeekpro
+          rm -R ${{ github.workspace }}/vgeekpro/.output
           pnpm generate
           cp -R ${{ github.workspace }}/vgeekpro/.output/public/ ${{ github.workspace }}/static
       - name: Static Publish
@@ -37,6 +38,7 @@ jobs:
       - name: Build Nitro Files
         run: |
           cd ${{ github.workspace }}/vgeekpro
+          rm -R ${{ github.workspace }}/vgeekpro/.output
           pnpm build
           cp -R ${{ github.workspace }}/vgeekpro/.output/ ${{ github.workspace }}/nitro
       - name: Nitro Publish
