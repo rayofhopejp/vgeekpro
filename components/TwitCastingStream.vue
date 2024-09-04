@@ -44,6 +44,6 @@ const accountPrefix = computed({
 
 <template>
 	<ButtonLinkBase :href="`https://www.twitcasting.tv/${accountPrefix}${props.userId}`" :useSimpleAncher="props.useSimpleAnchor" rel="noopener noreferrer" target="_blank">
-		{{ $t("profileCommon.twitCastingLinkButton") }}
+		{{ $t("profileCommon.twitCastingLinkButton") }} {{ $t("profileCommon.linkButtonStream") }}
 	</ButtonLinkBase>
 </template>
