@@ -5,20 +5,24 @@ definePageMeta({
 const name = "ひょんぢゅ";
 const yomi = "Hyondyu";
 const description = "コンパイラが通らない！デバッグ神社を立てろ！";
+const imageId = "hyondyu";
 useSeoMeta({
 	title: name,
 	description,
 	ogType: "profile",
 	ogTitle: name,
 	ogDescription: description,
-	profileUsername: name
+	ogImageUrl: `https://vgeekpro.com/images/members/${imageId}/upper_body.webp`,
+	profileUsername: name,
+	twitterCard: "summary",
+	twitterSite: "@vgeekproduction",
 })
 </script>
 
 <template>
 	<aside class="tw-self-start tw-text-center tw-w-full xl:tw-w-auto">
 		<FullBodyImage
-			memberId="hyondyu"
+			:memberId="imageId"
 			:alt="yomi"
 		/>
 	</aside>

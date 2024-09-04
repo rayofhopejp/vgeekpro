@@ -5,20 +5,24 @@ definePageMeta({
 const name = "坂道輪";
 const yomi = "Rin Sakamichi";
 const description = "データ構造とアルゴリズム、そして天才貪欲を届けたい！";
+const imageId = "rin_sakamichi";
 useSeoMeta({
 	title: name,
 	description,
 	ogType: "profile",
 	ogTitle: name,
 	ogDescription: description,
-	profileUsername: name
+	ogImageUrl: `https://vgeekpro.com/images/members/${imageId}/upper_body.webp`,
+	profileUsername: name,
+	twitterCard: "summary",
+	twitterSite: "@vgeekproduction",
 })
 </script>
 
 <template>
 	<aside class="tw-self-start tw-text-center tw-w-full xl:tw-w-auto">
 		<FullBodyImage
-			memberId="rin_sakamichi"
+			:memberId="imageId"
 			:alt="yomi"
 		/>
 	</aside>
@@ -31,7 +35,7 @@ useSeoMeta({
 				プログラミングとロードバイクの二刀流で、文武両道・才色兼備を目指して、視聴者と一緒に精進していきます。
 			</ProfileHead>
 			<div class="tw-w-fit tw-flex tw-flex-col xl:tw-flex-row xl:tw-flex-wrap tw-justify-between tw-items-center tw-gap-4">
-				<XProfile userId="RinSakamichi"/>
+				<XButtonLink screen-name="RinSakamichi"/>
 				<YouTubeChannel handle="RinSakamichi"/>
 				<OtherSiteLink href="https://rinsakamichi.github.io/">
 					Website

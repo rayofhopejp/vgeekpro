@@ -5,24 +5,28 @@ definePageMeta({
 const name = "夢向せつな";
 const yomi = "Yumemukai Setsuna";
 const description = "いつから仕様書と実体が同じだと錯覚したんですか？";
+const imageId = "yumemukai_setsuna";
 useSeoMeta({
 	title: name,
 	description,
 	ogType: "profile",
 	ogTitle: name,
 	ogDescription: description,
-	profileUsername: name
+	ogImageUrl: `https://vgeekpro.com/images/members/${imageId}/upper_body.webp`,
+	profileUsername: name,
+	twitterCard: "summary",
+	twitterSite: "@vgeekproduction",
 })
 </script>
 
 <template>
 	<aside class="tw-self-start tw-text-center tw-w-full xl:tw-w-auto">
 		<FullBodyImage
-			memberId="yumemukai_setsuna"
+			:memberId="imageId"
 			:alt="yomi"
 		/>
 		<FullBodyImage
-			memberId="yumemukai_setsuna"
+			:memberId="imageId"
 			:alt="yomi"
 			variation="2"
 		/>
