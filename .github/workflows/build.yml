@@ -26,9 +26,9 @@ jobs:
       - name: Build Static Files
         run: |
           cd ${{ github.workspace }}/vgeekpro
-          rm -R ${{ github.workspace }}/vgeekpro/.output
           pnpm generate
           cp -R ${{ github.workspace }}/vgeekpro/.output/public/ ${{ github.workspace }}/static
+          rm -R ${{ github.workspace }}/vgeekpro/.output
       - name: Static Publish
         uses: actions/upload-artifact@v4
         with:
@@ -38,9 +38,9 @@ jobs:
       - name: Build Nitro Files
         run: |
           cd ${{ github.workspace }}/vgeekpro
-          rm -R ${{ github.workspace }}/vgeekpro/.output
           pnpm build
           cp -R ${{ github.workspace }}/vgeekpro/.output/ ${{ github.workspace }}/nitro
+          rm -R ${{ github.workspace }}/vgeekpro/.output
       - name: Nitro Publish
         uses: actions/upload-artifact@v4
         with:
