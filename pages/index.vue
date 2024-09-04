@@ -83,6 +83,13 @@ const members: Member[] = [
 		imageId: "io_otogi",
 		imageAlt: "IO Otogi",
 	},
+	{
+		name: "創好リナ",
+		yomi: "Lina Tsukusu",
+		profileId: "lina_tsukusu",
+		imageId: "lina_tsukusu",
+		imageAlt: "Lina Tsukusu",
+	},
 ];
 
 type Unit = {
@@ -277,7 +284,7 @@ if (import.meta.client) {
 					<SectionHeader :description="$t('topPage.linkSubtitle')" title="Link" titleColor="stone-900"/>
 					<div class="tw-leading-loose tw-text-center">
 						<div class="tw-w-full tw-flex tw-flex-col xl:tw-flex-row xl:tw-flex-wrap tw-justify-between tw-items-center tw-gap-4">
-							<a class="tw-self-stretch tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4" href="https://x.com/usaneko_xlarge" target="_blank" rel="noopener noreferrer">
+							<a class="tw-self-stretch tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4" href="https://x.com/vgeekproduction" target="_blank" rel="noopener noreferrer">
 								{{ $t('topPage.xLinkButton') }}
 							</a>
 							<a class="tw-self-stretch tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4" href="https://www.youtube.com/@usaneko_xlarge" target="_blank" rel="noopener noreferrer">
