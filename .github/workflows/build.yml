@@ -1,4 +1,4 @@
-name: Build Static Files
+name: Build
 
 on: workflow_dispatch
 
@@ -27,8 +27,21 @@ jobs:
         run: |
           cd ${{ github.workspace }}/vgeekpro
           pnpm generate
-      - name: Publish
+          cp -R ${{ github.workspace }}/vgeekpro/.output/public/ ${{ github.workspace }}/static
+      - name: Static Publish
         uses: actions/upload-artifact@v4
         with:
-          path: ${{ github.workspace }}/vgeekpro/.output/public/
-          name: Output
+          path: ${{ github.workspace }}/static
+          name: VGeek Static
+          compression-level: 9
+      - name: Build Nitro Files
+        run: |
+          cd ${{ github.workspace }}/vgeekpro
+          pnpm build
+          cp -R ${{ github.workspace }}/vgeekpro/.output/ ${{ github.workspace }}/nitro
+      - name: Nitro Publish
+        uses: actions/upload-artifact@v4
+        with:
+          path: ${{ github.workspace }}/nitro
+          name: VGeek Nitro
+          compression-level: 9
