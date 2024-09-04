@@ -1,0 +1,111 @@
+@import "./fonts.less";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes tracking-in-contract {
+	0% {
+		letter-spacing: 1em;
+		opacity: 0;
+	}
+	40% {
+		opacity: .6;
+	}
+	to {
+		letter-spacing: normal;
+		opacity: 1;
+	}
+}
+
+.tracking-in-contract {
+	animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.bg-maze {
+	background-image: url("../public/images/background-maze.png");
+	background-size: cover;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+}
+
+.sample-slider .swiper-wrapper {
+	transition-timing-function: linear;
+}
+
+.font-slogan {
+	font-family: "SourceHanSerif", serif;
+}
+
+.gradient-radial {
+	background-image: radial-gradient(var(--tw-gradient-stops));
+}
+
+.gradient-conic {
+	background-image: conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops));
+}
+
+/**
+ここから下のマーカーまでのコードは崎津 祥汰によって開発されています。
+*/
+a[href]:not(.disable-link-icons) {
+	&[target="_blank" i][href^="//" i]::after,
+	&[target="_blank" i][href^="http://" i]::after,
+	&[target="_blank" i][href^="https://" i]::after {
+		/* 外部リンクを示すアイコンの表示 */
+		margin-left: .25em;
+		content: "\F1C5";
+		display: inline-block;
+		vertical-align: 1.25em;
+		font-size: .5em;
+		font-family: bootstrap-icons !important;
+	}
+
+	&::before {
+		display: inline-block;
+		margin-right: .25em;
+		font-family: bootstrap-icons !important;
+		vertical-align: -.125em;
+		font-size: 1em;
+	}
+
+	/* メールリンクの識別アイコン */
+
+	&[href^="mailto:" i]::before {
+		content: "\F32F";
+	}
+
+	/* YouTubeのリンク識別アイコン */
+
+	&[href^="https://youtube.com/" i]::before,
+	&[href^="https://www.youtube.com/" i]::before {
+		content: "\F62B";
+	}
+
+	/* Twitchのリンク識別アイコン */
+
+	&[href^="https://twitch.tv/" i]::before,
+	&[href^="https://www.twitch.tv/" i]::before {
+		content: "\F5EE";
+	}
+
+	/* GitHubのリンク識別アイコン */
+
+	&[href^="https://github.com/" i]::before,
+	&[href^="https://www.github.com/" i]::before {
+		content: "\F3ED";
+	}
+
+	/* Xのリンク識別アイコン */
+
+	&[href^="https://twitter.com/" i]::before,
+	&[href^="https://www.twitter.com/" i]::before,
+	&[href^="https://mobile.twitter.com/" i]::before,
+	&[href^="https://x.com/" i]::before,
+	&[href^="https://www.x.com/" i]::before,
+	&[href^="https://mobile.x.com/" i]::before {
+		content: "\F8DB";
+	}
+}
+
+/** ここまでは崎津 祥汰が開発 */
