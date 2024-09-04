@@ -18,6 +18,7 @@ jobs:
         name: Install pnpm
         with:
           run_install: false
+          package_json_file: '$GITHUB_WORKSPACE/vgeekpro/package.json'
       - name: Install Packages
         run: |
           cd $GITHUB_WORKSPACE/vgeekpro
