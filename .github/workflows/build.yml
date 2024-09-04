@@ -21,14 +21,14 @@ jobs:
           version: latest
       - name: Install Packages
         run: |
-          cd $GITHUB_WORKSPACE/vgeekpro
+          cd ${{ github.workspace }}/vgeekpro
           pnpm install --frozen-lockfile --color
       - name: Build Static Files
         run: |
-          cd $GITHUB_WORKSPACE/vgeekpro
+          cd ${{ github.workspace }}/vgeekpro
           pnpm generate
       - name: Publish
         uses: actions/upload-artifact@v4
         with:
-          path: $GITHUB_WORKSPACE/vgeekpro/.output/public/
+          path: ${{ github.workspace }}/vgeekpro/.output/public/
           name: Output
