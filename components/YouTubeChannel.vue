@@ -18,6 +18,7 @@ type YouTubeChannelAttributes = ({
 	 * 従来のユーザーIDです。`/user/`以降のことを指します。
 	 */
 	userId?: string
+	useSimpleAnchor?: boolean,
 });
 
 const props = defineProps<YouTubeChannelAttributes>();
@@ -67,7 +68,7 @@ const text = computed({
 </script>
 
 <template>
-	<ButtonLinkBase :href="href" :target="target" :rel="rel">
+	<ButtonLinkBase :href="href" :rel="rel" :target="target" :useSimpleAncher="props.useSimpleAnchor">
 		{{ $t(text) }}
 	</ButtonLinkBase>
 </template>

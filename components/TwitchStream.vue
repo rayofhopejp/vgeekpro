@@ -3,13 +3,14 @@ import ButtonLinkBase from "~/components/ButtonLinkBase.vue";
 
 type TwitchStreamAttributes = {
 	userId: string
+	useSimpleAnchor?: boolean,
 };
 
 const props = defineProps<TwitchStreamAttributes>();
 </script>
 
 <template>
-	<ButtonLinkBase :href="`https://www.twitch.tv/${props.userId}`" target="_blank" rel="noopener noreferrer">
+	<ButtonLinkBase :href="`https://www.twitch.tv/${props.userId}`" :useSimpleAncher="props.useSimpleAnchor" rel="noopener noreferrer" target="_blank">
 		{{ $t("profileCommon.twitchLinkButton") }}
 	</ButtonLinkBase>
 </template>
