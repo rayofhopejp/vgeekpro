@@ -90,6 +90,20 @@ const members: Member[] = [
 		imageId: "lina_tsukusu",
 		imageAlt: "Lina Tsukusu",
 	},
+	{
+		name: "珠響そうき",
+		yomi: "Tamayura Souki",
+		profileId: "tamayura_souki",
+		imageId: "tamayura_souki",
+		imageAlt: "Tamayura Souki",
+	},
+	{
+		name: "凪なぎさ",
+		yomi: "Nagi Nagisa",
+		profileId: "nagi_nagisa",
+		imageId: "nagi_nagisa",
+		imageAlt: "Nagi Nagisa",
+	},
 ];
 
 type Unit = {
@@ -341,6 +355,7 @@ if (import.meta.client) {
 									<li>社会的に不適切な行為（ハラスメント、差別、それらを助長する行為等）を行わない。</li>
 									<li>「ぶいぎーく！」のDiscordサーバーや運営とのコミュニケーションを許可なく外部に共有しない。</li>
 									<li>本ウェブサイトに掲載するための名前（日本語および英語表記）、立ち絵などの画像、口上、説明文を用意できる。</li>
+									<li>メンバーの特別な紹介でない場合、成人している (18歳以上である) こと</li>
 								</ul>
 							</section>
 							<section>

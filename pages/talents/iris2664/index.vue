@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import OtherSiteLink from '~/components/OtherSiteLink.vue';
+
 definePageMeta({
 	layout: 'member-page'
 })
