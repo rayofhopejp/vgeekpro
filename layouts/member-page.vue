@@ -17,7 +17,7 @@
 				</div>
 			</div>
 			<div class="tw-my-10 tw-w-full tw-flex tw-justify-around tw-items-start">
-				<NuxtLink class="tw-self-stretch tw-flex-col tw-shrink tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4" href="/#members" rel="noopener noreferrer">
+				<NuxtLink :href="localePath('/#members')" class="tw-self-stretch tw-flex-col tw-shrink tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4" rel="noopener noreferrer">
 					戻る
 				</NuxtLink>
 			</div>
@@ -42,4 +42,6 @@ useSeoMeta({
 	ogImageUrl: "/images/logo.webp",
 	ogDescription: "IT 系 VTuber グループ「ぶいぎーく！」の公式サイトです。",
 })
+
+const localePath = useLocalePath();
 </script>

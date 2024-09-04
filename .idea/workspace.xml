@@ -4,23 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ea76109-579f-4c40-9a56-4698e287f93d" name="変更" comment="リンクボタンの機能を追加">
+    <list default="true" id="8ea76109-579f-4c40-9a56-4698e287f93d" name="変更" comment="ミスの修正">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/XProfile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/VRoidHubLink.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locales/en-gb.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en-gb.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locales/en-us.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en-us.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locales/ja.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ja.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/talents/hyondyu/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talents/hyondyu/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/talents/io_otogi/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talents/io_otogi/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/talents/iris2664/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talents/iris2664/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/talents/kohinata_gaku/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talents/kohinata_gaku/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/talents/lina_tsukusu/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talents/lina_tsukusu/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/talents/maskaple/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talents/maskaple/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/talents/setsuna/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talents/setsuna/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/talents/shiisharp/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talents/shiisharp/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/talents/usaneko_xlarge/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talents/usaneko_xlarge/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/talents/yuniru_yuni/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talents/yuniru_yuni/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CommonlyHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/CommonlyHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MemberCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/MemberCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/member-page.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/member-page.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +143,7 @@
       <updated>1725322255628</updated>
       <workItem from="1725322256720" duration="10585000" />
       <workItem from="1725378046511" duration="8276000" />
-      <workItem from="1725449698934" duration="13453000" />
+      <workItem from="1725449698934" duration="15001000" />
     </task>
     <task id="LOCAL-00002" summary="東雲絢芽氏のビジュメンテナンスに対応しました">
       <option name="closed" value="true" />
@@ -309,7 +297,55 @@
       <option name="project" value="LOCAL" />
       <updated>1725463276244</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="VRoid Hubのリンクボタンを追加">
+      <option name="closed" value="true" />
+      <created>1725463304050</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1725463304050</updated>
+    </task>
+    <task id="LOCAL-00022" summary="旧仕様のXリンクボタンを削除しました">
+      <option name="closed" value="true" />
+      <created>1725463353417</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1725463353417</updated>
+    </task>
+    <task id="LOCAL-00023" summary="言語の更新">
+      <option name="closed" value="true" />
+      <created>1725463370937</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1725463370937</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Xリンクボタンの機能変更に対応">
+      <option name="closed" value="true" />
+      <created>1725463392714</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1725463392714</updated>
+    </task>
+    <task id="LOCAL-00025" summary="「東雲絢芽個人サイト」へのリンクをボタンに変更">
+      <option name="closed" value="true" />
+      <created>1725463693241</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1725463693241</updated>
+    </task>
+    <task id="LOCAL-00026" summary="ミスの修正">
+      <option name="closed" value="true" />
+      <created>1725464105252</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1725464105252</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,7 +365,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="破壊的変更: フレームワークNuxt3に変更し、Bootstrap5と共存しました" />
     <MESSAGE value="東雲絢芽氏のビジュメンテナンスに対応しました" />
     <MESSAGE value="乙木イオ氏の加入に対応しました" />
     <MESSAGE value="i18nモジュールを準備しました。" />
@@ -349,7 +384,13 @@
     <MESSAGE value="翻訳の文言を追加" />
     <MESSAGE value="リンクボタンのシンプル化に対応" />
     <MESSAGE value="リンクボタンの機能を追加" />
-    <option name="LAST_COMMIT_MESSAGE" value="リンクボタンの機能を追加" />
+    <MESSAGE value="VRoid Hubのリンクボタンを追加" />
+    <MESSAGE value="旧仕様のXリンクボタンを削除しました" />
+    <MESSAGE value="言語の更新" />
+    <MESSAGE value="Xリンクボタンの機能変更に対応" />
+    <MESSAGE value="「東雲絢芽個人サイト」へのリンクをボタンに変更" />
+    <MESSAGE value="ミスの修正" />
+    <option name="LAST_COMMIT_MESSAGE" value="ミスの修正" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
