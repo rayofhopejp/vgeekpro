@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ea76109-579f-4c40-9a56-4698e287f93d" name="変更" comment="ミスの修正">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CommonlyHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/CommonlyHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MemberCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/MemberCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/member-page.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/member-page.vue" afterDir="false" />
-    </list>
+    <list default="true" id="8ea76109-579f-4c40-9a56-4698e287f93d" name="変更" comment="i18nリンクに対応" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,7 +138,7 @@
       <updated>1725322255628</updated>
       <workItem from="1725322256720" duration="10585000" />
       <workItem from="1725378046511" duration="8276000" />
-      <workItem from="1725449698934" duration="15001000" />
+      <workItem from="1725449698934" duration="15349000" />
     </task>
     <task id="LOCAL-00002" summary="東雲絢芽氏のビジュメンテナンスに対応しました">
       <option name="closed" value="true" />
@@ -345,7 +340,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725464105252</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="i18nリンクに対応">
+      <option name="closed" value="true" />
+      <created>1725464924611</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1725464924611</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -365,7 +368,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="東雲絢芽氏のビジュメンテナンスに対応しました" />
     <MESSAGE value="乙木イオ氏の加入に対応しました" />
     <MESSAGE value="i18nモジュールを準備しました。" />
     <MESSAGE value="マーキーの時間を文字列型から数値型に変換しました。" />
@@ -390,7 +392,8 @@
     <MESSAGE value="Xリンクボタンの機能変更に対応" />
     <MESSAGE value="「東雲絢芽個人サイト」へのリンクをボタンに変更" />
     <MESSAGE value="ミスの修正" />
-    <option name="LAST_COMMIT_MESSAGE" value="ミスの修正" />
+    <MESSAGE value="i18nリンクに対応" />
+    <option name="LAST_COMMIT_MESSAGE" value="i18nリンクに対応" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
