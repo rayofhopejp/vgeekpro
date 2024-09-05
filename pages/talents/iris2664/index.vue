@@ -63,13 +63,13 @@ useSeoMeta({
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">誕生日</td>
 						<td class="tw-pb-4 tw-align-top">
-							<JapaneseTime year="2002" month="5"/>
+							<LocaleTime year="2002" month="5"/>
 						</td>
 					</tr>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">初配信日</td>
 						<td class="tw-pb-4 tw-align-top">
-							<JapaneseTime year="2024" month="8" day="26"/>
+							<LocaleTime year="2024" month="8" day="26"/>
 						</td>
 					</tr>
 					<tr>

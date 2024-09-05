@@ -48,13 +48,13 @@ useSeoMeta({
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">誕生日</td>
 						<td class="tw-pb-4 tw-align-top">
-							<JapaneseTime month="10" day="5"/>
+							<LocaleTime month="10" day="5"/>
 						</td>
 					</tr>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">初配信日</td>
 						<td class="tw-pb-4 tw-align-top">
-							<JapaneseTime year="2018" month="6" day="27"/>
+							<LocaleTime year="2018" month="6" day="27"/>
 						</td>
 					</tr>
 					<tr>
