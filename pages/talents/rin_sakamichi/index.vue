@@ -66,7 +66,7 @@ useSeoMeta({
 					</tr>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">イラスト・モデル</td>
-						<td class="tw-pb-4 tw-align-top">ルフ</td>
+						<td class="tw-pb-4 tw-align-top">セルフ</td>
 					</tr>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">ハッシュタグ</td>
