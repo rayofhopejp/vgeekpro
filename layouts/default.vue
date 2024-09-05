@@ -17,7 +17,9 @@ useSeoMeta({
 	description: "IT 系 VTuber グループ「ぶいぎーく！」の公式サイトです。",
 	ogType: "website",
 	ogSiteName: "ぶいぎーく！",
-	ogImageUrl: "/images/logo.webp",
+	ogImageUrl: "https://vgeekpro.com/images/logo.webp",
 	ogDescription: "IT 系 VTuber グループ「ぶいぎーく！」の公式サイトです。",
+	twitterCard: "summary_large_image",
+	twitterSite: "@vgeekproduction",
 })
 </script>

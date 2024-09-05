@@ -7,20 +7,24 @@ definePageMeta({
 const name = "東雲絢芽";
 const yomi = "SHINONOME Ayame";
 const description = "カーネルの海をクロール中！";
+const imageId = "shinonome_ayame";
 useSeoMeta({
 	title: name,
 	description,
 	ogType: "profile",
 	ogTitle: name,
 	ogDescription: description,
-	profileUsername: name
+	ogImageUrl: `https://vgeekpro.com/images/members/${imageId}/upper_body.webp`,
+	profileUsername: name,
+	twitterCard: "summary",
+	twitterSite: "@vgeekproduction",
 })
 </script>
 
 <template>
 	<aside class="tw-self-start tw-text-center tw-w-full xl:tw-w-auto">
 		<FullBodyImage
-			memberId="shinonome_ayame"
+			:memberId="imageId"
 			:alt="yomi"
 		/>
 	</aside>
