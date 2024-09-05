@@ -31,7 +31,7 @@ useSeoMeta({
 				プログラミングとロードバイクの二刀流で、文武両道・才色兼備を目指して、視聴者と一緒に精進していきます。
 			</ProfileHead>
 			<div class="tw-w-fit tw-flex tw-flex-col xl:tw-flex-row xl:tw-flex-wrap tw-justify-between tw-items-center tw-gap-4">
-				<XProfile userId="RinSakamichi"/>
+				<XButtonLink screen-name="RinSakamichi"/>
 				<YouTubeChannel handle="RinSakamichi"/>
 				<OtherSiteLink href="https://rinsakamichi.github.io/">
 					Website
@@ -62,7 +62,7 @@ useSeoMeta({
 					</tr>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">イラスト・モデル</td>
-						<td class="tw-pb-4 tw-align-top">ルフ</td>
+						<td class="tw-pb-4 tw-align-top">セルフ</td>
 					</tr>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">ハッシュタグ</td>

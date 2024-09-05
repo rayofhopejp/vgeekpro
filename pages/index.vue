@@ -111,6 +111,13 @@ const members: Member[] = [
 		imageId: "rin_sakamichi",
 		imageAlt: "rin_sakamichi",
 	},
+	{
+		name: "Kazuryu",
+		yomi: "Kazuryu",
+		profileId: "kazuryu",
+		imageId: "kazuryu",
+		imageAlt: "kazuryu",
+	},
 ];
 
 type Unit = {
