@@ -32,7 +32,7 @@ if (props.year != undefined) {
 		usingTimeElement.value = false;
 	}
 } else if (props.day != undefined) {
-	displayValue.value = `${props.day}日${props.day}`;
+	displayValue.value = `${props.day}日`;
 	usingTimeElement.value = false;
 } else {
 	usingTimeElement.value = false;

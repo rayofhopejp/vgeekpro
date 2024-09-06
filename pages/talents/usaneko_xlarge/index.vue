@@ -59,18 +59,20 @@ useSeoMeta({
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">誕生日</td>
 						<td class="tw-pb-4 tw-align-top">
-							<JapaneseTime month="12" day="31"/>
+							<LocaleTime month="12" day="31" />
 						</td>
 					</tr>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">初配信日</td>
 						<td class="tw-pb-4 tw-align-top">
-							<JapaneseTime year="2023" month="7" day="2"/>
+							<LocaleTime year="2023" month="7" day="2" />
 						</td>
 					</tr>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">身長</td>
-						<td class="tw-pb-4 tw-align-top">だいたい170cm</td>
+						<td class="tw-pb-4 tw-align-top">
+							<LocaleHeight :height="170" original-unit="centimeter" :is-approx="true" />
+						</td>
 					</tr>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">イラストレーター</td>
