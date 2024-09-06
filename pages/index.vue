@@ -124,6 +124,13 @@ const members: Member[] = [
 		profileId: "marine_sphere",
 		imageId: "marine_sphere",
 		imageAlt: "marine_sphere",
+	},
+	{
+		name: "やすビディア",
+		yomi: "YASUVIDIA",
+		profileId: "yasuvidia",
+		imageId: "yasuvidia",
+		imageAlt: "YASUVIDIA",
 	}
 ];
 
