@@ -131,7 +131,14 @@ const members: Member[] = [
 		profileId: "yasuvidia",
 		imageId: "yasuvidia",
 		imageAlt: "YASUVIDIA",
-	}
+	},
+	{
+		name: "崎津 祥汰",
+		yomi: "Shota Sakitsu",
+		profileId: "shota_sakitsu",
+		imageId: "shota_sakitsu",
+		imageAlt: "Shota Sakitsu",
+	},
 ];
 
 type Unit = {
