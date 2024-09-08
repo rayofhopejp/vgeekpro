@@ -5,7 +5,6 @@ type LocaleTimeAttributes = {
 	month?: string|number,
 	day?: string|number,
 	isShort?: boolean,
-	isShortest?: boolean,
 	isLong?: boolean,
 }
 
