@@ -63,7 +63,7 @@ useSeoMeta({
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">誕生日</td>
 						<td class="tw-pb-4 tw-align-top">
-							<LocaleTime year="2002" month="5"/>
+							<FuzzyLocaleTime month="5" fuzzyDay="mid"/>
 						</td>
 					</tr>
 					<tr>
