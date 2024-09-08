@@ -9,6 +9,7 @@ type Member = {
 	profileId: string,
 	imageId: string,
 	imageAlt: string,
+	tag?: string[],
 }
 
 /**
