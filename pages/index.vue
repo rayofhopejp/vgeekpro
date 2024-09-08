@@ -49,13 +49,6 @@ const members: Member[] = [
 		imageAlt: "setsuna",
 	},
 	{
-		name: "ゆにるユニ",
-		yomi: "Yuniru Yuni",
-		profileId: "yuniru_yuni",
-		imageId: "yuniru_yuni",
-		imageAlt: "Yuniru Yuni",
-	},
-	{
 		name: "小日向がく",
 		yomi: "Kohinata Gaku",
 		profileId: "kohinata_gaku",
@@ -138,6 +131,13 @@ const members: Member[] = [
 		profileId: "shota_sakitsu",
 		imageId: "shota_sakitsu",
 		imageAlt: "Shota Sakitsu",
+	},
+	{
+		name: "黒音キト",
+		yomi: "Kuroné Kito",
+		profileId: "kurone_kito",
+		imageId: "kurone_kito",
+		imageAlt: "Kuroné Kito",
 	},
 ];
 
