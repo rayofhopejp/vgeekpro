@@ -140,6 +140,13 @@ const members: Member[] = [
 		imageId: "kurone_kito",
 		imageAlt: "Kuroné Kito",
 	},
+	{
+		name: "白犬コマ",
+		yomi: "Siroinu Koma",
+		profileId: "koma_siroinu",
+		imageId: "koma_siroinu",
+		imageAlt: "Siroinu Koma",
+	},
 ];
 
 type Unit = {
