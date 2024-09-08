@@ -51,6 +51,9 @@ if (locale.value != "ja") description = "‘I'm an engineer wolf who wants to be
 				<OtherSiteLink href="https://www.virtlive.jp/talents/jp/gen0/shota/">
 					Official Profile
 				</OtherSiteLink>
+				<OtherSiteLink href="https://www.fanpicks.jp/vtalent/5515">
+					FanPicks
+				</OtherSiteLink>
 			</div>
 		</section>
 		<section>
@@ -122,6 +125,10 @@ if (locale.value != "ja") description = "‘I'm an engineer wolf who wants to be
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-align-top">趣味</td>
 						<td class="tw-align-top">サイト運営・開発</td>
+					</tr>
+					<tr>
+						<td class="tw-pe-8 xl:tw-pe-16 tw-align-top">二次創作</td>
+						<td class="tw-align-top">二次創作ガイドラインは公式プロフィールからご確認ください。</td>
 					</tr>
 					</tbody>
 				</table>
