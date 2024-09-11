@@ -27,6 +27,9 @@ const members: Member[] = [
 		profileId: "usaneko_xlarge",
 		imageId: "usaneko_large",
 		imageAlt: "Usaneko Large",
+		tag: [
+			"member"
+		],
 	},
 	{
 		name: "東雲絢芽",
@@ -34,6 +37,9 @@ const members: Member[] = [
 		profileId: "iris2664",
 		imageId: "shinonome_ayame",
 		imageAlt: "SHINONOME Ayame",
+		tag: [
+			"member"
+		],
 	},
 	{
 		name: "椎半音",
@@ -41,6 +47,9 @@ const members: Member[] = [
 		profileId: "shiisharp",
 		imageId: "shii_sharp",
 		imageAlt: "Shii Sharp",
+		tag: [
+			"member"
+		],
 	},
 	{
 		name: "夢向せつな",
@@ -48,6 +57,9 @@ const members: Member[] = [
 		profileId: "setsuna",
 		imageId: "yumemukai_setsuna",
 		imageAlt: "setsuna",
+		tag: [
+			"member"
+		],
 	},
 	{
 		name: "小日向がく",
@@ -55,6 +67,9 @@ const members: Member[] = [
 		profileId: "kohinata_gaku",
 		imageId: "kohinata_gaku",
 		imageAlt: "Kohinata Gaku",
+		tag: [
+			"member"
+		],
 	},
 	{
 		name: "ますかぷる",
@@ -62,6 +77,9 @@ const members: Member[] = [
 		profileId: "maskaple",
 		imageId: "maskaple",
 		imageAlt: "Maskaple",
+		tag: [
+			"member"
+		],
 	},
 	{
 		name: "ひょんぢゅ",
@@ -69,6 +87,9 @@ const members: Member[] = [
 		profileId: "hyondyu",
 		imageId: "hyondyu",
 		imageAlt: "Hyondyu",
+		tag: [
+			"member"
+		],
 	},
 	{
 		name: "乙木イオ",
@@ -76,6 +97,9 @@ const members: Member[] = [
 		profileId: "io_otogi",
 		imageId: "io_otogi",
 		imageAlt: "IO Otogi",
+		tag: [
+			"member"
+		],
 	},
 	{
 		name: "創好リナ",
@@ -83,6 +107,9 @@ const members: Member[] = [
 		profileId: "lina_tsukusu",
 		imageId: "lina_tsukusu",
 		imageAlt: "Lina Tsukusu",
+		tag: [
+			"member"
+		],
 	},
 	{
 		name: "珠響そうき",
@@ -90,6 +117,9 @@ const members: Member[] = [
 		profileId: "tamayura_souki",
 		imageId: "tamayura_souki",
 		imageAlt: "Tamayura Souki",
+		tag: [
+			"member"
+		],
 	},
 	{
 		name: "凪なぎさ",
@@ -97,6 +127,9 @@ const members: Member[] = [
 		profileId: "nagi_nagisa",
 		imageId: "nagi_nagisa",
 		imageAlt: "Nagi Nagisa",
+		tag: [
+			"member"
+		],
 	},
 	{
 		name: "坂道輪",
@@ -104,6 +137,9 @@ const members: Member[] = [
 		profileId: "rin_sakamichi",
 		imageId: "rin_sakamichi",
 		imageAlt: "rin_sakamichi",
+		tag: [
+			"member"
+		],
 	},
 	{
 		name: "Kazuryu",
@@ -111,6 +147,9 @@ const members: Member[] = [
 		profileId: "kazuryu",
 		imageId: "kazuryu",
 		imageAlt: "kazuryu",
+		tag: [
+			"member"
+		],
 	},
 	{
 		name: "まりんとすふぃあ",
@@ -118,6 +157,9 @@ const members: Member[] = [
 		profileId: "marine_sphere",
 		imageId: "marine_sphere",
 		imageAlt: "marine_sphere",
+		tag: [
+			"member"
+		],
 	},
 	{
 		name: "やすビディア",
@@ -125,6 +167,9 @@ const members: Member[] = [
 		profileId: "yasuvidia",
 		imageId: "yasuvidia",
 		imageAlt: "YASUVIDIA",
+		tag: [
+			"member"
+		],
 	},
 	{
 		name: "崎津 祥汰",
@@ -132,6 +177,12 @@ const members: Member[] = [
 		profileId: "shota_sakitsu",
 		imageId: "shota_sakitsu",
 		imageAlt: "Shota Sakitsu",
+		tag: [
+			"staff",
+			"backend",
+			"frontend",
+			"infrastructure"
+		],
 	},
 	{
 		name: "黒音キト",
@@ -139,6 +190,9 @@ const members: Member[] = [
 		profileId: "kurone_kito",
 		imageId: "kurone_kito",
 		imageAlt: "Kuroné Kito",
+		tag: [
+			"member"
+		],
 	},
 	{
 		name: "白犬コマ",
@@ -146,6 +200,9 @@ const members: Member[] = [
 		profileId: "koma_siroinu",
 		imageId: "koma_siroinu",
 		imageAlt: "Siroinu Koma",
+		tag: [
+			"member"
+		],
 	},
 ];
 
