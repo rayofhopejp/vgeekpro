@@ -200,7 +200,21 @@ const members: Member[] = [
 		imageId: "kurone_kito",
 		imageAlt: "Kuroné Kito",
 		tag: [
-			"member"
+			"automation",
+			"csharp",
+			"docker",
+			"web-frontend",
+			"linux",
+			"macos",
+			"member",
+			"meow",
+			"nodejs",
+			"react",
+			"solid-js",
+			"typescript",
+			"udonsharp",
+			"unity3d",
+			"ui-ux"
 		],
 	},
 	{
