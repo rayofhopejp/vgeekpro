@@ -78,7 +78,16 @@ const members: Member[] = [
 		imageId: "maskaple",
 		imageAlt: "Maskaple",
 		tag: [
-			"member"
+			"member",
+			"system-engineer",
+			"informaiton-infrastrcture",
+			"hardware",
+			"network",
+			"server",
+			"cloud",
+			"operating-system",
+			"b-to-b",
+			"neko"
 		],
 	},
 	{
