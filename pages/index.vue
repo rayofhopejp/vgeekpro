@@ -58,7 +58,13 @@ const members: Member[] = [
 		imageId: "yumemukai_setsuna",
 		imageAlt: "setsuna",
 		tag: [
-			"member"
+			"member",			
+			"rpgtkoolmz",
+			"sqlserver",
+			"internet-information-services",
+			"windowsserver",
+			"solid-js",
+			"chatgpt"
 		],
 	},
 	{
