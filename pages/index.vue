@@ -123,7 +123,20 @@ const members: Member[] = [
 		imageId: "lina_tsukusu",
 		imageAlt: "Lina Tsukusu",
 		tag: [
-			"member"
+			"member",
+			"linux",
+			"docker",
+			"typescript",
+			"deno",
+			"svelte",
+			"web",
+			"backend",
+			"frontend",
+			"freelance",
+			"resonite",
+			"vrchat",
+			"lt",
+			"minecraft"
 		],
 	},
 	{
