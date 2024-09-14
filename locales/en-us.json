@@ -13,7 +13,8 @@
 		"openMailApp": "Compose in your e-mail app.",
 		"openGmail": "Compose in Gmail",
 		"openYahooJapanMail": "Compose in Yahoo! JAPAN Mail",
-		"guidelineSubtitle": "Vgeek production guidelines"
+		"guidelineSubtitle": "Vgeek production guidelines",
+		"searchByTag": "Search by Tag (BETA)"
 	},
 	"profileCommon": {
 		"xLinkButton": "X (Twitter)",
@@ -85,5 +86,39 @@
 		"hobby": "Hobby",
 		"memeSubtitle": "Internet slang",
 		"backToTop": "Back"
+	},
+	"tagNames": {
+		"all": "All",
+		"automation": "Automation",
+		"b-to-b": "B2B",
+		"backend": "Backend",
+		"chatgpt": "ChatGPT",
+		"cloud": "Cloud",
+		"csharp": "C#",
+		"docker": "Docker",
+		"frontend": "Frontend",
+		"hardware": "Hardware",
+		"infrastructure": "Infrastructure",
+		"internet-information-services": "IIS",
+		"linux": "Linux",
+		"macos": "macOS",
+		"member": "Member",
+		"meow": "Meow =^_^=",
+		"network": "Network",
+		"nodejs": "Node.js",
+		"operating-system": "OS",
+		"react": "React",
+		"rpg-maker-mz": "RPG Maker MZ",
+		"security-girl": "Security Girl",
+		"server": "Server",
+		"solid-js": "SolidJS",
+		"sqlserver": "SQL Server",
+		"staff": "Staff",
+		"system-engineer": "System Engineer",
+		"typescript": "TypeScript",
+		"udonsharp": "UdonSharp",
+		"ui-ux": "UI・UX",
+		"unity3d": "Unity",
+		"windows-server": "Windows Server"
 	}
 }

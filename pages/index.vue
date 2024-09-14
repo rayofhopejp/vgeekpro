@@ -1,15 +1,11 @@
 <script setup lang="ts">
-import CommonlyHeader from "~/components/CommonlyHeader.vue";
-import SectionHeader from "~/components/SectionHeader.vue";
-import MemberCard from "~/components/MemberCard.vue";
-
 type Member = {
 	name: string,
 	yomi: string,
 	profileId: string,
 	imageId: string,
 	imageAlt: string,
-	tag?: string[],
+	tag: string[],
 }
 
 /**
@@ -60,7 +56,7 @@ const members: Member[] = [
 		imageId: "yumemukai_setsuna",
 		imageAlt: "setsuna",
 		tag: [
-			"member",			
+			"member",
 			"rpg-maker-mz",
 			"sqlserver",
 			"internet-information-services",
@@ -275,6 +271,20 @@ const mailAddress = "naomi.lilienthal.jpn@gmail.com";
 
 const thisYear = toRef((new Date().getFullYear()))
 
+const currentlySelectedTag = toRef("all");
+
+const displayMembers = computed(() => {
+	const returnBuffer: Member[] = [];
+	for (const member of members) {
+		console.log(member);
+		if (checkTag(currentlySelectedTag.value, member.tag)) {
+			returnBuffer.push(member);
+		}
+	}
+	console.log(returnBuffer);
+	return returnBuffer;
+})
+
 const mailModal = toRef(false);
 
 const showContributorsModal = toRef(false);
@@ -410,8 +420,17 @@ if (import.meta.client) {
 					<section class="tw-px-10 xl:tw-px-14 tw-py-10 tw-text-base">
 						<section>
 							<SectionHeader :description="$t('topPage.membersSubtitle')" title="Members" titleColor="black"/>
-							<div class="tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 md:tw-grid-cols-3 2xl:tw-grid-cols-4 tw-gap-20">
-								<MemberCard v-for="member in members" :key="member.profileId" :name="member.name" :yomi="member.yomi" :profileId="member.profileId" :imageId="member.imageId" :imageAlt="member.imageAlt" />
+							<div :class="`tw-grid tw-pb-20 tw-grid-cols-1 sm:tw-grid-cols-2 xl:tw-grid-cols-3 tw-gap-20`">
+								<BFormFloatingLabel :label="$t('topPage.searchByTag')">
+									<BFormSelect v-model="currentlySelectedTag">
+										<BFormSelectOption v-for="availableTag in currentlyAvailableTags" :key="availableTag" :value="availableTag">
+											{{ $t(`tagNames.${availableTag}`) }}
+										</BFormSelectOption>
+									</BFormSelect>
+								</BFormFloatingLabel>
+							</div>
+							<div :class="`tw-grid tw-pb-20 tw-grid-cols-1 sm:tw-grid-cols-${displayMembers.length >= 2 ? '2' : '1'} md:tw-grid-cols-${displayMembers.length >= 4 ? '3' : displayMembers.length} 2xl:tw-grid-cols-${displayMembers.length >= 5 ? '4' : displayMembers.length} tw-gap-20`">
+								<MemberCard v-for="member in displayMembers" :key="member.profileId" :name="member.name" :yomi="member.yomi" :profileId="member.profileId" :imageId="member.imageId" :imageAlt="member.imageAlt" :tags="member.tag" :selectedTag="currentlySelectedTag"/>
 							</div>
 						</section>
 					</section>
