@@ -131,6 +131,20 @@
 		"resonite": "Resonite",
 		"vrchat": "VRChay",
 		"lt": "Lightning Talks",
-		"minecraft": "Minecraft"
+		"minecraft": "Minecraft",
+		"clang": "C",
+		"basic": "BASIC",
+		"windows-forms": "Windows Forms",
+		"cryptography-research": "Cryptography Research",
+		"security-engineer": "Security Engineer",
+		"nessus": "Nessus",
+		"programming": "Programming",
+		"game-development": "Game Development",
+		"retro-pc": "Nostalgic computers",
+		"x68000": "X68000",
+		"mz700": "MZ-700",
+		"pc6000": "PC-6000 Series",
+		"msx": "MSX",
+		"free-bsd": "FreeBSD"
 	}
 }

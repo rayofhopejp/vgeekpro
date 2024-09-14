@@ -46,7 +46,23 @@ const members: Member[] = [
 		imageId: "shii_sharp",
 		imageAlt: "Shii Sharp",
 		tag: [
-			"member"
+			"member",
+			"csharp",
+			"clang",
+			"basic",
+			"windows-forms",
+			"cryptography-research",
+			"security-engineer",
+			"nessus",
+			"programming",
+			"game-development",
+			"retro-pc",
+			"x68000",
+			"mz700",
+			"pc6000",
+			"msx",
+			"operating-system",
+			"free-bsd"
 		],
 	},
 	{

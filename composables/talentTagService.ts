@@ -48,6 +48,20 @@ const currentTags: string[] = [
 	"vrchat",							//   VRChay
 	"lt",								//   Lightning Talks (?)
 	"minecraft",						//   Minecraft
+	"clang",							//   C言語
+	"basic",							//   BASIC
+	"windows-forms",					//   Windows フォーム
+	"cryptography-research",			//   暗号研究
+	"security-engineer",				//   セキュリティエンジニア
+	"nessus",							//   Nessus
+	"programming",						//   プログラミング
+	"game-development",					//   ゲーム開発
+	"retro-pc",							//   レトロPC
+	"x68000",							//   X68000
+	"mz700",							//   MZ-700
+	"pc6000",							//   PC-6000 シリーズ
+	"msx",								//   MSX
+	"free-bsd",							//   FreeBSD
 ]
 
 const currentlyAvailableTags: string[] = [
