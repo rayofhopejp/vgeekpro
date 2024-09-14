@@ -14,13 +14,13 @@ const currentTags: string[] = [
 	"backend",							//   バックエンド
 	"chatgpt",							//   ChatGPT (広義の生成AIを含む)
 	"cloud",							//   クラウド (Azure, AWS, GCP, etc...)
-	"csharp",							//   C#
+	"csharp",							// * C#
 	"docker",							//   Docker
 	"frontend",							// * フロントエンド
 	"hardware",							// * ハードウェア
 	"infrastructure",					// * インフラ
 	"internet-information-services",	//   IIS
-	"linux",							//   Linux (GNU/Linux)
+	"linux",							// * Linux (GNU/Linux)
 	"macos",							//   macOS
 	"member",							// * ぶいぎーく！メンバー
 	"meow",								// * にゃー (ねこ)
@@ -68,9 +68,11 @@ const currentlyAvailableTags: string[] = [
 	"all",								// * すべて表示
 	"member",							// * ぶいぎーく！メンバー
 	"staff",							// * ぶいぎーく！スタッフ
+	"csharp",							// * C#
 	"frontend",							// * フロントエンド
 	"hardware",							// * ハードウェア
 	"infrastructure",					// * インフラ
+	"linux",							// * Linux (GNU/Linux)
 	"meow",								// * にゃー (ねこ)
 	"network",							// * ネットワーク
 	"security-girl",					// * セキュリティガール (ユニット名)
