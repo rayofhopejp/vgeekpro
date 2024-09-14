@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 definePageMeta({
 	layout: 'member-page'
 })
@@ -22,13 +22,13 @@ useSeoMeta({
 <template>
 	<aside class="tw-self-start tw-text-center tw-w-full xl:tw-w-auto">
 		<FullBodyImage
-			:memberId="imageId"
 			:alt="yomi"
+			:memberId="imageId"
 		/>
 	</aside>
 	<section class="tw-px-10 xl:tw-px-14 tw-py-14 tw-text-base">
 		<section>
-			<ProfileHead :name="name" :yomi="yomi" :catchphrase="description">
+			<ProfileHead :catchphrase="description" :name="name" :yomi="yomi">
 				競技プログラミングにハマった自転車VTuberです。<br/>
 				AtCoderから競プロ沼に落ち込んで以来、競技プログラミングの楽しさを広めようとしています。<br/>
 				元々のゲーム好きと融合して、対戦ゲームBotコンテストのCodinGameでは世界TOP100に入る腕前を誇ります。<br/>
@@ -43,7 +43,7 @@ useSeoMeta({
 			</div>
 		</section>
 		<section>
-			<SectionHeader :isDark="true" title="Contents" description="配信内容"/>
+			<SectionHeader :isDark="true" description="配信内容" title="Contents"/>
 			<div class="tw-mb-28 tw-leading-loose xl:tw-max-w-screen-sm xl:tw-mx-auto">
 				<ul class="tw-list-disc tw-ps-5">
 					<li>雑談</li>
@@ -54,14 +54,14 @@ useSeoMeta({
 			</div>
 		</section>
 		<section>
-			<SectionHeader :isDark="true" title="Profile" description="プロフィール"/>
+			<SectionHeader :isDark="true" description="プロフィール" title="Profile"/>
 			<div class="tw-mb-28 tw-leading-loose tw-align-top xl:tw-max-w-screen-sm xl:tw-mx-auto">
 				<table>
 					<tbody>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">初配信日</td>
 						<td class="tw-pb-4 tw-align-top">
-							<LocaleTime year="2018" month="8" day="17"/>
+							<LocaleTime day="17" month="8" year="2018"/>
 						</td>
 					</tr>
 					<tr>
@@ -71,7 +71,7 @@ useSeoMeta({
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">ハッシュタグ</td>
 						<td class="tw-pb-4 tw-align-top">
-							汎用タグ: <a href="https://x.com/hashtag/坂道輪" target="_blank" rel="noopener noreferrer">#坂道輪</a> 
+							汎用タグ: <a href="https://x.com/hashtag/坂道輪" rel="noopener noreferrer" target="_blank">#坂道輪</a>
 						</td>
 					</tr>
 					<tr>

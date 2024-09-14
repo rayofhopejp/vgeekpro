@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import UnitImage from "~/components/UnitImage.vue";
 
 type UnitInformation = {
@@ -20,7 +20,7 @@ const props = defineProps<UnitInformation>();
 
 <template>
 	<section>
-		<UnitImage :unitId="props.unitImageId ?? props.unitId" :alt="props.unitImageAlt ?? props.unitYomi"/>
+		<UnitImage :alt="props.unitImageAlt ?? props.unitYomi" :unitId="props.unitImageId ?? props.unitId"/>
 		<div class="tw-mb-28 tw-leading-loose tw-text-white">
 			<p class="font-slogan tw-text-center tw-text-3xl xl:tw-text-5xl" v-text="locale == 'ja' ? props.unitName : props.unitYomi"></p>
 			<p class="font-slogan tw-text-center tw-mb-14" v-text="locale == 'ja' ? props.unitYomi : props.unitName "></p>

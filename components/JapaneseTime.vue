@@ -1,8 +1,8 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 type JapaneseTimeAttributes = {
-	year?: string|number,
-	month?: string|number,
-	day?: string|number,
+	year?: string | number,
+	month?: string | number,
+	day?: string | number,
 }
 
 const props = defineProps<JapaneseTimeAttributes>();

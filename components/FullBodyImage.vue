@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 type FullBodyImageAttributes = {
 	memberId: string,
 	alt: string,
@@ -20,12 +20,12 @@ const imagePath = computed({
 
 <template>
 	<img
-		class="tw-object-contain tw-mt-10 xl:tw-mt-40 tw-mx-auto"
-		:src="imagePath"
 		:alt="props.alt"
-		:width="props.width ?? 300"
 		:height="props.height ?? 600"
-		/>
+		:src="imagePath"
+		:width="props.width ?? 300"
+		class="tw-object-contain tw-mt-10 xl:tw-mt-40 tw-mx-auto"
+	/>
 </template>
 
 <style scoped>

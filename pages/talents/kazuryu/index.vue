@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 definePageMeta({
 	layout: 'member-page'
 })
@@ -18,13 +18,13 @@ useSeoMeta({
 <template>
 	<aside class="tw-self-start tw-text-center tw-w-full xl:tw-w-auto">
 		<FullBodyImage
-			memberId="kazuryu"
 			:alt="yomi"
+			memberId="kazuryu"
 		/>
 	</aside>
 	<section class="tw-px-10 xl:tw-px-14 tw-py-14 tw-text-base">
 		<section>
-			<ProfileHead :name="name" :yomi="yomi" :catchphrase="description">
+			<ProfileHead :catchphrase="description" :name="name" :yomi="yomi">
 				ゲーミングチームに所属しており，Vtuber用ゲーム大会の配信用オーバーレイを開発している現役大学生プログラマー．<br/>
 				ロボコンからWebアプリケーション開発まで浅く広く経験．つよつよプログラマーになりたい！<br/>
 				今はRustや量子コンピュータについて勉強中．

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 definePageMeta({
 	layout: 'member-page'
 })
@@ -22,13 +22,13 @@ useSeoMeta({
 <template>
 	<aside class="tw-self-start tw-text-center tw-w-full xl:tw-w-auto">
 		<FullBodyImage
-			:memberId="imageId"
 			:alt="yomi"
+			:memberId="imageId"
 		/>
 	</aside>
 	<section class="tw-px-10 xl:tw-px-14 tw-py-14 tw-text-base">
 		<section>
-			<ProfileHead :name="name" :yomi="yomi" :catchphrase="description">
+			<ProfileHead :catchphrase="description" :name="name" :yomi="yomi">
 				CEH，OSCP，OSEP等のハッキング能力を証明する資格を取得しているハッカー系Vtuber💻💀<br/>
 				Youtubeにてハッカー（攻撃者）がどのようにしてあなたの情報を日々狙っているのかを解説している<br/>
 				映画のような遠い世界の話のように感じるハッキング行為だが、気づかないうちに意外と身近に危険は潜んでいる<br/>

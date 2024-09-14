@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 type SectionHeaderAttributes = {
 	isDark?: boolean;
 	title: string,

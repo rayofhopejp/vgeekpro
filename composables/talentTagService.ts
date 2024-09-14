@@ -63,4 +63,4 @@ const currentlyAvailableTags: string[] = [
 	"solid-js",							// * SolidJS
 ]
 
-export { currentlyAvailableTags, currentTags, checkTag };
+export {currentlyAvailableTags, currentTags, checkTag};

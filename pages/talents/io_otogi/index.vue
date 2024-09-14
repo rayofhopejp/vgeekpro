@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 definePageMeta({
 	layout: 'member-page'
 })
@@ -22,13 +22,13 @@ useSeoMeta({
 <template>
 	<aside class="tw-self-start tw-text-center tw-w-full xl:tw-w-auto">
 		<FullBodyImage
-			:memberId="imageId"
 			:alt="yomi"
+			:memberId="imageId"
 		/>
 	</aside>
 	<section class="tw-px-10 xl:tw-px-14 tw-py-14 tw-text-base">
 		<section>
-			<ProfileHead :name="name" :yomi="yomi" :catchphrase="description">
+			<ProfileHead :catchphrase="description" :name="name" :yomi="yomi">
 				元AIの現役システムエンジニアVtuber。AI時代はバーチャルアシスタントを務めていたが、いつの間にか実体化して人間として生きることに。<br/>
 				『Hi, イオ!』と声をかけると反応するとかしないとか。<br/>
 				IT関係にとどまらず様々なことに興味があり、とりあえず手を出してみたがる好奇心旺盛な性格。<br/>

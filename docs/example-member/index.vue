@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 definePageMeta({
 	layout: 'member-page'
 })
@@ -22,13 +22,13 @@ useSeoMeta({
 <template>
 	<aside class="tw-self-start tw-text-center tw-w-full xl:tw-w-auto">
 		<FullBodyImage
-			:memberId="imageId"
 			:alt="yomi"
+			:memberId="imageId"
 		/>
 	</aside>
 	<section class="tw-px-10 xl:tw-px-14 tw-py-14 tw-text-base">
 		<section>
-			<ProfileHead :name="name" :yomi="yomi" :catchphrase="description">
+			<ProfileHead :catchphrase="description" :name="name" :yomi="yomi">
 				プロフィール
 			</ProfileHead>
 			<div class="tw-w-fit tw-flex tw-flex-col xl:tw-flex-row xl:tw-flex-wrap tw-justify-between tw-items-center tw-gap-4">
@@ -42,7 +42,7 @@ useSeoMeta({
 			</div>
 		</section>
 		<section>
-			<SectionHeader :isDark="true" title="Contents" description="配信内容"/>
+			<SectionHeader :isDark="true" description="配信内容" title="Contents"/>
 			<div class="tw-mb-28 tw-leading-loose xl:tw-max-w-screen-sm xl:tw-mx-auto">
 				<ul class="tw-list-disc tw-ps-5">
 					<li>リスト項目1</li>
@@ -52,20 +52,20 @@ useSeoMeta({
 			</div>
 		</section>
 		<section>
-			<SectionHeader :isDark="true" title="Profile" description="プロフィール"/>
+			<SectionHeader :isDark="true" description="プロフィール" title="Profile"/>
 			<div class="tw-mb-28 tw-leading-loose tw-align-top xl:tw-max-w-screen-sm xl:tw-mx-auto">
 				<table>
 					<tbody>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">誕生日</td>
 						<td class="tw-pb-4 tw-align-top">
-							<LocaleTime month="1" day="1"/>
+							<LocaleTime day="1" month="1"/>
 						</td>
 					</tr>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">初配信日</td>
 						<td class="tw-pb-4 tw-align-top">
-							<LocaleTime year="2100" month="7" day="1"/>
+							<LocaleTime day="1" month="7" year="2100"/>
 						</td>
 					</tr>
 					<tr>
@@ -87,8 +87,8 @@ useSeoMeta({
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">ハッシュタグ</td>
 						<td class="tw-pb-4 tw-align-top">
-							配信タグ: <a href="https://x.com/hashtag/example" target="_blank" rel="noopener noreferrer">#examplesteam</a> <br/>
-							ファンアートタグ: <a href="https://x.com/hashtag/exampleart" target="_blank" rel="noopener noreferrer">#exampleart</a>
+							配信タグ: <a href="https://x.com/hashtag/example" rel="noopener noreferrer" target="_blank">#examplesteam</a> <br/>
+							ファンアートタグ: <a href="https://x.com/hashtag/exampleart" rel="noopener noreferrer" target="_blank">#exampleart</a>
 						</td>
 					</tr>
 					<tr>
@@ -100,7 +100,7 @@ useSeoMeta({
 			</div>
 		</section>
 		<section>
-			<SectionHeader :isDark="true" title="Words / Meme" description="ジャーゴン"/>
+			<SectionHeader :isDark="true" description="ジャーゴン" title="Words / Meme"/>
 			<div class="tw-leading-loose xl:tw-max-w-screen-sm xl:tw-mx-auto">
 				<ul class="tw-list-disc tw-ps-5">
 					<li>

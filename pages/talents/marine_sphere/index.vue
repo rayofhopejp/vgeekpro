@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 definePageMeta({
 	layout: 'member-page'
 })
@@ -18,13 +18,13 @@ useSeoMeta({
 <template>
 	<aside class="tw-self-start tw-text-center tw-w-full xl:tw-w-auto">
 		<FullBodyImage
-			memberId="marine_sphere"
 			:alt="yomi"
+			memberId="marine_sphere"
 		/>
 	</aside>
 	<section class="tw-px-10 xl:tw-px-14 tw-py-14 tw-text-base">
 		<section>
-			<ProfileHead :name="name" :yomi="yomi" :catchphrase="description">
+			<ProfileHead :catchphrase="description" :name="name" :yomi="yomi">
 				みなさんこんにちは！ まりんとすふぃあです。<br/>
 				私たちは、Youtubeをメインに動画投稿をしている2人組エンジニア系VTuberです。（緑の方がまりん、紫がすふぃあ）<br/>
 				エンジニア向けの解説動画や、面白そうなコンテンツの紹介動画を定期的に投稿しています！<br/>
@@ -36,7 +36,7 @@ useSeoMeta({
 			</div>
 		</section>
 		<section>
-			<SectionHeader :isDark="true" title="Contents" description="配信内容"/>
+			<SectionHeader :isDark="true" description="配信内容" title="Contents"/>
 			<div class="tw-mb-28 tw-leading-loose xl:tw-max-w-screen-sm xl:tw-mx-auto">
 				<ul class="tw-list-disc tw-ps-5">
 					<li>エンジニア向け解説動画</li>
@@ -46,5 +46,5 @@ useSeoMeta({
 			</div>
 		</section>
 	</section>
-	
+
 </template>
