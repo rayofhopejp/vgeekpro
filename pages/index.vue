@@ -28,6 +28,7 @@ const members: Member[] = [
 		imageId: "usaneko_large",
 		imageAlt: "Usaneko Large",
 		tag: [
+			"security-girl",
 			"member"
 		],
 	},
@@ -38,6 +39,7 @@ const members: Member[] = [
 		imageId: "shinonome_ayame",
 		imageAlt: "SHINONOME Ayame",
 		tag: [
+			"security-girl",
 			"member"
 		],
 	},
@@ -59,10 +61,10 @@ const members: Member[] = [
 		imageAlt: "setsuna",
 		tag: [
 			"member",			
-			"rpgtkoolmz",
+			"rpg-maker-mz",
 			"sqlserver",
 			"internet-information-services",
-			"windowsserver",
+			"windows-server",
 			"solid-js",
 			"chatgpt"
 		],
@@ -86,14 +88,14 @@ const members: Member[] = [
 		tag: [
 			"member",
 			"system-engineer",
-			"informaiton-infrastrcture",
+			"infrastructure",
 			"hardware",
 			"network",
 			"server",
 			"cloud",
 			"operating-system",
 			"b-to-b",
-			"neko"
+			"meow"
 		],
 	},
 	{
@@ -209,7 +211,7 @@ const members: Member[] = [
 			"automation",
 			"csharp",
 			"docker",
-			"web-frontend",
+			"frontend",
 			"linux",
 			"macos",
 			"member",
