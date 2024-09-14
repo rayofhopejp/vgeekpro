@@ -14,7 +14,8 @@
 		"openGmail": "Compose in Gmail",
 		"openYahooJapanMail": "Compose in Yahoo! JAPAN Mail",
 		"guidelineSubtitle": "Vgeek production guidelines",
-		"searchByTag": "Search by Tag (BETA)"
+		"searchByTag": "Search by Tag (BETA)",
+		"showAllTags": "Show all tags"
 	},
 	"profileCommon": {
 		"xLinkButton": "X (Twitter)",
@@ -122,6 +123,14 @@
 		"udonsharp": "UdonSharp",
 		"ui-ux": "UI・UX",
 		"unity3d": "Unity",
-		"windows-server": "Windows Server"
+		"windows-server": "Windows Server",
+		"deno": "Deno",
+		"svelte": "Svelte",
+		"web": "Web",
+		"freelance": "Freelance",
+		"resonite": "Resonite",
+		"vrchat": "VRChay",
+		"lt": "Lightning Talks",
+		"minecraft": "Minecraft"
 	}
 }

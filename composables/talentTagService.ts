@@ -40,6 +40,14 @@ const currentTags: string[] = [
 	"ui-ux",							//   UI・UX (デザイン)
 	"unity3d",							//   Unity
 	"windows-server",					//   Windows Server
+	"deno",								//   Deno
+	"svelte",							//   Svelte
+	"web",								//   Web
+	"freelance",						//   フリーランス
+	"resonite",							//   Resonite
+	"vrchat",							//   VRChay
+	"lt",								//   Lightning Talks (?)
+	"minecraft",						//   Minecraft
 ]
 
 const currentlyAvailableTags: string[] = [

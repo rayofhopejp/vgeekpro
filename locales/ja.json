@@ -14,7 +14,8 @@
 		"openGmail": "Gmailを開く",
 		"openYahooJapanMail": "Yahoo! メールを開く",
 		"guidelineSubtitle": "ぶいぎーく！ガイドライン",
-		"searchByTag": "タグで検索 (β)"
+		"searchByTag": "タグで検索 (β)",
+		"showAllTags": "すべてのタグを表示"
 	},
 	"profileCommon": {
 		"xLinkButton": "X (Twitter)",
@@ -122,6 +123,14 @@
 		"udonsharp": "UdonSharp",
 		"ui-ux": "UI・UX",
 		"unity3d": "Unity",
-		"windows-server": "Windows Server"
+		"windows-server": "Windows Server",
+		"deno": "Deno",
+		"svelte": "Svelte",
+		"web": "Web",
+		"freelance": "フリーランス",
+		"resonite": "Resonite",
+		"vrchat": "VRChay",
+		"lt": "Lightning Talks",
+		"minecraft": "Minecraft"
 	}
 }

@@ -298,6 +298,12 @@ const displayMembers = computed(() => {
 	return returnBuffer;
 })
 
+const showAllTags = toRef(false);
+
+const tags = computed(() => {
+	return showAllTags.value ? currentTags : currentlyAvailableTags;
+});
+
 const mailModal = toRef(false);
 
 const showContributorsModal = toRef(false);
@@ -395,7 +401,7 @@ if (import.meta.client) {
 				<div class="tw-z-10 tw-relative tw-w-full tw-h-svh tw-bg-gradient-to-b tw-from-transparent tw-from-40% xl:tw-from-60% tw-to-stone-900"></div>
 				<img
 					alt="top illust"
-					class="tw-object-cover"
+					class="tw-object-contain xl:tw-object-cover"
 					style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
 					src="/images/topillust.webp">
 				<div class="tw-z-20 tw-absolute tw-ps-[3vw] tw-w-full tw-bottom-14 tw-whitespace-nowrap tw-text-center tw-text-[6vw] font-slogan">Reality Meets Virtuality</div>
@@ -428,21 +434,32 @@ if (import.meta.client) {
 
 
 		<section id="members" class="tw-w-full">
-			<div class="tw-relative tw-bg-gradient-to-b tw-from-stone-100 tw-from-90%">
+			<div class="tw-relative tw-bg-gradient-to-b tw-from-stone-100 tw-from-[calc(100%-8rem)]">
 				<div class="tw-z-10 tw-relative tw-flex tw-flex-col xl:tw-flex-row tw-justify-center tw-items-center">
 					<section class="tw-px-10 xl:tw-px-14 tw-py-10 tw-text-base">
 						<section>
 							<SectionHeader :description="$t('topPage.membersSubtitle')" title="Members" titleColor="black"/>
-							<div :class="`tw-grid tw-pb-20 tw-grid-cols-1 sm:tw-grid-cols-2 xl:tw-grid-cols-3 tw-gap-20`">
-								<BFormFloatingLabel :label="$t('topPage.searchByTag')">
-									<BFormSelect v-model="currentlySelectedTag">
-										<BFormSelectOption v-for="availableTag in currentlyAvailableTags" :key="availableTag" :value="availableTag">
-											{{ $t(`tagNames.${availableTag}`) }}
-										</BFormSelectOption>
-									</BFormSelect>
-								</BFormFloatingLabel>
+							<div :class="`tw-grid tw-pb-20 tw-grid-cols-1 sm:tw-grid-cols-1 xl:tw-grid-cols-2 tw-gap-20`">
+								<div class="tw-flex">
+									<div class="tw-flex-glow tw-flex-auto me-1">
+										<BFormFloatingLabel :label="$t('topPage.searchByTag')">
+											<BFormSelect v-model="currentlySelectedTag">
+												<BFormSelectOption v-for="availableTag in tags" :key="availableTag" :value="availableTag">
+													{{ $t(`tagNames.${availableTag}`) }}
+												</BFormSelectOption>
+											</BFormSelect>
+										</BFormFloatingLabel>
+									</div>
+									<div class="align-items-center tw-flex ms-1">
+										<BFormCheckbox v-model="showAllTags">
+											<span class="tw-text-black">
+												{{ $t(`topPage.showAllTags`) }}
+											</span>
+										</BFormCheckbox>
+									</div>
+								</div>
 							</div>
-							<div :class="`tw-grid tw-pb-20 tw-grid-cols-1 sm:tw-grid-cols-${displayMembers.length >= 2 ? '2' : '1'} md:tw-grid-cols-${displayMembers.length >= 4 ? '3' : displayMembers.length} 2xl:tw-grid-cols-${displayMembers.length >= 5 ? '4' : displayMembers.length} tw-gap-20`">
+							<div :class="`tw-grid tw-grid-cols-1 sm:tw-grid-cols-${displayMembers.length >= 2 ? '2' : '1'} md:tw-grid-cols-${displayMembers.length >= 4 ? '3' : displayMembers.length} 2xl:tw-grid-cols-${displayMembers.length >= 5 ? '4' : displayMembers.length} tw-gap-20`">
 								<MemberCard v-for="member in displayMembers" :key="member.profileId" :name="member.name" :yomi="member.yomi" :profileId="member.profileId" :imageId="member.imageId" :imageAlt="member.imageAlt" :tags="member.tag" :selectedTag="currentlySelectedTag"/>
 							</div>
 						</section>
