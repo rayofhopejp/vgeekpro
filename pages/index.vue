@@ -223,7 +223,9 @@ const members: Member[] = [
 			"staff",
 			"backend",
 			"frontend",
-			"infrastructure"
+			"infrastructure",
+			"csharp",
+			"typescript",
 		],
 	},
 	{
