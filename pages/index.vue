@@ -457,7 +457,7 @@ if (import.meta.client) {
 					<section class="tw-px-10 xl:tw-px-14 tw-py-10 tw-text-base">
 						<section>
 							<SectionHeader :description="$t('topPage.membersSubtitle')" title="Members" titleColor="black"/>
-							<div :class="`tw-grid tw-pb-20 tw-grid-cols-1 sm:tw-grid-cols-1 xl:tw-grid-cols-2 tw-gap-20`">
+							<div class="tw-grid tw-pb-20 tw-grid-cols-1 sm:tw-grid-cols-1 xl:tw-grid-cols-2 tw-gap-20">
 								<div class="tw-flex">
 									<div class="tw-flex-glow tw-flex-auto me-1">
 										<BFormFloatingLabel :label="$t('topPage.searchByTag')">
@@ -477,8 +477,8 @@ if (import.meta.client) {
 									</div>
 								</div>
 							</div>
-							<div :class="`tw-grid tw-grid-cols-1 sm:tw-grid-cols-${displayMembers.length >= 2 ? '2' : '1'} md:tw-grid-cols-${displayMembers.length >= 4 ? '3' : displayMembers.length} 2xl:tw-grid-cols-${displayMembers.length >= 5 ? '4' : displayMembers.length} tw-gap-20`">
-								<MemberCard v-for="member in displayMembers" :key="member.profileId" :imageAlt="member.imageAlt" :imageId="member.imageId" :name="member.name" :profileId="member.profileId" :selectedTag="currentlySelectedTag" :tags="member.tag" :yomi="member.yomi"/>
+							<div class="tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 md:tw-grid-cols-3 2xl:tw-grid-cols-4 tw-gap-20">
+								<MemberCard v-for="member in displayMembers" :key="member.profileId" :imageAlt="member.imageAlt" :imageId="member.imageId" :name="member.name" :profileId="member.profileId" :yomi="member.yomi"/>
 							</div>
 						</section>
 					</section>
