@@ -45,7 +45,7 @@ const currentTags: string[] = [
 	"web",								//   Web
 	"freelance",						//   フリーランス
 	"resonite",							//   Resonite
-	"vrchat",							//   VRChay
+	"vrchat",							//   VRChat
 	"lt",								//   Lightning Talks (?)
 	"minecraft",						//   Minecraft
 	"clang",							//   C言語
@@ -62,8 +62,11 @@ const currentTags: string[] = [
 	"pc6000",							//   PC-6000 シリーズ
 	"msx",								//   MSX
 	"free-bsd",							//   FreeBSD
-]
+] as const;
 
+type Tags = (typeof currentTags)[number];
+
+// まず無いとは思いますが、不要になったら削除します
 const currentlyAvailableTags: string[] = [
 	"all",								// * すべて表示
 	"member",							// * ぶいぎーく！メンバー
@@ -77,6 +80,6 @@ const currentlyAvailableTags: string[] = [
 	"network",							// * ネットワーク
 	"security-girl",					// * セキュリティガール (ユニット名)
 	"solid-js",							// * SolidJS
-]
+] as const satisfies readonly Tags[]
 
 export {currentlyAvailableTags, currentTags, checkTag};
