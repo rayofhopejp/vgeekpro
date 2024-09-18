@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 
 type LocaleTimeAttributes = {
 	year?: string | number,
@@ -341,7 +341,7 @@ const generateDisplayValueBase = () => {
 }
 
 const displayValue = computed(() => {
-	return `${generateDisplayValueBase()}${ (props.isFuzzy ?? false) ? "頃" : "" }`;
+	return `${generateDisplayValueBase()}${(props.isFuzzy ?? false) ? "頃" : ""}`;
 })
 </script>
 

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 type ProfileHeadAttributes = {
 	name: string,
 	yomi: string,
@@ -18,7 +18,7 @@ const props = defineProps<ProfileHeadAttributes>();
 		<p v-if="!(props.isDisableCatchphraseBrackets ?? false)" class="font-slogan tw-text-center tw-mb-14 tw-text-xl xl:tw-text-3xl">「{{ props.catchphrase }}」</p>
 		<p v-else class="font-slogan tw-text-center tw-mb-14 tw-text-xl xl:tw-text-3xl">{{ props.catchphrase }}</p>
 		<p class="tw-mb-14">
-			<slot />
+			<slot/>
 		</p>
 	</div>
 </template>

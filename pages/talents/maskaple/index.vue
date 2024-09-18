@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 definePageMeta({
 	layout: 'member-page'
 })
@@ -22,13 +22,13 @@ useSeoMeta({
 <template>
 	<aside class="tw-self-start tw-text-center tw-w-full xl:tw-w-auto">
 		<FullBodyImage
-			:memberId="imageId"
 			:alt="yomi"
+			:memberId="imageId"
 		/>
 	</aside>
 	<section class="tw-px-10 xl:tw-px-14 tw-py-14 tw-text-base">
 		<section>
-			<ProfileHead :name="name" :yomi="yomi" :catchphrase="description">
+			<ProfileHead :catchphrase="description" :name="name" :yomi="yomi">
 				インフラSEさんに拾われて、いつの間にか自分もインフラSEになっていた飼い猫又。<br/>
 				某中小SIer勤務で、1匹でインフラ全般担当しております。<br/>
 				好奇心の赴くまま蒐集した知識や技術のコレクションを、皆々様と共有したい！<br/>
@@ -41,7 +41,7 @@ useSeoMeta({
 			</div>
 		</section>
 		<section>
-			<SectionHeader :isDark="true" title="Contents" description="配信内容"/>
+			<SectionHeader :isDark="true" description="配信内容" title="Contents"/>
 			<div class="tw-mb-28 tw-leading-loose xl:tw-max-w-screen-sm xl:tw-mx-auto">
 				<ul class="tw-list-disc tw-ps-5">
 					<li>雑談配信 「Barますかぷる」(定期配信/毎週金曜20時～)</li>
@@ -55,20 +55,20 @@ useSeoMeta({
 			</div>
 		</section>
 		<section>
-			<SectionHeader :isDark="true" title="Profile" description="プロフィール"/>
+			<SectionHeader :isDark="true" description="プロフィール" title="Profile"/>
 			<div class="tw-mb-28 tw-leading-loose tw-align-top xl:tw-max-w-screen-sm xl:tw-mx-auto">
 				<table>
 					<tbody>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">誕生日</td>
 						<td class="tw-pb-4 tw-align-top">
-							<LocaleTime month="12" day="27"/>
+							<LocaleTime day="27" month="12"/>
 						</td>
 					</tr>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">初配信日</td>
 						<td class="tw-pb-4 tw-align-top">
-							<LocaleTime year="2023" month="12" day="1"/>
+							<LocaleTime day="1" month="12" year="2023"/>
 						</td>
 					</tr>
 					<tr>
@@ -82,9 +82,9 @@ useSeoMeta({
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">ハッシュタグ</td>
 						<td class="tw-pb-4 tw-align-top">
-							配信タグ: <a href="https://x.com/hashtag/ますかぷる" target="_blank" rel="noopener noreferrer">#ますかぷる</a> <br/>
-							ファンアートタグ: <a href="https://x.com/hashtag/Barますかぷる" target="_blank" rel="noopener noreferrer">#Barますかぷる</a><br/>
-							ファンアートタグ: <a href="https://x.com/hashtag/おやつびと絵巻" target="_blank" rel="noopener noreferrer">#おやつびと絵巻</a>
+							配信タグ: <a href="https://x.com/hashtag/ますかぷる" rel="noopener noreferrer" target="_blank">#ますかぷる</a> <br/>
+							ファンアートタグ: <a href="https://x.com/hashtag/Barますかぷる" rel="noopener noreferrer" target="_blank">#Barますかぷる</a><br/>
+							ファンアートタグ: <a href="https://x.com/hashtag/おやつびと絵巻" rel="noopener noreferrer" target="_blank">#おやつびと絵巻</a>
 						</td>
 					</tr>
 					<tr>

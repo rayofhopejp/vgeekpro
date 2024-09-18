@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 definePageMeta({
 	layout: 'member-page'
 })
@@ -22,13 +22,13 @@ useSeoMeta({
 <template>
 	<aside class="tw-self-start tw-text-center tw-w-full xl:tw-w-auto">
 		<FullBodyImage
-			:memberId="imageId"
 			:alt="yomi"
+			:memberId="imageId"
 		/>
 	</aside>
 	<section class="tw-px-10 xl:tw-px-14 tw-py-14 tw-text-base">
 		<section>
-			<ProfileHead :name="name" :yomi="yomi" :catchphrase="description">
+			<ProfileHead :catchphrase="description" :name="name" :yomi="yomi">
 				ふわふわと海から流されてきたVtuber。<br/>
 				プログラミング、ゲーム制作、Webサービス開発など、クリエイティブな配信をしています。<br/>
 				バグと戦いつつも、リスナーのみんなと一緒に、面白くて新しい世界を作っていきたい！

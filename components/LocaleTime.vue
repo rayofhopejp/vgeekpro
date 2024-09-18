@@ -1,9 +1,9 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 
 type LocaleTimeAttributes = {
-	year?: string|number,
-	month?: string|number,
-	day?: string|number,
+	year?: string | number,
+	month?: string | number,
+	day?: string | number,
 	isShort?: boolean,
 	isLong?: boolean,
 }
@@ -41,7 +41,7 @@ if (props.year != undefined) {
 	usingTimeElement.value = false;
 }
 
-const { locale } = useI18n();
+const {locale} = useI18n();
 
 const englishNumberSuffix = (int: number) => {
 	switch (int) {

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 definePageMeta({
 	layout: 'member-page'
 })
@@ -22,13 +22,13 @@ useSeoMeta({
 <template>
 	<aside class="tw-self-start tw-text-center tw-w-full xl:tw-w-auto">
 		<FullBodyImage
-			:memberId="imageId"
 			:alt="yomi"
+			:memberId="imageId"
 		/>
 	</aside>
 	<section class="tw-px-10 xl:tw-px-14 tw-py-14 tw-text-base">
 		<section>
-			<ProfileHead :name="name" :yomi="yomi" :catchphrase="description">
+			<ProfileHead :catchphrase="description" :name="name" :yomi="yomi">
 				台湾出身狛犬Vtuber。<br/>
 				深山で仙人として修練をし続けてきたが、末法時代で霊力を使えなくなったため、代わりに現代技術を研鑽する狛犬。<br/>
 				道果を得るため日々修練を重ねてる。<br/><br/>
@@ -42,7 +42,7 @@ useSeoMeta({
 			</div>
 		</section>
 		<section>
-			<SectionHeader :isDark="true" title="Contents" description="配信内容"/>
+			<SectionHeader :isDark="true" description="配信内容" title="Contents"/>
 			<div class="tw-mb-28 tw-leading-loose xl:tw-max-w-screen-sm xl:tw-mx-auto">
 				<ul class="tw-list-disc tw-ps-5">
 					<li>スプラ3(ワイパー使い)</li>
@@ -54,26 +54,28 @@ useSeoMeta({
 			</div>
 		</section>
 		<section>
-			<SectionHeader :isDark="true" title="Profile" description="プロフィール"/>
+			<SectionHeader :isDark="true" description="プロフィール" title="Profile"/>
 			<div class="tw-mb-28 tw-leading-loose tw-align-top xl:tw-max-w-screen-sm xl:tw-mx-auto">
 				<table>
 					<tbody>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">誕生日</td>
 						<td class="tw-pb-4 tw-align-top">
-							<LocaleTime month="1" day="11" />(わんわんわん!)
+							<LocaleTime day="11" month="1"/>
+							(わんわんわん!)
 						</td>
 					</tr>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">初配信日</td>
 						<td class="tw-pb-4 tw-align-top">
-							<LocaleTime year="2023" month="5" day="5" />(AIコマとデビュー、現在アーカイブ非公開)
+							<LocaleTime day="5" month="5" year="2023"/>
+							(AIコマとデビュー、現在アーカイブ非公開)
 						</td>
 					</tr>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">身長</td>
 						<td class="tw-pb-4 tw-align-top">
-							<LocaleHeight :height="155" original-unit="centimeter" />
+							<LocaleHeight :height="155" original-unit="centimeter"/>
 						</td>
 					</tr>
 					<tr>
@@ -82,12 +84,12 @@ useSeoMeta({
 					</tr>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">モデラー</td>
-						<td class="tw-pb-4 tw-align-top">live2D(自作)/3D(自力改変、ベースはあまとうさぎ様が制作したライムちゃん) </td>
+						<td class="tw-pb-4 tw-align-top">live2D(自作)/3D(自力改変、ベースはあまとうさぎ様が制作したライムちゃん)</td>
 					</tr>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">ハッシュタグ</td>
 						<td class="tw-pb-4 tw-align-top">
-							配信タグ: <a href="https://x.com/hashtag/白犬物語" target="_blank" rel="noopener noreferrer">#白犬物語</a> <br/>
+							配信タグ: <a href="https://x.com/hashtag/白犬物語" rel="noopener noreferrer" target="_blank">#白犬物語</a> <br/>
 						</td>
 					</tr>
 					<tr>
@@ -99,7 +101,7 @@ useSeoMeta({
 			</div>
 		</section>
 		<section>
-			<SectionHeader :isDark="true" title="Words / Meme" description="ジャーゴン"/>
+			<SectionHeader :isDark="true" description="ジャーゴン" title="Words / Meme"/>
 			<div class="tw-leading-loose xl:tw-max-w-screen-sm xl:tw-mx-auto">
 				<ul class="tw-list-disc tw-ps-5">
 					<li>

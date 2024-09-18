@@ -13,7 +13,7 @@
 					</client-only>
 				</div>
 				<div class="tw-z-10 tw-relative tw-flex tw-flex-col xl:tw-flex-row tw-justify-center tw-items-center">
-					<slot />
+					<slot/>
 				</div>
 			</div>
 			<div class="tw-my-10 tw-w-full tw-flex tw-justify-around tw-items-start">
@@ -24,7 +24,7 @@
 		</section>
 	</main>
 </template>
-<script setup lang="ts">
+<script lang="ts" setup>
 useHead({
 	htmlAttrs: {
 		lang: "ja",

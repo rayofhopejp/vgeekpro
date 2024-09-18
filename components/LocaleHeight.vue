@@ -1,21 +1,21 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 
 type LocaleHeightAttributes = {
 	height: number,
-	originalUnit: "inch"|"feet"|"yard"|"millimeter"|"centimeter"|"decimeter"|"meter",
+	originalUnit: "inch" | "feet" | "yard" | "millimeter" | "centimeter" | "decimeter" | "meter",
 	isApprox?: boolean,
 	/**
 	 * 強制的にこの単位に変換します。
 	 * 既定では、日本語および英国英語ではセンチメートル、米国英語ではフィート・インチ併用です。
 	 */
-	forceUnit?: "inch"|"feet"|"yard"|"millimeter"|"centimeter"|"decimeter"|"meter",
+	forceUnit?: "inch" | "feet" | "yard" | "millimeter" | "centimeter" | "decimeter" | "meter",
 }
 
 const props = defineProps<LocaleHeightAttributes>();
 
-const { locale } = useI18n();
+const {locale} = useI18n();
 
-const toInch = (input: number, unit:"inch"|"feet"|"yard"|"millimeter"|"centimeter"|"decimeter"|"meter") => {
+const toInch = (input: number, unit: "inch" | "feet" | "yard" | "millimeter" | "centimeter" | "decimeter" | "meter") => {
 	let processBuffer = input;
 	switch (unit) {
 		case "inch":
@@ -35,7 +35,7 @@ const toInch = (input: number, unit:"inch"|"feet"|"yard"|"millimeter"|"centimete
 	}
 }
 
-const toMilliMeter = (input: number, unit:"inch"|"feet"|"yard"|"millimeter"|"centimeter"|"decimeter"|"meter") => {
+const toMilliMeter = (input: number, unit: "inch" | "feet" | "yard" | "millimeter" | "centimeter" | "decimeter" | "meter") => {
 	let processBuffer = input;
 	switch (unit) {
 		case "yard":
@@ -62,7 +62,7 @@ const calculatedHeight = computed(() => {
 	if (props.forceUnit != undefined) {
 		switch (props.forceUnit) {
 			case "yard":
-				yard = Math.floor(inputInch / 36 )
+				yard = Math.floor(inputInch / 36)
 				feet = Math.floor(inputInch % 36 / 12)
 				inch = Math.round(inputInch % 12);
 				if (yard >= 1) {
@@ -84,11 +84,11 @@ const calculatedHeight = computed(() => {
 				inch = Math.round(inputInch % 12);
 				return `${inch}in`;
 			case "meter":
-				return `${inputMilliMeter/1000}m`;
+				return `${inputMilliMeter / 1000}m`;
 			case "decimeter":
-				return `${inputMilliMeter/100}dm`;
+				return `${inputMilliMeter / 100}dm`;
 			case "centimeter":
-				return `${inputMilliMeter/10}cm`;
+				return `${inputMilliMeter / 10}cm`;
 			case "millimeter":
 				return `${inputMilliMeter}mm`;
 		}
@@ -103,7 +103,7 @@ const calculatedHeight = computed(() => {
 					return `${inch}in`;
 				}
 			default:
-				return `${inputMilliMeter/10}cm`;
+				return `${inputMilliMeter / 10}cm`;
 		}
 	}
 })
@@ -111,7 +111,7 @@ const calculatedHeight = computed(() => {
 
 <template>
 	<span>
-		{{(props.isApprox ?? false) ? `${$t("profileCommon.approx")} ` : ""}}{{calculatedHeight}}
+		{{ (props.isApprox ?? false) ? `${$t("profileCommon.approx")} ` : "" }}{{ calculatedHeight }}
 	</span>
 </template>
 

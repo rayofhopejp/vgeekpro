@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import ButtonLinkBase from "~/components/ButtonLinkBase.vue";
 
 type TwitCastingStreamAttributes = {
@@ -15,7 +15,7 @@ type TwitCastingStreamAttributes = {
 	 * - ``(記載なし): TwitterまたはXのアカウントでアカウントを作成した場合です。こちらは`XUser`が対応します
 	 * - 該当無し: 一切不明です。こちらは`Unknown`が対応します
 	 */
-	accountType: "CasAccount"|"XUser"|"Instagram"|"InstagramAlt"|"Facebook"|"Google"|"Unknown"
+	accountType: "CasAccount" | "XUser" | "Instagram" | "InstagramAlt" | "Facebook" | "Google" | "Unknown"
 	userId: string
 	useSimpleAnchor?: boolean,
 };

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 const route = useRoute();
 
 const {locale, locales, setLocale} = useI18n();
@@ -12,16 +12,16 @@ const setLocaleTo = (locale: string) => {
 
 <template>
 	<header>
-		<a class="tw-transition tw-left-0 tw-bg-primary tw-text-primary-content tw-absolute tw-p-3 tw-m-3 tw--translate-y-16 focus:tw-translate-y-0" href="#main-contents" v-smooth-scroll="{offset: -50}">Skip to main contents</a>
+		<a v-smooth-scroll="{offset: -50}" class="tw-transition tw-left-0 tw-bg-primary tw-text-primary-content tw-absolute tw-p-3 tw-m-3 tw--translate-y-16 focus:tw-translate-y-0" href="#main-contents">Skip to main contents</a>
 		<nav class="tw-z-30 tw-fixed tw-left-0 tw-top-0 tw-flex tw-justify-between tw-items-start tw-p-4 xl:tw-font-bold tw-pointer-events-none tw-w-[100vw]">
 			<div class="tw-flex tw-shrink tw-justify-items-start">
 				<NuxtLink v-smooth-scroll="{offset: -50}" :href="localePath('/#home')" class="tw-cursor-pointer tw-pointer-events-auto">
 					<img
-						src="/images/logo.webp"
 						alt="Vgeek Logo"
-						width="544"
+						class="tw-object-contain tw-w-auto tw-h-auto tw-max-w-[40vw] xl:tw-max-w-full tw-max-h-[30vh] xl:tw-max-h-[15vh]"
 						height="267"
-						class="tw-object-contain tw-w-auto tw-h-auto tw-max-w-[40vw] xl:tw-max-w-full tw-max-h-[30vh] xl:tw-max-h-[15vh]"/>
+						src="/images/logo.webp"
+						width="544"/>
 				</NuxtLink>
 			</div>
 			<div class="tw-flex tw-glow tw-justify-items-end">

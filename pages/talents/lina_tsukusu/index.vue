@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 definePageMeta({
 	layout: 'member-page'
 })
@@ -22,13 +22,13 @@ useSeoMeta({
 <template>
 	<aside class="tw-self-start tw-text-center tw-w-full xl:tw-w-auto">
 		<FullBodyImage
-			:memberId="imageId"
 			:alt="yomi"
+			:memberId="imageId"
 		/>
 	</aside>
 	<section class="tw-px-10 xl:tw-px-14 tw-py-14 tw-text-base">
 		<section>
-			<ProfileHead :name="name" :yomi="yomi" :catchphrase="description">
+			<ProfileHead :catchphrase="description" :name="name" :yomi="yomi">
 				バーチャルイキリプログラマを名乗るVTuber系フリーランスWebエンジニア｡<br/>
 				エンジニア界隈でよく行われるLTなどのような"技術でエンタメ"を作りたくて配信を始める｡<br/>
 				とはいえ普段は仕事に追われて倒れているか時間融解ゲームにのめり込んでいることが多い｡配信や動画投稿していたら褒めてあげよう｡
@@ -41,20 +41,20 @@ useSeoMeta({
 			</div>
 		</section>
 		<section>
-			<SectionHeader :isDark="true" title="Profile" description="プロフィール"/>
+			<SectionHeader :isDark="true" description="プロフィール" title="Profile"/>
 			<div class="tw-mb-28 tw-leading-loose tw-align-top xl:tw-max-w-screen-sm xl:tw-mx-auto">
 				<table>
 					<tbody>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">誕生日</td>
 						<td class="tw-pb-4 tw-align-top">
-							<LocaleTime month="10" day="5"/>
+							<LocaleTime day="5" month="10"/>
 						</td>
 					</tr>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">初配信日</td>
 						<td class="tw-pb-4 tw-align-top">
-							<LocaleTime year="2018" month="6" day="27"/>
+							<LocaleTime day="27" month="6" year="2018"/>
 						</td>
 					</tr>
 					<tr>

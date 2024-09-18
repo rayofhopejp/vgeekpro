@@ -1,8 +1,8 @@
 <template>
-	<slot />
+	<slot/>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 useHead({
 	htmlAttrs: {
 		lang: "ja",

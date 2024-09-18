@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 type UpperBodyImageAttributes = {
 	memberId: string,
 	alt: string,
@@ -22,12 +22,12 @@ const imagePath = computed({
 
 <template>
 	<img
-		:class="props.replaceClass ?? (`tw-object-contain tw-mt-10 ${(props.isDisableMarginTopExpand ?? false) ? '' : 'xl:tw-mt-40 '}tw-mx-auto`)"
-		:src="imagePath"
 		:alt="props.alt"
-		:width="props.width ?? 200"
+		:class="props.replaceClass ?? (`tw-object-contain tw-mt-10 ${(props.isDisableMarginTopExpand ?? false) ? '' : 'xl:tw-mt-40 '}tw-mx-auto`)"
 		:height="props.height ?? 200"
-		/>
+		:src="imagePath"
+		:width="props.width ?? 200"
+	/>
 </template>
 
 <style scoped>

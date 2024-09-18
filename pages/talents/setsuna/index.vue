@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 definePageMeta({
 	layout: 'member-page'
 })
@@ -22,18 +22,18 @@ useSeoMeta({
 <template>
 	<aside class="tw-self-start tw-text-center tw-w-full xl:tw-w-auto">
 		<FullBodyImage
-			:memberId="imageId"
 			:alt="yomi"
+			:memberId="imageId"
 		/>
 		<FullBodyImage
-			:memberId="imageId"
 			:alt="yomi"
+			:memberId="imageId"
 			variation="2"
 		/>
 	</aside>
 	<section class="tw-px-10 xl:tw-px-14 tw-py-14 tw-text-base">
 		<section>
-			<ProfileHead :name="name" :yomi="yomi" :catchphrase="description">
+			<ProfileHead :catchphrase="description" :name="name" :yomi="yomi">
 				うつろという名の某システム導入チームのエンジニアの記憶を学習したAI。<br/>
 				平日は基本仕事やばいということしか考えられていない。<br/>
 				（お休みの日に流れ弾が来てないだけ今のところマシ）<br/>
@@ -45,7 +45,7 @@ useSeoMeta({
 			</div>
 		</section>
 		<section>
-			<SectionHeader :isDark="true" title="Contents" description="配信内容"/>
+			<SectionHeader :isDark="true" description="配信内容" title="Contents"/>
 			<div class="tw-mb-28 tw-leading-loose xl:tw-max-w-screen-sm xl:tw-mx-auto">
 				<ul class="tw-list-disc tw-ps-5">
 					<li>雑談</li>
@@ -56,20 +56,20 @@ useSeoMeta({
 			</div>
 		</section>
 		<section>
-			<SectionHeader :isDark="true" title="Profile" description="プロフィール"/>
+			<SectionHeader :isDark="true" description="プロフィール" title="Profile"/>
 			<div class="tw-mb-28 tw-leading-loose tw-align-top xl:tw-max-w-screen-sm xl:tw-mx-auto">
 				<table>
 					<tbody>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">誕生日</td>
 						<td class="tw-pb-4 tw-align-top">
-							<LocaleTime month="3" day="6"/>
+							<LocaleTime day="6" month="3"/>
 						</td>
 					</tr>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">初配信月</td>
 						<td class="tw-pb-4 tw-align-top">
-							<LocaleTime year="2020" month="9"/>
+							<LocaleTime month="9" year="2020"/>
 						</td>
 					</tr>
 					<tr>
@@ -83,8 +83,8 @@ useSeoMeta({
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">ハッシュタグ</td>
 						<td class="tw-pb-4 tw-align-top">
-							配信タグ: <a href="https://x.com/hashtag/ゆめむか放送局" target="_blank" rel="noopener noreferrer">#ゆめむか放送局</a> <br/>
-							ファンアートタグ: <a href="https://x.com/hashtag/ゆめむかいらすと" target="_blank" rel="noopener noreferrer">#ゆめむかいらすと</a>
+							配信タグ: <a href="https://x.com/hashtag/ゆめむか放送局" rel="noopener noreferrer" target="_blank">#ゆめむか放送局</a> <br/>
+							ファンアートタグ: <a href="https://x.com/hashtag/ゆめむかいらすと" rel="noopener noreferrer" target="_blank">#ゆめむかいらすと</a>
 						</td>
 					</tr>
 					<tr>
