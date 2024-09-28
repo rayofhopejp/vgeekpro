@@ -48,5 +48,8 @@ export default defineNuxtConfig({
 				file: "en-gb.json"
 			},
 		]
-	}
+	},
+	runtimeConfig: {
+		apiServer: '***後でちゃんとした本番Pathに書き換えてね！***',
+	},
 })
