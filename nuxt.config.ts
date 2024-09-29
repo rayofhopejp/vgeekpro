@@ -50,6 +50,8 @@ export default defineNuxtConfig({
 		]
 	},
 	runtimeConfig: {
-		apiServer: '***後でちゃんとした本番Pathに書き換えてね！***',
-	},
+		public: {
+			WEB_API: process.env.WEB_API,
+		}
+	}
 })

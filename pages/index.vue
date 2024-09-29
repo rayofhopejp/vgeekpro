@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-type Member = {
+export type Member = {
 	name: string,
 	yomi: string,
 	profileId: string,
@@ -343,7 +343,7 @@ const konamiCommandPatterns = [
 
 if (import.meta.client) {
 	let keyBuffer: string[] = [];
-	let timerToken: int | undefined;
+	let timerToken: number | undefined;
 	window.addEventListener("keydown", (event) => {
 		commandCheckerCount++;
 		const currentCommandCheckerCount = commandCheckerCount;
@@ -454,28 +454,6 @@ if (import.meta.client) {
 			</div>
 		</section>
 
-		<section id="Live" class="bg-maze tw-w-full">
-			<div class="tw-relative tw-bg-gradient-to-b tw-from-stone-600 tw-from-60%">
-				<div class="tw-z-10 tw-relative tw-flex tw-flex-col xl:tw-flex-row tw-justify-center tw-items-center">
-					<section class="tw-px-10 xl:tw-px-14 tw-py-14 tw-text-base">
-						<section>
-							<SectionHeader :description="$t('topPage.livePage')" :isDark="true" title="Live"
-								titleColor="white" />
-
-							<div class="tw-grid tw-pb-20 tw-grid-cols-1 sm:tw-grid-cols-1 xl:tw-grid-cols-2 tw-gap-20">
-								<div class="tw-flex">
-									<div class="tw-flex-glow tw-flex-auto tw-items-center me-1">
-										<div></div>
-
-									</div>
-								</div>
-							</div>
-						</section>
-					</section>
-				</div>
-			</div>
-		</section>
-
 		<section id="members" class="tw-w-full">
 			<div class="tw-relative tw-bg-gradient-to-b tw-from-stone-100 tw-from-[calc(100%-8rem)]">
 				<div class="tw-z-10 tw-relative tw-flex tw-flex-col xl:tw-flex-row tw-justify-center tw-items-center">
@@ -503,6 +481,9 @@ if (import.meta.client) {
 										</BFormCheckbox>
 									</div>
 								</div>
+							</div>
+							<div class="tw-flex tw-items-center tw-justify-center tw-rounded-lg tw-bg-stone-300 tw-px-[30px]">
+								<VideoList :members="displayMembers"/>
 							</div>
 							<div
 								class="tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 md:tw-grid-cols-3 2xl:tw-grid-cols-4 tw-gap-20">

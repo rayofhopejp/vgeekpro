@@ -1,53 +1,72 @@
 <script lang="ts" setup>
 import UpperBodyImage from "~/components/UpperBodyImage.vue";
+import type { Member } from "~/pages/index.vue";
 
-type MemberAttributes = {
-    members: string[],
+type VideoMemberAttributes = {
+	members: Member[],
+}
+
+type Video = {
+	url: string,
+	videoId: string,
+	publishedAt: string,
+	channelTitle: string,
+	title: string,
+	description: string,
+	thumbnail: string,
+	liveBroadcast: string,
+	liveScheduledStartTime: string,
+	liveActualStartTime: string,
+	liveActualEndTime: string
 }
 
 const { locale } = useI18n();
 const localePath = useLocalePath();
-const runtimeConfig = useRuntimeConfig();
+const config = useRuntimeConfig();
 
-const props = defineProps<MemberCardAttributes>();
-const imagePath = computed({
-    get: () => {
-        console.log(runtimeConfig.apiServer);
+const props = defineProps<VideoMemberAttributes>();
 
-        const memberVideo = await useFetch(`${runtimeConfig.apiServer}/videos?name=${props.name.join(",")}`);
-        console.log("memberVideo", memberVideo);
+const memberVideo = ref<Video[]>([]);
+const isStart = ref(true);
+const errorLog = ref("");
 
-
-        console.log()
-        if (props.variation != undefined) {
-            return `/images/members/${props.memberId}/upper_body_variation_${props.variation}.webp`;
-        } else {
-            return `/images/members/${props.memberId}/upper_body.webp`;
-        }
-
-    }
-})
-
-
+watch(() => props.members,async()=>{
+	try {
+		memberVideo.value = await $fetch<Video[]>(`${config.public.WEB_API}/api/search?name=${props.members.map(e=>e.profileId).join(",")}`);
+		isStart.value = false;
+	} catch (error) {
+		errorLog.value = 'Error! Could not reach the API. ' + error;
+	}
+},{
+	immediate: true
+});
 
 </script>
 
 <template>
-    <section class="tw-items-center">
-        <UpperBodyImage :alt="props.imageAlt" :isDisableMarginTopExpand="true" :memberId="props.imageId" />
-        <div class="tw-mb-28 tw-leading-loose tw-text-black">
-            <p class="font-slogan tw-text-center tw-text-3xl xl:tw-text-5xl"
-                v-text="locale == 'ja' ? props.name : props.yomi"></p>
-            <p class="font-slogan tw-text-center tw-mb-14" v-text="locale == 'ja' ? props.yomi : props.name"></p>
-            <div class="tw-flex tw-flex-col">
-                <NuxtLink :href="localePath(`/talents/${props.profileId}`)"
-                    class="tw-self-stretch tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4 tw-text-center"
-                    rel="noopener noreferrer">
-                    {{ $t("topPage.toProfilePage") }}
-                </NuxtLink>
-            </div>
-        </div>
-    </section>
+	<section class="tw-w-[80vw] tw-h-[300px] tw-my-3">
+		<div v-if="isStart === false && memberVideo.length !== 0" class="tw-leading-loose tw-text-black tw-flex tw-flex-row tw-h-full tw-overflow-x-auto scrollbar">
+			<div v-for="videoItem in memberVideo" class="tw-h-full tw-mx-2">
+				<a :key="videoItem.videoId" :href="videoItem.url"  class="tw-h-full">
+					<div class="flex flex-col tw-w-[300px] tw-h-[85%] tw-rounded-lg tw-bg-stone-100 tw-overflow-hidden tw-items-center tw-justify-center tw-shadow-md">
+						<img
+							:alt="videoItem.title"
+							:height="1280"
+							:src="videoItem.thumbnail"
+							:width="720"
+							class="tw-h-auto"
+						/>
+						<div class="p-2">
+							<p class="tw-text-sm tw-text-center textline-hidden">{{ `${videoItem.title}`}}</p>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div v-if="isStart === false && memberVideo.length === 0" class="tw-leading-loose tw-flex tw-flex-row tw-h-full tw-flex tw-items-center tw-justify-center ">
+			<p class="tw-text-5xl">Not Found</p>
+		</div>
+	</section>
 </template>
 
 <style scoped></style>
