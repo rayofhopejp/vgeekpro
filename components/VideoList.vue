@@ -2,7 +2,6 @@
 import type { Member } from "~/pages/index.vue";
 
 type VideoMemberAttributes = {
-	members: Member[],
 	url: string,
 }
 
@@ -30,12 +29,12 @@ const memberVideo = ref<Video[]>([]);
 const isStart = ref(true);
 const errorLog = ref("");
 
-watch(() => ({member:props.members,url:props.url }),async()=>{
+watch(() => props.url, async()=>{
 	try {
 		memberVideo.value = await $fetch<Video[]>(props.url);
 		isStart.value = false;
 	} catch (error) {
-		errorLog.value = 'Error! Could not reach the API. ' + error;
+		errorLog.value = 'API Error!' + error;
 	}
 },{
 	immediate: true

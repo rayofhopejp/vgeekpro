@@ -12,18 +12,35 @@ const config = useRuntimeConfig();
 
 const props = defineProps<VideoMemberAttributes>();
 
-const tabs : {label:string,url:string}[] = [
-	{label: "ライブ前" , url: `${config.public.WEB_API}/api/search?name=${props.members.map(e=>e.profileId).join(",")}&type=liveBefore`},
-	{label: "ライブ" , url: `${config.public.WEB_API}/api/search?name=${props.members.map(e=>e.profileId).join(",")}&type=liveNow`},
-	{label: "ライブ後" , url: `${config.public.WEB_API}/api/search?name=${props.members.map(e=>e.profileId).join(",")}&type=liveAfter`},
-	{label: "ビデオ" , url: `${config.public.WEB_API}/api/search?name=${props.members.map(e=>e.profileId).join(",")}&type=video`},
-]
+const tabs = ref<{label:string,url:string}[]>(reload());
 
-const selectTab = ref(tabs[0]);
+const selectTab = ref<{label:string,url:string}>(tabs.value[0]);
 
 function tabChange(tab: {label:string,url:string}){
 	selectTab.value = tab;
 }
+
+function reload(){
+	return [
+		{label: "ライブ前" , url: `${config.public.WEB_API}/api/search?name=${props.members.map(e=>e.profileId).join(",")}&type=liveBefore`},
+		{label: "ライブ" , url: `${config.public.WEB_API}/api/search?name=${props.members.map(e=>e.profileId).join(",")}&type=liveNow`},
+		{label: "ライブ後" , url: `${config.public.WEB_API}/api/search?name=${props.members.map(e=>e.profileId).join(",")}&type=liveAfter`},
+		{label: "ビデオ" , url: `${config.public.WEB_API}/api/search?name=${props.members.map(e=>e.profileId).join(",")}&type=video`},
+	];
+}
+
+watch(() => props.members, async()=>{
+	tabs.value = reload();
+	const newTab = tabs.value.find(e=>e.label === selectTab.value.label);
+	if(newTab){
+		selectTab.value = newTab;
+	}else{
+		selectTab.value = tabs.value[0];
+	}
+},{
+	immediate: true
+});
+
 
 </script>
 
