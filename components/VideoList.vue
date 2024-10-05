@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import UpperBodyImage from "~/components/UpperBodyImage.vue";
 import type { Member } from "~/pages/index.vue";
 
 type VideoMemberAttributes = {
 	members: Member[],
+	url: string,
 }
 
 type Video = {
@@ -30,9 +30,9 @@ const memberVideo = ref<Video[]>([]);
 const isStart = ref(true);
 const errorLog = ref("");
 
-watch(() => props.members,async()=>{
+watch(() => ({member:props.members,url:props.url }),async()=>{
 	try {
-		memberVideo.value = await $fetch<Video[]>(`${config.public.WEB_API}/api/search?name=${props.members.map(e=>e.profileId).join(",")}`);
+		memberVideo.value = await $fetch<Video[]>(props.url);
 		isStart.value = false;
 	} catch (error) {
 		errorLog.value = 'Error! Could not reach the API. ' + error;

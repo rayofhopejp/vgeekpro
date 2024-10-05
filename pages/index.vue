@@ -482,8 +482,8 @@ if (import.meta.client) {
 									</div>
 								</div>
 							</div>
-							<div class="tw-flex tw-items-center tw-justify-center tw-rounded-lg tw-bg-stone-300 tw-px-[30px]">
-								<VideoList :members="displayMembers"/>
+							<div class="tw-w-full tw-h-full tw-px-[30px]">
+								<VideoListBox :members="displayMembers"/>
 							</div>
 							<div
 								class="tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 md:tw-grid-cols-3 2xl:tw-grid-cols-4 tw-gap-20">
