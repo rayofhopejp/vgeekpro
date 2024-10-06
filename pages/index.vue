@@ -262,6 +262,16 @@ const members: Member[] = [
 			"member"
 		],
 	},
+	{
+		name: "三峰スズ",
+		yomi: "Mitsumine Suzu",
+		profileId: "suzu_mitsumine",
+		imageId: "suzu_mitsumine",
+		imageAlt: "Mitsumine Suzu",
+		tag: [
+			"member"
+		],
+	},
 ];
 
 type Unit = {
