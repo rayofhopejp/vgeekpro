@@ -48,5 +48,10 @@ export default defineNuxtConfig({
 				file: "en-gb.json"
 			},
 		]
+	},
+	runtimeConfig: {
+		public: {
+			WEB_API: process.env.WEB_API,
+		}
 	}
 })

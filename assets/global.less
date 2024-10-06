@@ -9,9 +9,11 @@
 		letter-spacing: 1em;
 		opacity: 0;
 	}
+
 	40% {
 		opacity: .6;
 	}
+
 	to {
 		letter-spacing: normal;
 		opacity: 1;
@@ -27,6 +29,31 @@
 	background-size: cover;
 	background-position: bottom center;
 	background-repeat: no-repeat;
+}
+
+.scrollbar {
+	scrollbar-color: rgba(0, 0, 0, .3) rgba(0, 0, 0, .1);
+	scrollbar-width: 10px;
+
+	&::-webkit-scrollbar-thumb {
+		background: rgba(0, 0, 0, 0.3);
+	}
+
+	&::-webkit-scrollbar-track {
+		background: rgba(0, 0, 0, 0.1);
+	}
+
+	&::-webkit-scrollbar {
+		width: 10px;
+	}
+}
+
+.textline-hidden {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	line-clamp: 2;
+	-webkit-line-clamp: 2;
 }
 
 .sample-slider .swiper-wrapper {
@@ -49,6 +76,7 @@
 ここから下のマーカーまでのコードは崎津 祥汰によって開発されています。
 */
 a[href]:not(.disable-link-icons) {
+
 	&[target="_blank" i][href^="//" i]::after,
 	&[target="_blank" i][href^="http://" i]::after,
 	&[target="_blank" i][href^="https://" i]::after {
