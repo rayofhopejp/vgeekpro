@@ -50,7 +50,7 @@ watch(() => props.url, async () => {
 							<BCardImg :alt="videoItem.title" :height="1280" :src="videoItem.thumbnail" :width="720" class="thumbnail"/>
 						</template>
 						<BCardTitle>
-							<p class="tw-text-sm tw-text-center textline-hidden">{{ videoItem.title }}</p>
+							<p class="tw-text-sm tw-text-center text-line-hidden">{{ videoItem.title }}</p>
 						</BCardTitle>
 						<template v-slot:footer>
 							<div class="tw-h-[5em] description-text">
@@ -88,7 +88,7 @@ watch(() => props.url, async () => {
 				</a>
 			</div>
 		</div>
-		<div v-if="isStart === false && memberVideo.length === 0" class="tw-leading-loose tw-flex tw-flex-row tw-h-full tw-items-center tw-justify-center ">
+		<div v-if="!isStart && memberVideo.length === 0" class="tw-leading-loose tw-flex tw-flex-row tw-h-full tw-items-center tw-justify-center ">
 			<p class="tw-text-5xl">Not Found</p>
 		</div>
 	</section>
