@@ -47,7 +47,7 @@ watch(() => props.url, async()=>{
 				<a :key="videoItem.videoId" :href="videoItem.url"  class="tw-h-full disable-link-icons">
 					<BCard class="tw-w-[320px] tw-h-full">
 						<template v-slot:img>
-							<BCardImg :alt="videoItem.title" :height="1280" :src="videoItem.thumbnail" :width="720" />
+							<BCardImg class="thumbnail" :alt="videoItem.title" :height="1280" :src="videoItem.thumbnail" :width="720" />
 						</template>
 						<BCardTitle>
 							<p class="tw-text-sm tw-text-center textline-hidden">{{ videoItem.title }}</p>
@@ -102,6 +102,13 @@ watch(() => props.url, async()=>{
 .description-text {
 	font-size: 10.5pt;
 	line-height: 10.5pt;
+}
+
+.thumbnail {
+	/* 親指の爪…… ではなく縮小版 */
+	background-color: #cccccc;
+	aspect-ratio: 16/9;
+	object-fit: contain;
 }
 
 .channel-name {
