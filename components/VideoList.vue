@@ -69,8 +69,8 @@ watch(() => props.url, async () => {
 									<span v-else>
 										<span v-if="videoItem.liveActualStartTime != ''">
 											<span class="tw-me-1">{{ $t("videoListBox.fromHead") }}</span>
-											<span>{{ new Date(videoItem.liveActualStartTime).toLocaleString(locale, {year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit"}) }}</span><br>
-											<span class="tw-ms-1">{{ $t("videoListBox.fromFoot") }}</span>
+											<span>{{ new Date(videoItem.liveActualStartTime).toLocaleString(locale, {year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit"}) }}</span>
+											<span class="tw-ms-1">{{ $t("videoListBox.fromFoot") }}</span><br>
 											<span class="tw-me-1">{{ $t("videoListBox.toHead") }}</span>
 											<span>{{ new Date(videoItem.liveActualEndTime).toLocaleString(locale, {year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit"}) }}</span>
 											<span class="tw-ms-1">{{ $t("videoListBox.toFoot") }}</span>
