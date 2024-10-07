@@ -18,7 +18,7 @@ type Video = {
 	liveActualEndTime: string
 }
 
-const { locale } = useI18n();
+const {locale} = useI18n();
 const config = useRuntimeConfig();
 
 const props = defineProps<VideoMemberAttributes>();
@@ -27,14 +27,14 @@ const memberVideo = ref<Video[]>([]);
 const isStart = ref(true);
 const errorLog = ref("");
 
-watch(() => props.url, async()=>{
+watch(() => props.url, async () => {
 	try {
 		memberVideo.value = await $fetch<Video[]>(props.url);
 		isStart.value = false;
 	} catch (error) {
 		errorLog.value = 'API Error!' + error;
 	}
-},{
+}, {
 	immediate: true
 });
 
@@ -44,10 +44,10 @@ watch(() => props.url, async()=>{
 	<section class="list-container tw-h-[400px] tw-my-3">
 		<div v-if="isStart === false && memberVideo.length !== 0" class="tw-leading-loose tw-text-black tw-flex tw-flex-row tw-h-full tw-overflow-x-auto scrollbar">
 			<div v-for="videoItem in memberVideo" class="tw-h-full tw-mx-2">
-				<a :key="videoItem.videoId" :href="videoItem.url"  class="tw-h-full disable-link-icons">
+				<a :key="videoItem.videoId" :href="videoItem.url" class="tw-h-full disable-link-icons">
 					<BCard class="tw-w-[320px] tw-h-full">
 						<template v-slot:img>
-							<BCardImg class="thumbnail" :alt="videoItem.title" :height="1280" :src="videoItem.thumbnail" :width="720" />
+							<BCardImg :alt="videoItem.title" :height="1280" :src="videoItem.thumbnail" :width="720" class="thumbnail"/>
 						</template>
 						<BCardTitle>
 							<p class="tw-text-sm tw-text-center textline-hidden">{{ videoItem.title }}</p>

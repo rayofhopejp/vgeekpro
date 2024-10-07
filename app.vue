@@ -2,11 +2,11 @@
 	<NuxtLayout>
 		<NuxtPage/>
 	</NuxtLayout>
-	<div class="eye-catch-backdrop tw-hidden md:tw-block" v-if="isShowBackground"></div>
-	<div class="eye-catch tw-hidden md:tw-block" v-if="isShowEyeCatch">
-		<img @load="imageLoaded" class="object-fit-cover w-100 h-100" src="/images/eyecatch.webp" alt="Vgeek production" fetchpriority="high">
+	<div v-if="isShowBackground" class="eye-catch-backdrop tw-hidden md:tw-block"></div>
+	<div v-if="isShowEyeCatch" class="eye-catch tw-hidden md:tw-block">
+		<img alt="Vgeek production" class="object-fit-cover w-100 h-100" fetchpriority="high" src="/images/eyecatch.webp" @load="imageLoaded">
 	</div>
-	<div class="eye-catch-backdrop tw-hidden md:tw-block" v-if="isShowForeground"></div>
+	<div v-if="isShowForeground" class="eye-catch-backdrop tw-hidden md:tw-block"></div>
 </template>
 
 <script lang="ts" setup>

@@ -30,7 +30,8 @@ function reload() {
 		{
 			label: "videoListBox.scheduled",
 			type: "schedule",
-			url: `${config.public.WEB_API}/api/search?name=${props.members.map(e => e.profileId).join(",")}&type=liveBefore`},
+			url: `${config.public.WEB_API}/api/search?name=${props.members.map(e => e.profileId).join(",")}&type=liveBefore`
+		},
 		{
 			label: "videoListBox.live",
 			type: "live",
@@ -66,8 +67,8 @@ watch(() => props.members, async () => {
 
 <template>
 	<div class="tw-flex tw-flex-row tw-text-slate-800">
-		<button v-for="tab in tabs" class="tw-rounded-t-lg tw-py-3 tw-px-5 tw-border-4 tw-border-b-0 tw-border-t-[15px]" v-on:click="()=>tabChange(tab)"
-				:class="{'tw-border-[#F43F5E]': tab.type === selectTab.type}">
+		<button v-for="tab in tabs" :class="{'tw-border-[#F43F5E]': tab.type === selectTab.type}" class="tw-rounded-t-lg tw-py-3 tw-px-5 tw-border-4 tw-border-b-0 tw-border-t-[15px]"
+				v-on:click="()=>tabChange(tab)">
 			{{ $t(tab.label) }}
 		</button>
 	</div>
