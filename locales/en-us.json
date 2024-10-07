@@ -17,6 +17,20 @@
 		"searchByTag": "Search by Tag (BETA)",
 		"showAllTags": "Show all tags"
 	},
+	"videoListBox": {
+		"scheduled": "Scheduled Streams",
+		"live": "Live Streams",
+		"archive": "Archives",
+		"video": "Videos",
+		"fromHead": "Started at:",
+		"fromFoot": "",
+		"toHead": "Ended at:",
+		"toFoot": "",
+		"postedAtHead": "Posted at:",
+		"postedAtFoot": "",
+		"scheduledAtHead": "Scheduled:",
+		"scheduledAtFoot": ""
+	},
 	"profileCommon": {
 		"xLinkButton": "X (Twitter)",
 		"youTubeLinkButton": "YouTube",

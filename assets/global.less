@@ -33,7 +33,7 @@
 
 .scrollbar {
 	scrollbar-color: rgba(0, 0, 0, .3) rgba(0, 0, 0, .1);
-	scrollbar-width: 10px;
+	scrollbar-width: auto;
 
 	&::-webkit-scrollbar-thumb {
 		background: rgba(0, 0, 0, 0.3);
@@ -48,12 +48,11 @@
 	}
 }
 
-.textline-hidden {
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
+.text-line-hidden {
+	display: flex;
+	flex-direction: column;
 	overflow: hidden;
 	line-clamp: 2;
-	-webkit-line-clamp: 2;
 }
 
 .sample-slider .swiper-wrapper {
@@ -86,12 +85,14 @@ a[href]:not(.disable-link-icons) {
 		display: inline-block;
 		vertical-align: 1.25em;
 		font-size: .5em;
+		//noinspection CssNoGenericFontName
 		font-family: bootstrap-icons !important;
 	}
 
 	&::before {
 		display: inline-block;
 		margin-right: .25em;
+		//noinspection CssNoGenericFontName
 		font-family: bootstrap-icons !important;
 		vertical-align: -.125em;
 		font-size: 1em;
