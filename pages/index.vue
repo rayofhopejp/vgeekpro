@@ -493,7 +493,7 @@ if (import.meta.client) {
 									</div>
 								</div>
 							</div>
-							<div class="tw-w-full tw-h-full tw-px-[30px]">
+							<div class="tw-w-full tw-px-[30px]">
 								<VideoListBox :members="displayMembers"/>
 							</div>
 							<div

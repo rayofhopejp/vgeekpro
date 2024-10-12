@@ -30,7 +30,12 @@
 		"postedAtHead": "",
 		"postedAtFoot": "投稿",
 		"scheduledAtHead": "",
-		"scheduledAtFoot": "開始予定"
+		"scheduledAtFoot": "開始予定",
+		"from": "%s 開始",
+		"to": "%s 終了",
+		"postedAt": "%s 投稿",
+		"scheduledAt": "%s 開始予定",
+		"lastFetched": "最終更新: %s"
 	},
 	"profileCommon": {
 		"xLinkButton": "X (Twitter)",
