@@ -1,4 +1,10 @@
 {
+	"languageName": {
+		"displayName": "English",
+		"languageName": "English",
+		"localeName": "United States",
+		"dialectName": ""
+	},
 	"topPage": {
 		"aboutVgeekPro": "About \"Vgeek production\"",
 		"vgeekDescription": "\"Vgeek production\" is a group of IT VTubers.",
