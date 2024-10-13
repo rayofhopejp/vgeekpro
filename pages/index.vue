@@ -272,6 +272,16 @@ const members: Member[] = [
 			"member"
 		],
 	},
+	{
+		name: "猫耳ミクス",
+		yomi: "Nekomix",
+		profileId: "nekomix",
+		imageId: "nekomix",
+		imageAlt: "Nekomix",
+		tag: [
+			"member"
+		],
+	},
 ];
 
 type Unit = {
@@ -301,6 +311,41 @@ const Units: Unit[] = [
 			{
 				name: "東雲絢芽",
 				yomi: "SHINONOME Ayame",
+			},
+		],
+	},
+	{
+		unitId: "hard_geeks",
+		unitName: "はーどぎーく",
+		unitYomi: "HARD GEEKS!",
+		members: [
+			{
+				name: "椎半音",
+				yomi: "Shii Sharp",
+			},
+			{
+				name: "三峰スズ",
+				yomi: "Suzu Mitsumine",
+			},
+			{
+				name: "黒音キト",
+				yomi: "Kuroné Kito",
+			},
+			{
+				name: "Kazuryu",
+				yomi: "Kazuryu",
+			},
+			{
+				name: "ひょんぢゅ",
+				yomi: "Hyondyu",
+			},
+			{
+				name: "黒音キト",
+				yomi: "Kuroné Kito",
+			},
+			{
+				name: "小日向がく",
+				yomi: "Gaku Kohinata",
 			},
 		],
 	},
