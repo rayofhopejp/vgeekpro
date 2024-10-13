@@ -4,7 +4,7 @@
 	</NuxtLayout>
 	<div v-if="isShowBackground" class="eye-catch-backdrop tw-hidden md:tw-block"></div>
 	<div v-if="isShowEyeCatch" class="eye-catch tw-hidden md:tw-block">
-		<video autoplay muted class="object-fit-cover w-100 h-100" @canplay="imageLoaded" @abort="notShow" @error="notShow" src="/videos/eyecatch.webm" type='video/webm' />
+		<video autoplay class="object-fit-cover w-100 h-100" muted src="/videos/eyecatch.webm" type='video/webm' @abort="notShow" @canplay="imageLoaded" @error="notShow"/>
 	</div>
 	<div v-if="isShowForeground" class="eye-catch-backdrop tw-hidden md:tw-block"></div>
 </template>

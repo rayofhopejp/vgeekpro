@@ -87,4 +87,4 @@ const currentlyAvailableTags: string[] = [
 	"solid-js",							// * SolidJS
 ] as const satisfies readonly Tags[]
 
-export { unitTags, attributeTags, specialTags, currentlyAvailableTags, allTags, Tags, checkTag };
+export {unitTags, attributeTags, specialTags, currentlyAvailableTags, allTags, Tags, checkTag};
