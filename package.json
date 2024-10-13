@@ -18,6 +18,7 @@
 		"bootstrap-icons": "^1.11.3",
 		"nuxt": "^3.13.1",
 		"nuxt-aos": "^1.2.5",
+		"ohash": "^1.1.4",
 		"swiper": "^11.1.12",
 		"taos": "^1.0.5",
 		"vue": "latest",
