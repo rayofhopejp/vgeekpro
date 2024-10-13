@@ -15,7 +15,11 @@
 		"openYahooJapanMail": "Compose in Yahoo! JAPAN Mail",
 		"guidelineSubtitle": "Vgeek production guidelines",
 		"searchByTag": "Search by Tag (BETA)",
-		"showAllTags": "Show all tags"
+		"showAllTags": "Show all tags",
+		"specialTags": "Special tags",
+		"unitTags": "Unit tags",
+		"attributeTags": "Attribute tags",
+		"allTags": "All tags"
 	},
 	"videoListBox": {
 		"scheduled": "Scheduled Streams",

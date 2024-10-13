@@ -3,12 +3,22 @@ const checkTag = (tag: string, tags: string[]): boolean => {
 	return tags.indexOf(tag) !== -1;
 }
 
-const currentTags: string[] = [
+const specialTags: string[] = [
+	"all",								// * すべて表示
+	"member",							// * ぶいぎーく！メンバー
+	"staff",							// * ぶいぎーく！スタッフ
+] as const;
+
+const unitTags: string[] = [
+	"security-girl",					// * セキュリティガール (ユニット名)
+	"hard-geeks",						// * はーどぎーく(ユニット名)
+] as const;
+
+const attributeTags: string[] = [
 	// 現時点で表示出来そうなものには表示タグを付けています。
 	// ドロップダウン選択にする予定です。
 	// タグID							|表示|概要
 	//									|    |
-	"all",								// * すべて表示
 	"automation",						//   自動化
 	"b-to-b",							//   企業間取引
 	"backend",							//   バックエンド
@@ -22,18 +32,15 @@ const currentTags: string[] = [
 	"internet-information-services",	//   IIS
 	"linux",							// * Linux (GNU/Linux)
 	"macos",							//   macOS
-	"member",							// * ぶいぎーく！メンバー
 	"meow",								// * にゃー (ねこ)
 	"network",							// * ネットワーク
 	"nodejs",							//   Node.js
 	"operating-system",					//   OS (ジャンル)
 	"react",							//   React
 	"rpg-maker-mz",						//   RPGツクールMZ
-	"security-girl",					// * セキュリティガール (ユニット名)
 	"server",							//   サーバー
 	"solid-js",							// * SolidJS
 	"sqlserver",						//   SQL Server
-	"staff",							// * ぶいぎーく！スタッフ
 	"system-engineer",					//   システムエンジニア (広義)
 	"typescript",						//   TypeScript
 	"udonsharp",						//   UdonSharp
@@ -62,18 +69,14 @@ const currentTags: string[] = [
 	"pc6000",							//   PC-6000 シリーズ
 	"msx",								//   MSX
 	"free-bsd",							//   FreeBSD
-	"hard-geeks",						// * はーどぎーく(ユニット名)
 ] as const;
 
-type Tags = (typeof currentTags)[number];
+const allTags: string[] = [].concat(specialTags, unitTags, attributeTags) as const;
+
+type Tags = (typeof allTags)[number];
 
 // まず無いとは思いますが、不要になったら削除します
 const currentlyAvailableTags: string[] = [
-	"all",								// * すべて表示
-	"member",							// * ぶいぎーく！メンバー
-	"staff",							// * ぶいぎーく！スタッフ
-	"security-girl",					// * セキュリティガール (ユニット名)
-	"hard-geeks",						// * はーどぎーく(ユニット名)
 	"csharp",							// * C#
 	"frontend",							// * フロントエンド
 	"hardware",							// * ハードウェア
@@ -84,4 +87,4 @@ const currentlyAvailableTags: string[] = [
 	"solid-js",							// * SolidJS
 ] as const satisfies readonly Tags[]
 
-export {currentlyAvailableTags, currentTags, checkTag};
+export { unitTags, attributeTags, specialTags, currentlyAvailableTags, allTags, Tags, checkTag };

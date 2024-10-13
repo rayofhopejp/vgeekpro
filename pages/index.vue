@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+
 export type Member = {
 	name: string,
 	yomi: string,
@@ -375,10 +376,6 @@ const displayMembers = computed(() => {
 
 const showAllTags = toRef(false);
 
-const tags = computed(() => {
-	return showAllTags.value ? currentTags : currentlyAvailableTags;
-});
-
 const mailModal = toRef(false);
 
 const showContributorsModal = toRef(false);
@@ -517,17 +514,36 @@ if (import.meta.client) {
 				<div class="tw-z-10 tw-relative tw-flex tw-flex-col xl:tw-flex-row tw-justify-center tw-items-center">
 					<section class="tw-px-10 xl:tw-px-14 tw-py-10 tw-text-base">
 						<section>
-							<SectionHeader :description="$t('topPage.membersSubtitle')" title="Members"
-										   titleColor="black"/>
+							<SectionHeader :description="$t('topPage.membersSubtitle')" title="Members" titleColor="black"/>
 							<div class="tw-grid tw-pb-20 tw-grid-cols-1 sm:tw-grid-cols-1 xl:tw-grid-cols-2 tw-gap-20">
 								<div class="tw-flex">
 									<div class="tw-flex-glow tw-flex-auto me-1">
 										<BFormFloatingLabel :label="$t('topPage.searchByTag')">
 											<BFormSelect v-model="currentlySelectedTag">
-												<BFormSelectOption v-for="availableTag in tags" :key="availableTag"
-																   :value="availableTag">
-													{{ $t(`tagNames.${availableTag}`) }}
-												</BFormSelectOption>
+												<template v-if="!showAllTags">
+													<BFormSelectOptionGroup :label="$t('topPage.specialTags')">
+														<BFormSelectOption v-for="availableTag in specialTags" :key="availableTag" :value="availableTag">
+															{{ $t(`tagNames.${availableTag}`) }}
+														</BFormSelectOption>
+													</BFormSelectOptionGroup>
+													<BFormSelectOptionGroup :label="$t('topPage.unitTags')">
+														<BFormSelectOption v-for="availableTag in unitTags" :key="availableTag" :value="availableTag">
+															{{ $t(`tagNames.${availableTag}`) }}
+														</BFormSelectOption>
+													</BFormSelectOptionGroup>
+													<BFormSelectOptionGroup :label="$t('topPage.attributeTags')">
+														<BFormSelectOption v-for="availableTag in currentlyAvailableTags" :key="availableTag" :value="availableTag">
+															{{ $t(`tagNames.${availableTag}`) }}
+														</BFormSelectOption>
+													</BFormSelectOptionGroup>
+												</template>
+												<template v-else>
+													<BFormSelectOptionGroup :label="$t('topPage.allTags')">
+														<BFormSelectOption v-for="availableTag in allTags" :key="availableTag" :value="availableTag">
+															{{ $t(`tagNames.${availableTag}`) }}
+														</BFormSelectOption>
+													</BFormSelectOptionGroup>
+												</template>
 											</BFormSelect>
 										</BFormFloatingLabel>
 									</div>
@@ -545,9 +561,7 @@ if (import.meta.client) {
 							</div>
 							<div
 								class="tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 md:tw-grid-cols-3 2xl:tw-grid-cols-4 tw-gap-20">
-								<MemberCard v-for="member in displayMembers" :key="member.profileId"
-											:imageAlt="member.imageAlt" :imageId="member.imageId" :name="member.name"
-											:profileId="member.profileId" :yomi="member.yomi"/>
+								<MemberCard v-for="member in displayMembers" :key="member.profileId" :imageAlt="member.imageAlt" :imageId="member.imageId" :name="member.name" :profileId="member.profileId" :yomi="member.yomi"/>
 							</div>
 						</section>
 					</section>
@@ -732,3 +746,9 @@ if (import.meta.client) {
 		</a>
 	</footer>
 </template>
+
+<style lang="less" scoped>
+optgroup {
+	font-style: normal;
+}
+</style>

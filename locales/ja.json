@@ -16,7 +16,11 @@
 		"openYahooJapanMail": "Yahoo! メールを開く",
 		"guidelineSubtitle": "ぶいぎーく！ガイドライン",
 		"searchByTag": "タグで検索 (β)",
-		"showAllTags": "すべてのタグを表示"
+		"showAllTags": "すべてのタグを表示",
+		"specialTags": "特別なタグ",
+		"unitTags": "ユニットのタグ",
+		"attributeTags": "属性のタグ",
+		"allTags": "すべてのタグ"
 	},
 	"videoListBox": {
 		"scheduled": "スケジュール",
