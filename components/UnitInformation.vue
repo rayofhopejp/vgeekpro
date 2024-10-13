@@ -16,6 +16,7 @@ type UnitMember = {
 }
 
 const props = defineProps<UnitInformation>();
+const {locale} = useI18n();
 </script>
 
 <template>
