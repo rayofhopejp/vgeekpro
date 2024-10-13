@@ -351,7 +351,7 @@ const Units: Unit[] = [
 	},
 ];
 
-const {locale} = useI18n();
+const { locale } = useI18n();
 
 const mailAddress = "naomi.lilienthal.jpn@gmail.com";
 
@@ -466,7 +466,7 @@ if (import.meta.client) {
 </script>
 
 <template>
-	<CommonlyHeader/>
+	<CommonlyHeader />
 	<main id="main-contents" class="tw-w-full tw-flex tw-flex-col tw-items-center">
 
 		<div id="home" class="tw-overflow-hidden tw-relative tw-w-full tw-h-svh xl:tw-h-svh">
@@ -475,11 +475,10 @@ if (import.meta.client) {
 					class="tw-z-10 tw-relative tw-w-full tw-h-svh tw-bg-gradient-to-b tw-from-transparent tw-from-40% xl:tw-from-60% tw-to-stone-900">
 				</div>
 				<img alt="top illust" class="tw-object-contain xl:tw-object-cover" src="/images/topillust.webp"
-					 style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent">
+					style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent">
 				<div
 					class="tw-z-20 tw-absolute tw-ps-[3vw] tw-w-full tw-bottom-14 tw-whitespace-nowrap tw-text-center tw-text-[6vw] font-slogan">
-					Reality Meets Virtuality
-				</div>
+					Reality Meets Virtuality</div>
 			</div>
 		</div>
 
@@ -499,9 +498,9 @@ if (import.meta.client) {
 					<section class="tw-px-10 xl:tw-px-14 tw-py-14 tw-text-base">
 						<section>
 							<SectionHeader :description="$t('topPage.aboutVgeekPro')" :isDark="true" title="About"
-										   titleColor="white"/>
+								titleColor="white" />
 							<ProfileHead :isDisableCatchphraseBrackets="true" catchphrase="Reality meets Virtuality"
-										 name="ぶいぎーく！" yomi="Vgeek Production">
+								name="ぶいぎーく！" yomi="Vgeek Production">
 								{{ $t('topPage.vgeekDescription') }}
 							</ProfileHead>
 						</section>
@@ -516,14 +515,14 @@ if (import.meta.client) {
 					<section class="tw-px-10 xl:tw-px-14 tw-py-10 tw-text-base">
 						<section>
 							<SectionHeader :description="$t('topPage.membersSubtitle')" title="Members"
-										   titleColor="black"/>
+								titleColor="black" />
 							<div class="tw-grid tw-pb-20 tw-grid-cols-1 sm:tw-grid-cols-1 xl:tw-grid-cols-2 tw-gap-20">
 								<div class="tw-flex">
 									<div class="tw-flex-glow tw-flex-auto me-1">
 										<BFormFloatingLabel :label="$t('topPage.searchByTag')">
 											<BFormSelect v-model="currentlySelectedTag">
 												<BFormSelectOption v-for="availableTag in tags" :key="availableTag"
-																   :value="availableTag">
+													:value="availableTag">
 													{{ $t(`tagNames.${availableTag}`) }}
 												</BFormSelectOption>
 											</BFormSelect>
@@ -538,14 +537,14 @@ if (import.meta.client) {
 									</div>
 								</div>
 							</div>
-							<div class="tw-w-full tw-px-[30px]">
+							<div class="tw-w-full tw-h-full tw-px-[30px]">
 								<VideoListBox :members="displayMembers"/>
 							</div>
 							<div
 								class="tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 md:tw-grid-cols-3 2xl:tw-grid-cols-4 tw-gap-20">
 								<MemberCard v-for="member in displayMembers" :key="member.profileId"
-											:imageAlt="member.imageAlt" :imageId="member.imageId" :name="member.name"
-											:profileId="member.profileId" :yomi="member.yomi"/>
+									:imageAlt="member.imageAlt" :imageId="member.imageId" :name="member.name"
+									:profileId="member.profileId" :yomi="member.yomi" />
 							</div>
 						</section>
 					</section>
@@ -559,12 +558,12 @@ if (import.meta.client) {
 					<section class="tw-px-10 xl:tw-px-14 tw-py-14 tw-text-base">
 						<section>
 							<SectionHeader :description="$t('topPage.groupsSubtitle')" :isDark="true" title="Groups"
-										   titleColor="white"/>
+								titleColor="white" />
 							<section>
 								<UnitInformation v-for="unit in Units" :key="unit.unitId" :members="unit.members"
-												 :unit-id="unit.unitId" :unit-image-alt="unit.unitImageAlt"
-												 :unit-image-id="unit.unitImageId" :unit-name="unit.unitName"
-												 :unit-yomi="unit.unitYomi"/>
+									:unit-id="unit.unitId" :unit-image-alt="unit.unitImageAlt"
+									:unit-image-id="unit.unitImageId" :unit-name="unit.unitName"
+									:unit-yomi="unit.unitYomi" />
 							</section>
 						</section>
 					</section>
@@ -575,17 +574,17 @@ if (import.meta.client) {
 		<section id="link" class="tw-w-full">
 			<div class="tw-relative tw-bg-stone-400">
 				<div class="tw-px-10 xl:tw-px-14 tw-py-14 tw-text-base">
-					<SectionHeader :description="$t('topPage.linkSubtitle')" title="Link" titleColor="stone-900"/>
+					<SectionHeader :description="$t('topPage.linkSubtitle')" title="Link" titleColor="stone-900" />
 					<div class="tw-leading-loose tw-text-center">
 						<div
 							class="tw-w-full tw-flex tw-flex-col xl:tw-flex-row xl:tw-flex-wrap tw-justify-between tw-items-center tw-gap-4">
 							<a class="tw-self-stretch tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4"
-							   href="https://x.com/vgeekproduction" rel="noopener noreferrer" target="_blank">
+								href="https://x.com/vgeekproduction" rel="noopener noreferrer" target="_blank">
 								{{ $t('topPage.xLinkButton') }}
 							</a>
 							<a class="tw-self-stretch tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4"
-							   href="https://www.youtube.com/@usaneko_xlarge" rel="noopener noreferrer"
-							   target="_blank">
+								href="https://www.youtube.com/@usaneko_xlarge" rel="noopener noreferrer"
+								target="_blank">
 								{{ $t('topPage.youTubeLinkButton') }}
 							</a>
 							<button
@@ -594,7 +593,7 @@ if (import.meta.client) {
 								<i class="bi bi-envelope tw-me-0.5" style="vertical-align: -.125em"></i>
 								{{ $t('topPage.openMailModal') }}
 								<i class="bi bi-box-arrow-up-right tw-ms-0.5"
-								   style="font-size: .5em; vertical-align: 1.2em"></i>
+									style="font-size: .5em; vertical-align: 1.2em"></i>
 							</button>
 						</div>
 					</div>
@@ -605,7 +604,7 @@ if (import.meta.client) {
 		<section id="guideline" class="tw-w-full" lang="ja">
 			<div class="tw-relative tw-bg-stone-300 tw-text-stone-900">
 				<div class="tw-px-10 xl:tw-px-14 tw-py-14 tw-text-base">
-					<SectionHeader :description="$t('topPage.guidelineSubtitle')" title="Guideline"/>
+					<SectionHeader :description="$t('topPage.guidelineSubtitle')" title="Guideline" />
 					<div class="tw-leading-loose xl:tw-max-w-screen-sm xl:tw-mx-auto">
 						<div v-if="locale != 'ja'" class="fs-5 tw-mb-12" lang="en">
 							The Guidelines are only valid in the original Japanese language.<br>
@@ -639,8 +638,8 @@ if (import.meta.client) {
 								<ul class="tw-mb-6 tw-list-disc tw-ps-5">
 									<li>Discord: usaneko_xlarge</li>
 									<li>X (Twitter): <a class="disable-link-icons"
-														href="https://x.com/messages/compose?recipient_id=1644686586318327808"
-														rel="noopener noreferrer" target="_blank">@usaneko_xlarge</a></li>
+											href="https://x.com/messages/compose?recipient_id=1644686586318327808"
+											rel="noopener noreferrer" target="_blank">@usaneko_xlarge</a></li>
 									<li>このページに記載のメールアドレス</li>
 								</ul>
 							</section>
@@ -656,28 +655,28 @@ if (import.meta.client) {
 			</div>
 		</section>
 		<BModal v-model="mailModal" :ok-only="true" :title="$t('topPage.mailModalTitle')"
-				title-class="fs-5 tw-text-stone-900">
+			title-class="fs-5 tw-text-stone-900">
 			<div class="tw-flex tw-flex-col">
 				<a :href="`mailto:${mailAddress}`"
-				   class="tw-self-stretch tw-my-2 tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4"
-				   rel="noopener noreferrer" target="_blank">
+					class="tw-self-stretch tw-my-2 tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4"
+					rel="noopener noreferrer" target="_blank">
 					{{ $t('topPage.openMailApp') }}
 				</a>
 				<a :href="`https://mail.google.com/mail/?extsrc=mailto&url=mailto:${mailAddress}`"
-				   class="tw-self-stretch tw-my-2 tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4"
-				   rel="noopener noreferrer" target="_blank">
+					class="tw-self-stretch tw-my-2 tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4"
+					rel="noopener noreferrer" target="_blank">
 					{{ $t('topPage.openGmail') }}
 				</a>
 				<a :href="`https://mail.yahoo.co.jp/compose/?To=mailto:${mailAddress}`"
-				   class="tw-self-stretch tw-my-2 tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4"
-				   rel="noopener noreferrer" target="_blank">
+					class="tw-self-stretch tw-my-2 tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4"
+					rel="noopener noreferrer" target="_blank">
 					{{ $t('topPage.openYahooJapanMail') }}
 				</a>
 			</div>
 		</BModal>
 		<client-only>
 			<BModal v-model="showContributorsModal" :ok-only="true" body-class="tw-text-stone-900" title="OSINT"
-					title-class="fs-2 tw-text-stone-900">
+				title-class="fs-2 tw-text-stone-900">
 				<div class="container">
 					<div class="row">
 						<span class="fs-3">コントリビュータ</span>
