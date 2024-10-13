@@ -151,3 +151,4 @@ Temporary Items
 .gen
 node_modules
 *:Zone.Identifier
+package-lock.json
