@@ -62,7 +62,8 @@ const members: Member[] = [
 			"pc6000",
 			"msx",
 			"operating-system",
-			"free-bsd"
+			"free-bsd",
+			"hard-geeks"
 		],
 	},
 	{
@@ -88,7 +89,8 @@ const members: Member[] = [
 		imageId: "kohinata_gaku",
 		imageAlt: "Kohinata Gaku",
 		tag: [
-			"member"
+			"member",
+			"hard-geeks"
 		],
 	},
 	{
@@ -117,7 +119,8 @@ const members: Member[] = [
 		imageId: "hyondyu",
 		imageAlt: "Hyondyu",
 		tag: [
-			"member"
+			"member",
+			"hard-geeks"
 		],
 	},
 	{
@@ -190,7 +193,8 @@ const members: Member[] = [
 		imageId: "kazuryu",
 		imageAlt: "kazuryu",
 		tag: [
-			"member"
+			"member",
+			"hard-geeks"
 		],
 	},
 	{
@@ -249,7 +253,8 @@ const members: Member[] = [
 			"typescript",
 			"udonsharp",
 			"unity3d",
-			"ui-ux"
+			"ui-ux",
+			"hard-geeks"
 		],
 	},
 	{
@@ -269,7 +274,8 @@ const members: Member[] = [
 		imageId: "suzu_mitsumine",
 		imageAlt: "Mitsumine Suzu",
 		tag: [
-			"member"
+			"member",
+			"hard-geeks"
 		],
 	},
 	{
@@ -316,7 +322,7 @@ const Units: Unit[] = [
 	},
 	{
 		unitId: "hard_geeks",
-		unitName: "はーどぎーく",
+		unitName: "はーどぎーく！",
 		unitYomi: "HARD GEEKS!",
 		members: [
 			{
@@ -338,10 +344,6 @@ const Units: Unit[] = [
 			{
 				name: "ひょんぢゅ",
 				yomi: "Hyondyu",
-			},
-			{
-				name: "黒音キト",
-				yomi: "Kuroné Kito",
 			},
 			{
 				name: "小日向がく",

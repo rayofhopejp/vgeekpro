@@ -62,6 +62,7 @@ const currentTags: string[] = [
 	"pc6000",							//   PC-6000 シリーズ
 	"msx",								//   MSX
 	"free-bsd",							//   FreeBSD
+	"hard-geeks",						// * はーどぎーく(ユニット名)
 ] as const;
 
 type Tags = (typeof currentTags)[number];
@@ -71,6 +72,8 @@ const currentlyAvailableTags: string[] = [
 	"all",								// * すべて表示
 	"member",							// * ぶいぎーく！メンバー
 	"staff",							// * ぶいぎーく！スタッフ
+	"security-girl",					// * セキュリティガール (ユニット名)
+	"hard-geeks",						// * はーどぎーく(ユニット名)
 	"csharp",							// * C#
 	"frontend",							// * フロントエンド
 	"hardware",							// * ハードウェア
@@ -78,7 +81,6 @@ const currentlyAvailableTags: string[] = [
 	"linux",							// * Linux (GNU/Linux)
 	"meow",								// * にゃー (ねこ)
 	"network",							// * ネットワーク
-	"security-girl",					// * セキュリティガール (ユニット名)
 	"solid-js",							// * SolidJS
 ] as const satisfies readonly Tags[]
 
