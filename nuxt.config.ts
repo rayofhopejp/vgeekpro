@@ -51,7 +51,7 @@ export default defineNuxtConfig({
 	},
 	runtimeConfig: {
 		public: {
-			WEB_API: process.env.VUE_APP_WEB_API ?? "https://ytapi.virtlive.jp",
+			WEB_API: process.env.VUE_APP_WEB_API ?? "https://infra.virtlive.jp/ytapi/v1",
 		}
 	}
 })
