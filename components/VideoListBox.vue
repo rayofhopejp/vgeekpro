@@ -68,13 +68,13 @@ onMounted(() => {
 	<div class="video-list-wrapper">
 		<ul id="video-list-container" class="nav nav-tabs" role="tablist">
 			<li v-for="tab in tabs" class="nav-item" role="presentation">
-				<button @click="()=>tabChange(tab.type)" class="nav-link" :id="`#${tab.type}-tab`" type="button" role="tab" :aria-controls="`${tab.type}-tab-pane`" :class="{'active':tab.type == selectedTab}" :aria-selected="tab.type == selectedTab">
+				<button :id="`#${tab.type}-tab`" :aria-controls="`${tab.type}-tab-pane`" :aria-selected="tab.type == selectedTab" :class="{'active':tab.type == selectedTab}" class="nav-link" role="tab" type="button" @click="()=>tabChange(tab.type)">
 					{{ $t(tab.label) }}
 				</button>
 			</li>
 		</ul>
 		<div class="tab-content border-bottom border-start border-end p-2 rounded-bottom">
-			<div v-for="tab in tabs" :key="hash(tab)" :id="`${tab.type}-tab-pane`" class="tab-pane fade" :class="{'show': tab.type == selectedTab, 'active': tab.type == selectedTab}" role="tabpanel" :aria-labelledby="`${tab.type}-tab`" tabindex="0">
+			<div v-for="tab in tabs" :id="`${tab.type}-tab-pane`" :key="hash(tab)" :aria-labelledby="`${tab.type}-tab`" :class="{'show': tab.type == selectedTab, 'active': tab.type == selectedTab}" class="tab-pane fade" role="tabpanel" tabindex="0">
 				<VideoList :key="updateId" :url="tab.url"/>
 			</div>
 		</div>
@@ -89,10 +89,12 @@ onMounted(() => {
 	container-type: inline-size;
 	height: fit-content;
 }
+
 .tab-content {
 	background: #ffffff;
 	container-type: inline-size;
 }
+
 .tab-pane {
 	container-type: inline-size;
 }

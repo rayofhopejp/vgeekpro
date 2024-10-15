@@ -1,4 +1,10 @@
 {
+	"languageName": {
+		"displayName": "English",
+		"languageName": "English",
+		"localeName": "United States",
+		"dialectName": ""
+	},
 	"topPage": {
 		"aboutVgeekPro": "About \"Vgeek production\"",
 		"vgeekDescription": "\"Vgeek production\" is a group of IT VTubers.",
@@ -15,7 +21,11 @@
 		"openYahooJapanMail": "Compose in Yahoo! JAPAN Mail",
 		"guidelineSubtitle": "Vgeek production guidelines",
 		"searchByTag": "Search by Tag (BETA)",
-		"showAllTags": "Show all tags"
+		"showAllTags": "Show all tags",
+		"specialTags": "Special tags",
+		"unitTags": "Unit tags",
+		"attributeTags": "Attribute tags",
+		"allTags": "All tags"
 	},
 	"videoListBox": {
 		"scheduled": "Scheduled Streams",
@@ -161,6 +171,7 @@
 		"mz700": "MZ-700",
 		"pc6000": "PC-6000 Series",
 		"msx": "MSX",
-		"free-bsd": "FreeBSD"
+		"free-bsd": "FreeBSD",
+		"hard-geeks": "はーどぎーく！"
 	}
 }

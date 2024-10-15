@@ -4,9 +4,7 @@
 	</NuxtLayout>
 	<div v-if="isShowBackground" class="eye-catch-backdrop tw-hidden md:tw-block"></div>
 	<div v-if="isShowEyeCatch" class="eye-catch tw-hidden md:tw-block">
-		<video autoplay muted class="object-fit-cover w-100 h-100" @canplay="imageLoaded">
-			<source src="/videos/eyecatch.webm" type='video/webm' />
-		</video>
+		<video autoplay class="object-fit-cover w-100 h-100" muted src="/videos/eyecatch.webm" type='video/webm' @abort="notShow" @canplay="imageLoaded" @error="notShow"/>
 	</div>
 	<div v-if="isShowForeground" class="eye-catch-backdrop tw-hidden md:tw-block"></div>
 </template>
@@ -17,6 +15,13 @@ import "assets/global.less";
 const isShowEyeCatch = toRef(true);
 const isShowBackground = toRef(true);
 const isShowForeground = toRef(true);
+
+const notShow = () => {
+	console.log("Error Loading EyeCatch")
+	isShowForeground.value = false
+	isShowBackground.value = false
+	isShowEyeCatch.value = false
+}
 
 const imageLoaded = () => {
 	isShowForeground.value = false;
