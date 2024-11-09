@@ -289,6 +289,17 @@ const members: Member[] = [
 			"member"
 		],
 	},
+	{
+		name: "知推カナエ",
+		yomi: "Chisui Kanae",
+		profileId: "chisui_kanae",
+		imageId: "chisui_kanae",
+		imageAlt: "Chisui Kanae",
+		tag: [
+			"member"
+		],
+	},
+
 ];
 
 type Unit = {
