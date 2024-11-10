@@ -671,8 +671,7 @@ if (import.meta.client) {
 				</div>
 			</div>
 		</section>
-		<BModal v-model="mailModal" :ok-only="true" :title="$t('topPage.mailModalTitle')"
-				title-class="fs-5 tw-text-stone-900">
+		<BModal v-model="mailModal" :ok-only="true" :title="$t('topPage.mailModalTitle')" title-class="fs-5 tw-text-stone-900">
 			<div class="tw-flex tw-flex-col">
 				<a :href="`mailto:${mailAddress}`"
 				   class="tw-self-stretch tw-my-2 tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4"
