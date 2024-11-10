@@ -30,10 +30,10 @@ useSeoMeta({
 		<section>
 			<ProfileHead :catchphrase="description" :name="name" :yomi="yomi">
 				こんちす！嫁に監視されてるVTuberの知推カナエです。<br>
-				本業&副業ともにデータサイエンティストで、多業界でデータ分析を行ったりAI製品化してます！<br>
+				本業&amp;副業ともにデータサイエンティストで、多業界でデータ分析を行ったりAI製品化してます！<br>
 				「AIってなあに？」という方向けに、みんなにデータサイエンスを身近に感じてもらえるような配信を目指していきます！！<br>
 				<br>
-				車が大好き&浪費家で1年間で使った金額は1500万。嫁からは収支から位置情報、更にはYouTubeまで監視されています...<br>
+				車が大好き&amp;浪費家で1年間で使った金額は1500万。嫁からは収支から位置情報、更にはYouTubeまで監視されています...<br>
 				嫁の監視から逃げられるメン限配信をするのが夢！！！
 			</ProfileHead>
 			<div class="tw-w-fit tw-flex tw-flex-col xl:tw-flex-row xl:tw-flex-wrap tw-justify-between tw-items-center tw-gap-4">
@@ -70,7 +70,7 @@ useSeoMeta({
 					</tr>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">身長</td>
-						<td class="tw-pb-4 tw-align-top">158cm</td>
+						<LocaleHeight :height="158" :is-approx="false" original-unit="centimeter"/>
 					</tr>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">イラストレーター</td>
@@ -83,8 +83,8 @@ useSeoMeta({
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">ハッシュタグ</td>
 						<td class="tw-pb-4 tw-align-top">
-							一般タグ: <a href="https://x.com/search?q=%23%E3%81%A1%E3%81%A3%E3%81%99%E3%82%93" rel="noopener noreferrer" target="_blank">#ちっすん</a> <br/>
-							ファンアートタグ: <a href="https://x.com/search?q=%23%E7%B5%B5%E3%81%A1%E3%81%99%E3%81%84" rel="noopener noreferrer" target="_blank">#絵ちすい</a>
+							一般タグ: <a href="https://x.com/hashtag/ちっすん" rel="noopener noreferrer" target="_blank">#ちっすん</a> <br/>
+							ファンアートタグ: <a href="https://x.com/hashtag/絵ちすい" rel="noopener noreferrer" target="_blank">#絵ちすい</a>
 						</td>
 					</tr>
 					<tr>
