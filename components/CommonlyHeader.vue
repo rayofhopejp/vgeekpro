@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-const route = useRoute();
-
-const {locale, locales, setLocale} = useI18n();
+const {locale, setLocale} = useI18n();
 const localePath = useLocalePath();
 
 const setLocaleTo = (locale: string) => {
@@ -34,6 +32,9 @@ const setLocaleTo = (locale: string) => {
 					</NuxtLink>
 					<NuxtLink v-smooth-scroll="{offset: -50}" :href="localePath('/#groups')" class="tw-px-8 tw-py-4 tw-border-white tw-border-y-2 tw-bg-white tw-bg-opacity-75 tw-cursor-pointer hover:tw-text-white hover:tw-bg-rose-500 hover:tw-bg-opacity-75">
 						Groups
+					</NuxtLink>
+					<NuxtLink :href="localePath('/comiket/c105/')" class="tw-px-8 tw-py-4 tw-border-white tw-border-y-2 tw-bg-white tw-bg-opacity-75 tw-cursor-pointer hover:tw-text-white hover:tw-bg-rose-500 hover:tw-bg-opacity-75">
+						Comiket
 					</NuxtLink>
 					<NuxtLink v-smooth-scroll="{offset: -50}" :href="localePath('/#link')" class="tw-px-8 tw-py-4 tw-border-white tw-border-y-2 tw-bg-white tw-bg-opacity-75 tw-cursor-pointer hover:tw-text-white hover:tw-bg-rose-500 hover:tw-bg-opacity-75">
 						Link
