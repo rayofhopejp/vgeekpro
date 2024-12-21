@@ -19,11 +19,11 @@ export type Member = {
  */
 const members: Member[] = [
 	{
-		name: "うさねこらーじ",
-		yomi: "Usaneko Large",
-		profileId: "usaneko_xlarge",
-		imageId: "usaneko_large",
-		imageAlt: "Usaneko Large",
+		name: "朱兎ねこら",
+		yomi: "SYUTO Nekora",
+		profileId: "syutonekora",
+		imageId: "syutonekora",
+		imageAlt: "SYUTO Nekora",
 		tag: [
 			"security-girl",
 			"member"
@@ -323,8 +323,8 @@ const Units: Unit[] = [
 		unitYomi: "Security Girl",
 		members: [
 			{
-				name: "うさねこらーじ",
-				yomi: "Usaneko Large",
+				name: "朱兎ねこら",
+				yomi: "SYUTO Nekora",
 			},
 			{
 				name: "東雲絢芽",
@@ -611,7 +611,7 @@ if (import.meta.client) {
 								{{ $t('topPage.xLinkButton') }}
 							</a>
 							<a class="tw-self-stretch tw-flex-1 tw-items-center tw-rounded-full tw-bg-rose-500 hover:tw-bg-rose-700 tw-text-white tw-px-8 tw-py-4"
-							   href="https://www.youtube.com/@usaneko_xlarge" rel="noopener noreferrer"
+							   href="https://www.youtube.com/@vgeekproduction" rel="noopener noreferrer"
 							   target="_blank">
 								{{ $t('topPage.youTubeLinkButton') }}
 							</a>
@@ -664,10 +664,10 @@ if (import.meta.client) {
 							<section>
 								<p class="tw-mb-6">参加希望者は、以下のいずれかの方法で運営までご連絡ください。</p>
 								<ul class="tw-mb-6 tw-list-disc tw-ps-5">
-									<li>Discord: usaneko_xlarge</li>
+									<li>Discord: syutonekora</li>
 									<li>X (Twitter): <a class="disable-link-icons"
 														href="https://x.com/messages/compose?recipient_id=1644686586318327808"
-														rel="noopener noreferrer" target="_blank">@usaneko_xlarge</a></li>
+														rel="noopener noreferrer" target="_blank">@syutonekorae</a></li>
 									<li>このページに記載のメールアドレス</li>
 								</ul>
 							</section>
@@ -709,7 +709,7 @@ if (import.meta.client) {
 						<span class="fs-3">コントリビュータ</span>
 						<ul class="list-group">
 							<li class="list-group-item">
-								<span class="fs-4">うさねこらーじ</span>
+								<span class="fs-4">朱兎ねこら</span>
 								<ul class="list-group">
 									<li class="list-group-item list-group-item-info">主な貢献</li>
 									<li class="list-group-item">プロジェクトオーナー</li>
@@ -749,10 +749,10 @@ if (import.meta.client) {
 	</main>
 	<footer class="tw-my-16 tw-footer tw-text-base tw-text-center">
 		<a class="tw-inline xl:tw-hidden" @click.stop="showContributorsModal = true">
-			<client-only>Copyright &copy; 2023, {{ thisYear }} Usaneko Large</client-only>
+			<client-only>Copyright &copy; 2023, {{ thisYear }} SYUTO Nekora</client-only>
 		</a>
 		<a class="tw-hidden xl:tw-inline">
-			<client-only>Copyright &copy; 2023, {{ thisYear }} Usaneko Large</client-only>
+			<client-only>Copyright &copy; 2023, {{ thisYear }} SYUTO nekora</client-only>
 		</a>
 	</footer>
 </template>
