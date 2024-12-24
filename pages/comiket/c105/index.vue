@@ -54,7 +54,7 @@ useSeoMeta({
 				<tr>
 					<th scope="row">朱兎ねこら</th>
 					<th scope="row" rowspan="2">
-						<a href="https://webcatalog.circle.ms/Circle/" target="_blank">うさねこらーじ</a>
+						<a href="https://webcatalog.circle.ms/Circle/20027464" target="_blank">うさねこらーじ</a>
 					</th>
 					<td>サークル参加</td>
 					<td rowspan="2">月曜日(2日目)</td>
@@ -70,7 +70,7 @@ useSeoMeta({
 				<tr>
 					<th scope="row">椎 半音</th>
 					<th scope="row">
-						<a href="https://webcatalog.circle.ms/Circle/" target="_blank">椎半音GAMES</a>
+						<a href="https://webcatalog.circle.ms/Circle/20005147" target="_blank">椎半音GAMES</a>
 					</th>
 					<td>サークル参加</td>
 					<td>月曜日(2日目)</td>
@@ -82,7 +82,7 @@ useSeoMeta({
 				<tr>
 					<th scope="row">三峰スズ</th>
 					<th scope="row">
-						<a href="https://webcatalog.circle.ms/Circle/" target="_blank">三峰スズ工房</a>
+						<a href="https://webcatalog.circle.ms/Circle/20005360" target="_blank">三峰スズ工房</a>
 					</th>
 					<td>サークル参加</td>
 					<td>月曜日(2日目)</td>
@@ -94,7 +94,7 @@ useSeoMeta({
 				<tr>
 					<th scope="row">珠響そうき</th>
 					<th scope="row">
-						<a href="https://webcatalog.circle.ms/Circle/" target="_blank">Visterminal</a>
+						<a href="https://webcatalog.circle.ms/Circle/20006857" target="_blank">Visterminal</a>
 					</th>
 					<td>サークル参加</td>
 					<td>月曜日(2日目)</td>
@@ -106,7 +106,7 @@ useSeoMeta({
 				<tr>
 					<th scope="row">夢向せつな</th>
 					<th scope="row">
-						<a href="https://webcatalog.circle.ms/Circle/" target="_blank">ゆめむかい工房</a>
+						<a href="https://webcatalog.circle.ms/Circle/20027903" target="_blank">ゆめむかい工房</a>
 					</th>
 					<td>サークル参加</td>
 					<td>月曜日(2日目)</td>

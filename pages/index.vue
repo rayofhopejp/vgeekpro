@@ -114,11 +114,11 @@ const members: Member[] = [
 		],
 	},
 	{
-		name: "ひょんぢゅ",
-		yomi: "Hyondyu",
-		profileId: "hyondyu",
-		imageId: "hyondyu",
-		imageAlt: "Hyondyu",
+		name: "にころ・ちゅーりんぐ",
+		yomi: "Nicoro Turing",
+		profileId: "nicoro_turing",
+		imageId: "nicoro_turing",
+		imageAlt: "Nicoro Turing",
 		tag: [
 			"member",
 			"hard-geeks"
@@ -354,8 +354,8 @@ const Units: Unit[] = [
 				yomi: "Kazuryu",
 			},
 			{
-				name: "ひょんぢゅ",
-				yomi: "Hyondyu",
+				name: "にころ・ちゅーりんぐ",
+				yomi: "Nicoro Turing",
 			},
 			{
 				name: "小日向がく",
