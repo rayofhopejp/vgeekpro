@@ -52,7 +52,7 @@ useSeoMeta({
 				</thead>
 				<tbody>
 				<tr>
-					<th scope="row">朱兎ねこら</th>
+					<th scope="row">うさねこらーじ</th>
 					<th scope="row" rowspan="2">
 						<a href="https://webcatalog.circle.ms/Circle/20027464" target="_blank">うさねこらーじ</a>
 					</th>

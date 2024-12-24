@@ -2,10 +2,10 @@
 definePageMeta({
 	layout: 'member-page'
 })
-const name = "朱兎ねこら";
-const yomi = "SYUTO Nekora";
-const description = "弱音は飲み込む、足は止めない──時にそれが狂気と呼ばれても";
-const imageId = "syutonekora";
+const name = "うさねこらーじ";
+const yomi = "Usaneko Large";
+const description = "セキュリティホールから、こんばんらーじ！";
+const imageId = "usaneko_xlarge";
 useSeoMeta({
 	title: name,
 	description,
@@ -29,20 +29,21 @@ useSeoMeta({
 	<section class="tw-px-10 xl:tw-px-14 tw-py-14 tw-text-base">
 		<section>
 			<ProfileHead :catchphrase="description" :name="name" :yomi="yomi">
-				赤いフードに猫耳を隠し、宙を舞う兎型ロボを相棒に、サイバーパンクな世界を生き抜く VTuber。<br/>
-				東京大学を卒業し、エンジニアとしての腕前をさらに高めようと、黙々と鍛錬を続けている。<br/>
-				彼女の目指す先は「人間として胸を張れる存在になる」こと。<br/>
-				朱兎ねこらの物語が、あなたの前で始まる。
+				22才、東大卒、新人セキュリティスペシャリストVTuber。<br/>
+				本性はポンコツ。配信ではもっぱらイジられたりツッコまれたりしている。東大卒らしい威厳は一切ない。<br/>
+				下ネタとエロをこよなく愛する。ガチ恋勢を増やすべく策略を練っている。しかし、定期的にガチ恋を葬り去るような言動をする。<br/>
+				配信をつうじて様々な経験をして、みなさんと一緒に成長していきます！
 			</ProfileHead>
 			<div class="tw-w-fit tw-flex tw-flex-col xl:tw-flex-row xl:tw-flex-wrap tw-justify-between tw-items-center tw-gap-4">
-				<XButtonLink screen-name="syutonekora"/>
-				<YouTubeChannel handle="syutonekora"/>
+				<XButtonLink screen-name="usaneko_xlarge"/>
+				<YouTubeChannel handle="usaneko_xlarge"/>
 			</div>
 		</section>
 		<section>
 			<SectionHeader :isDark="true" description="配信内容" title="Contents"/>
 			<div class="tw-mb-28 tw-leading-loose xl:tw-max-w-screen-sm xl:tw-mx-auto">
 				<ul class="tw-list-disc tw-ps-5">
+				    <li>雑談配信</li>
 					<li>CTF (Hack the BoxやpicoCTFなど)</li>
 					<li>競技プログラミング (LeetCode, AtCoderなど)</li>
 					<li>Webプログラミング (ISUCONなど)</li>
@@ -79,13 +80,13 @@ useSeoMeta({
 					</tr>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">ファンネーム</td>
-						<td class="tw-pb-4 tw-align-top">ねこりす</td>
+						<td class="tw-pb-4 tw-align-top">うさねこリスナー</td>
 					</tr>
 					<tr>
 						<td class="tw-pe-8 xl:tw-pe-16 tw-pb-4 tw-align-top">ハッシュタグ</td>
 						<td class="tw-pb-4 tw-align-top">
-							配信タグ: <a href="https://x.com/hashtag/syutonekora" rel="noopener noreferrer" target="_blank">#syutonekora</a> <br/>
-							ファンアートタグ: <a href="https://x.com/hashtag/nekorart" rel="noopener noreferrer" target="_blank">#nekorart</a>
+							配信タグ: <a href="https://x.com/hashtag/usanekoxlarge" rel="noopener noreferrer" target="_blank">#usanekoxlarge</a> <br/>
+							ファンアートタグ: <a href="https://x.com/hashtag/usanekoart" rel="noopener noreferrer" target="_blank">#usanekoart</a>
 						</td>
 					</tr>
 					<tr>
