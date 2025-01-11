@@ -1,12 +1,16 @@
 # ぶいぎーく！公式サイトソースリポジトリ
 
+## ドキュメント
+
+[ドキュメントはこちらから](/docs/index.md)
+
 ## 初期設定
 
 ### `corepack`の準備
 
 このサイトは`corepack`を使用して環境を統一しております。  
 ドキュメント執筆時点のNode.JSでは追加インストールは不要なはずですが、以下のコードにて手動でインストールできます。  
-インストール済みの場合(`corepack --version`)が出来る場合は「インストールしたら」まで飛ばしてください。
+インストール済みの場合(`corepack --version`が出来る場合)は「インストールしたら」まで飛ばしてください。
 
 **※古すぎるバージョンには同梱されていませんが、そもそも互換性がないと思われるので問題ありません。**  
 **※将来的に`corepack`はNode.JSと分離される予定です。分離後は追加のインストールが必要になるだけで、廃止されるわけではありません。**
@@ -42,7 +46,8 @@ corepack prepare pnpm@latest --activate
 
 ### ライブラリのインストール
 
-まず、依存しているライブラリをインストールします。
+まず、依存しているライブラリをインストールします。  
+ビルドするだけであれば、本番環境セクションのビルドで`build.sh`や`build.bat`を使用することでこの手順をスキップできます。
 
 ```bash
 pnpm install --frozen-lockfile
@@ -64,7 +69,7 @@ pnpm install --frozen-lockfile
 pnpm run dev
 ```
 
-基本的に自動再読込されますが、開発サーバーはSSGではありませんので、本番環境用のデータをPreviewしてください。  
+基本的に自動再読込されますが、開発サーバーはSSG(Static Site Generation)ではありませんので、本番環境用のデータをPreviewしてください。  
 本番環境は次のセクションにあります。
 
 ## 本番環境
@@ -72,9 +77,16 @@ pnpm run dev
 本番環境用にサイトをビルドするには以下のコマンドを実行します
 
 ```bash
+# SSGでビルドします。
 pnpm run generate
+
 # 代わりに以下のスクリプトを使用出来ます
-./build.sh
+./build.sh #Bash/Dash(sh互換シェル)の場合
+build.bat #コマンドプロンプトの場合
+
+# 注: PowerShell用は署名する手間を考慮し、添付されていません。
+# また、GitHub Actionsを使用した自動ビルドもあります。
+# GitHub Actionsを有効化して、プッシュするとビルドされます。
 ```
 
 ビルドが完了したら次のコマンドで動作検証を行い、正常に動作する場合にコードを提出しましょう
@@ -87,17 +99,17 @@ pnpm run preview
 
 本プロジェクトでは次のIDE/コードエディタを推奨しています。
 
-- IntelliJ IDEA Ultimate (JetBrains s.r.o.)  
+- [IntelliJ IDEA Ultimate (JetBrains s.r.o.)](https://www.jetbrains.com/ja-jp/idea/)  
   Javaをメインに各言語に対応する万能IDEです。  
   以下のプラグインをインストールすると快適に開発出来ます。
-	- JavaScript and TypeScript
-	- Vue.js
-	- Node.js
-- WebStorm (JetBrains s.r.o.)  
+	- [JavaScript and TypeScript](https://plugins.jetbrains.com/plugin/22069)
+	- [Vue.js](https://plugins.jetbrains.com/plugin/9442)
+	- [Node.js](https://plugins.jetbrains.com/plugin/6098)
+- [WebStorm (JetBrains s.r.o.)](https://www.jetbrains.com/ja-jp/webstorm/)  
   JetBrains IDEsのHTML+JavaScriptなどのWebとNodeに最適化されたIDEです。
-- PhpStorm (JetBrains s.r.o.)  
+- [PhpStorm (JetBrains s.r.o.)](https://www.jetbrains.com/ja-jp/phpstorm/)  
   PHPに対応していることを除いてWebStormと同一です。
-- Visual Studio Code (Microsoft Corporation)  
+- [Visual Studio Code (Microsoft Corporation)](https://code.visualstudio.com/)  
   Visual Studioファミリーの製品で高機能なコードエディタです。  
   必ずインストール版をご利用ください。Web版ではEditorConfigが動作しないようです。  
   以下の拡張機能をインストールすると快適に開発できます。
